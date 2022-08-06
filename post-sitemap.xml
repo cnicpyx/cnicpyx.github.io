@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://pyxblog.cn/2022/08/05/matlab-basic-1/</loc>
+        <lastmod>2022-08-06T13:59:36.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/05/matlab-basic-2/</loc>
+        <lastmod>2022-08-06T13:59:29.722Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://pyxblog.cn/2022/08/02/test/</loc>
         <lastmod>2022-08-06T02:27:41.719Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -18,22 +34,6 @@
 
     <url>
         <loc>https://pyxblog.cn/2022/08/05/matlab-basic-0/</loc>
-        <lastmod>2022-08-06T02:27:41.718Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://pyxblog.cn/2022/08/05/matlab-basic-1/</loc>
-        <lastmod>2022-08-06T02:27:41.718Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://pyxblog.cn/2022/08/05/matlab-basic-2/</loc>
         <lastmod>2022-08-06T02:27:41.718Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

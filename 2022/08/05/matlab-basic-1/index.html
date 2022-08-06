@@ -45,7 +45,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-08-05T14:19:06.000Z">
-<meta property="article:modified_time" content="2022-08-06T02:27:41.718Z">
+<meta property="article:modified_time" content="2022-08-06T13:59:36.834Z">
 <meta property="article:author" content="庞宇轩">
 <meta property="article:tag" content="Matlab">
 <meta name="twitter:card" content="summary">
@@ -1769,7 +1769,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.26f8a394.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1659792599762),
+    lastupdate: new Date(1659794443991),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud"],
       for_post: ["blogger","toc","feedback"],
@@ -2650,312 +2650,329 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><table>
+    <div class="story post-story"><h2 id="常量">常量</h2>
+<table>
 <thead>
-<tr>
-<th align="center">常量名称</th>
-<th align="center">对应含义</th>
+<tr class="header">
+<th style="text-align: center;">常量名称</th>
+<th style="text-align: center;">对应含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>pi</code></td>
-<td align="center">圆周率</td>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>pi</code></td>
+<td style="text-align: center;">圆周率</td>
 </tr>
-<tr>
-<td align="center"><code>eps</code></td>
-<td align="center">浮点相对精度，常用于防止0出现在分母上</td>
+<tr class="even">
+<td style="text-align: center;"><code>eps</code></td>
+<td style="text-align: center;">浮点相对精度，常用于防止0出现在分母上</td>
 </tr>
-<tr>
-<td align="center"><code>inf</code>(<code>Inf</code>)</td>
-<td align="center">无穷大，如$1&#x2F;0$</td>
+<tr class="odd">
+<td style="text-align: center;"><code>inf</code>(<code>Inf</code>)</td>
+<td style="text-align: center;">无穷大，如<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="3.394ex" height="2.262ex" role="img" focusable="false" viewbox="0 -750 1500 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(500,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"/></g></g><g data-mml-node="mn" transform="translate(1000,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/></g></g></g></svg></mjx-container></span></td>
 </tr>
-<tr>
-<td align="center"><code>NaN</code>(<code>nan</code>)</td>
-<td align="center">不定值，如$0&#x2F;0$、$\infty&#x2F;\infty$、$0\times\infty$</td>
+<tr class="even">
+<td style="text-align: center;"><code>NaN</code>(<code>nan</code>)</td>
+<td style="text-align: center;">不定值，如<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="3.394ex" height="2.262ex" role="img" focusable="false" viewbox="0 -750 1500 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(500,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"/></g></g><g data-mml-node="mn" transform="translate(1000,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/></g></g></g></svg></mjx-container></span>、<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.656ex" height="2.262ex" role="img" focusable="false" viewbox="0 -750 2500 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"/></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1000,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"/></g></g><g data-mml-node="mi" transform="translate(1500,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"/></g></g></g></svg></mjx-container></span>、<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="6.159ex" height="1.557ex" role="img" focusable="false" viewbox="0 -666 2722.4 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/></g><g data-mml-node="mo" transform="translate(722.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"/></g><g data-mml-node="mi" transform="translate(1722.4,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"/></g></g></g></svg></mjx-container></span></td>
 </tr>
-<tr>
-<td align="center"><code>i</code>(<code>j</code>)</td>
-<td align="center">复数中的虚数单位</td>
+<tr class="odd">
+<td style="text-align: center;"><code>i</code>(<code>j</code>)</td>
+<td style="text-align: center;">复数中的虚数单位</td>
 </tr>
-<tr>
-<td align="center"><code>realmin</code></td>
-<td align="center">最小正浮点数</td>
+<tr class="even">
+<td style="text-align: center;"><code>realmin</code></td>
+<td style="text-align: center;">最小正浮点数</td>
 </tr>
-<tr>
-<td align="center"><code>realmax</code></td>
-<td align="center">最大正浮点数</td>
+<tr class="odd">
+<td style="text-align: center;"><code>realmax</code></td>
+<td style="text-align: center;">最大正浮点数</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>ps. 常量可以被赋值，使用命令<code>clear</code>+<code>变量名</code>或重启Matlab可以将常量恢复初始值。</p>
 <hr>
-</div><div class="story post-story"><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><table>
+</div><div class="story post-story"><h2 id="数据类型">数据类型</h2>
+<table>
 <thead>
-<tr>
+<tr class="header">
 <th>整型</th>
 <th>含义</th>
 <th>占用空间</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td><code>char</code></td>
 <td>字符型</td>
 <td>1字节</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>unsigned char</code></td>
 <td>无符号字符型</td>
 <td>1字节</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>short</code></td>
 <td>短整型</td>
 <td>2字节</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>unsigned short</code></td>
 <td>无符号短整型</td>
 <td>2字节</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>int</code></td>
 <td>有符号整型</td>
 <td>4字节</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>unsigned int</code></td>
 <td>无符号整型</td>
 <td>4字节</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>long</code></td>
 <td>长整型</td>
 <td>4字节</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>unsigned long</code></td>
 <td>无符号长整型</td>
 <td>4字节</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>浮点型：</p>
 <ul>
 <li>十进制数形式：由数字和小数点组成</li>
-<li>指数形式：一般形式为 <code>aEn</code>，其中<code>a</code>为10进制数，<code>n</code>为10进制整数，表示$a\times10^n$</li>
-<li>可以分为两类：单精度型和双精度型<ul>
-<li>单精度 <code>float</code>，占4字节，数值范围$3.4\times10^{-38}-3.4\times10^{38}$，最多7位有效数字</li>
-<li>双精度 <code>double</code>，占8字节，数值范围$1.7\times10^{308}-1.7\times10^{308}$，最多16位有效数字</li>
-</ul>
-</li>
+<li>指数形式：一般形式为 <code>aEn</code>，其中<code>a</code>为10进制数，<code>n</code>为10进制整数，表示<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="7.373ex" height="1.646ex" role="img" focusable="false" viewbox="0 -705.6 3258.7 727.6"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"/></g><g data-mml-node="mo" transform="translate(751.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"/></g><g data-mml-node="msup" transform="translate(1751.4,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"/></g><g data-mml-node="mi" transform="translate(1033,393.1) scale(0.707)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g></g></g></g></svg></mjx-container></span></li>
+<li>可以分为两类：单精度型和双精度型
+<ul>
+<li>单精度 <code>float</code>，占4字节，数值范围<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="23.425ex" height="2.14ex" role="img" focusable="false" viewbox="0 -864 10353.7 946"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"/><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z" transform="translate(778,0)"/></g><g data-mml-node="mo" transform="translate(1500.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"/></g><g data-mml-node="msup" transform="translate(2500.4,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"/></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"/></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" transform="translate(500,0)"/></g></g></g><g data-mml-node="mo" transform="translate(5062.9,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"/></g><g data-mml-node="mn" transform="translate(6063.1,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"/><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z" transform="translate(778,0)"/></g><g data-mml-node="mo" transform="translate(7563.3,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"/></g><g data-mml-node="msup" transform="translate(8563.6,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"/></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" transform="translate(500,0)"/></g></g></g></g></g></svg></mjx-container></span>，最多7位有效数字</li>
+<li>双精度 <code>double</code>，占8字节，数值范围<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="23.78ex" height="2.14ex" role="img" focusable="false" viewbox="0 -864 10510.7 946"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"/><path data-c="37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z" transform="translate(778,0)"/></g><g data-mml-node="mo" transform="translate(1500.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"/></g><g data-mml-node="msup" transform="translate(2500.4,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"/></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"/><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" transform="translate(1000,0)"/></g></g></g><g data-mml-node="mo" transform="translate(4866.3,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"/></g><g data-mml-node="mn" transform="translate(5866.5,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"/><path data-c="37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z" transform="translate(778,0)"/></g><g data-mml-node="mo" transform="translate(7366.8,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"/></g><g data-mml-node="msup" transform="translate(8367,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"/></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"/><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" transform="translate(1000,0)"/></g></g></g></g></g></svg></mjx-container></span>，最多16位有效数字</li>
+</ul></li>
 </ul>
 <p>ps. 使用命令<code>format</code>可以控制命令行的输出格式，参考<code>help format</code></p>
-<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nu = <span class="number">123</span>;</span><br><span class="line">st = num2str(nu);  <span class="comment">% &#x27;123&#x27;</span></span><br></pre></td></tr></table></figure>
-
+<h3 id="类型转换">类型转换</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nu = <span class="number">123</span>;</span><br><span class="line">st = num2str(nu);  <span class="comment">% '123'</span></span><br></pre></td></tr></table></figure>
 <p>遇到不熟悉的类型转换时，可以使用<code>lookfor</code>指令查找相关函数：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; lookfor num2</span><br><span class="line"><span class="built_in">num2cell</span>                       - Convert numeric array into cell array.</span><br><span class="line">num2hex                        - Convert singles and doubles to IEEE hexadecimal string format</span><br><span class="line">num2str                        - Convert numbers to character representation</span><br><span class="line">num2ruler                      - Convert numeric array to ruler-appropriate array datatype</span><br><span class="line">enum2val                       - Converts an enumerated string to its numerical equivalent.</span><br><span class="line"><span class="built_in">num2cell</span>                       - Convert numeric codistributed array into cell array</span><br><span class="line">num2str                        - overloaded <span class="keyword">for</span> gpuArrays</span><br><span class="line">num2mstr                       - Convert number to string in maximum precision.</span><br><span class="line">iptnum2ordinal                 - Convert positive integer to ordinal string.</span><br><span class="line">num2ordinal                    - Convert positive integer to ordinal character vector.</span><br><span class="line">signal_num2str                 - Convert the number to a string.</span><br><span class="line">num2goid                       - Converts numbers to Gene Ontology IDs.</span><br><span class="line">num2str                        - Convert numbers to character representation</span><br><span class="line">defnum2                        - Sets Default channel names</span><br><span class="line">num2deriv                      - Numeric two-point network derivative <span class="keyword">function</span>.</span><br><span class="line">num2base                       - Convert stored integers to strings</span><br><span class="line">num2sdec                       - Convert stored integers of array of fi objects to signed decimal representation</span><br><span class="line">num2fixpt                      - Quantize a value using a Fixed-Point Designer representation.</span><br><span class="line">num2alphaheaders               - Generate Alpha headers from a number (usually column).</span><br><span class="line">&gt;&gt; </span><br></pre></td></tr></table></figure>
-
 <hr>
-</div><div class="story post-story"><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><table>
+</div><div class="story post-story"><h2 id="运算符">运算符</h2>
+<table>
 <thead>
-<tr>
-<th align="center">算数运算符</th>
-<th align="center">定义</th>
+<tr class="header">
+<th style="text-align: center;">算数运算符</th>
+<th style="text-align: center;">定义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>+</code></td>
-<td align="center">算数加</td>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>+</code></td>
+<td style="text-align: center;">算数加</td>
 </tr>
-<tr>
-<td align="center"><code>-</code></td>
-<td align="center">算数减</td>
+<tr class="even">
+<td style="text-align: center;"><code>-</code></td>
+<td style="text-align: center;">算数减</td>
 </tr>
-<tr>
-<td align="center"><code>*</code></td>
-<td align="center">算数乘</td>
+<tr class="odd">
+<td style="text-align: center;"><code>*</code></td>
+<td style="text-align: center;">算数乘</td>
 </tr>
-<tr>
-<td align="center"><code>.*</code></td>
-<td align="center">点乘</td>
+<tr class="even">
+<td style="text-align: center;"><code>.*</code></td>
+<td style="text-align: center;">点乘</td>
 </tr>
-<tr>
-<td align="center"><code>^</code></td>
-<td align="center">算数乘方</td>
+<tr class="odd">
+<td style="text-align: center;"><code>^</code></td>
+<td style="text-align: center;">算数乘方</td>
 </tr>
-<tr>
-<td align="center"><code>.^</code></td>
-<td align="center">点乘方</td>
+<tr class="even">
+<td style="text-align: center;"><code>.^</code></td>
+<td style="text-align: center;">点乘方</td>
 </tr>
-<tr>
-<td align="center"><code>\</code></td>
-<td align="center">算数左除</td>
+<tr class="odd">
+<td style="text-align: center;"><code>\</code></td>
+<td style="text-align: center;">算数左除</td>
 </tr>
-<tr>
-<td align="center"><code>.\</code></td>
-<td align="center">点左除</td>
+<tr class="even">
+<td style="text-align: center;"><code>.\</code></td>
+<td style="text-align: center;">点左除</td>
 </tr>
-<tr>
-<td align="center"><code>/</code></td>
-<td align="center">算数右除</td>
+<tr class="odd">
+<td style="text-align: center;"><code>/</code></td>
+<td style="text-align: center;">算数右除</td>
 </tr>
-<tr>
-<td align="center"><code>./</code></td>
-<td align="center">点右除</td>
+<tr class="even">
+<td style="text-align: center;"><code>./</code></td>
+<td style="text-align: center;">点右除</td>
 </tr>
-<tr>
-<td align="center"><code>&#39;</code></td>
-<td align="center">矩阵共轭<strong>转置</strong></td>
+<tr class="odd">
+<td style="text-align: center;"><code>'</code></td>
+<td style="text-align: center;">矩阵共轭<strong>转置</strong></td>
 </tr>
-<tr>
-<td align="center"><code>.&#39;</code></td>
-<td align="center">矩阵转置，<strong>不求共轭</strong></td>
+<tr class="even">
+<td style="text-align: center;"><code>.'</code></td>
+<td style="text-align: center;">矩阵转置，<strong>不求共轭</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>其中：</p>
 <ul>
-<li>左除<code>a\b</code>表示$b\div a$，右除<code>a/b</code>表示$a\div b$</li>
-<li><code>A*B</code>表示矩阵乘法，要求矩阵$A$的第二维度与矩阵$B$的第一维度相等，<code>A.*B</code>表示矩阵按位乘法，要求矩阵$A$和矩阵$B$的形状相同，对乘方具有一致要求</li>
-<li><code>A+B</code>要求矩阵$A$和矩阵$B$的形状相同，对算数减有一致要求</li>
-<li><code>A+a</code>表示对矩阵$A$中的每个元素都$+a$，对其他算数运算有一致要求</li>
+<li>左除<code>a\b</code>表示<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.081ex;" xmlns="http://www.w3.org/2000/svg" width="4.933ex" height="1.652ex" role="img" focusable="false" viewbox="0 -694 2180.4 730"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"/></g><g data-mml-node="mo" transform="translate(651.2,0)"><path data-c="F7" d="M318 466Q318 500 339 518T386 537Q418 537 438 517T458 466Q458 438 440 417T388 396Q355 396 337 417T318 466ZM56 237T56 250T70 270H706Q721 262 721 250T706 230H70Q56 237 56 250ZM318 34Q318 68 339 86T386 105Q418 105 438 85T458 34Q458 6 440 -15T388 -36Q355 -36 337 -15T318 34Z"/></g><g data-mml-node="mi" transform="translate(1651.4,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"/></g></g></g></svg></mjx-container></span>，右除<code>a/b</code>表示<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.081ex;" xmlns="http://www.w3.org/2000/svg" width="4.933ex" height="1.652ex" role="img" focusable="false" viewbox="0 -694 2180.4 730"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"/></g><g data-mml-node="mo" transform="translate(751.2,0)"><path data-c="F7" d="M318 466Q318 500 339 518T386 537Q418 537 438 517T458 466Q458 438 440 417T388 396Q355 396 337 417T318 466ZM56 237T56 250T70 270H706Q721 262 721 250T706 230H70Q56 237 56 250ZM318 34Q318 68 339 86T386 105Q418 105 438 85T458 34Q458 6 440 -15T388 -36Q355 -36 337 -15T318 34Z"/></g><g data-mml-node="mi" transform="translate(1751.4,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"/></g></g></g></svg></mjx-container></span></li>
+<li><code>A*B</code>表示矩阵乘法，要求矩阵<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.697ex" height="1.62ex" role="img" focusable="false" viewbox="0 -716 750 716"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"/></g></g></g></svg></mjx-container></span>的第二维度与矩阵<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.717ex" height="1.545ex" role="img" focusable="false" viewbox="0 -683 759 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"/></g></g></g></svg></mjx-container></span>的第一维度相等，<code>A.*B</code>表示矩阵按位乘法，要求矩阵<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.697ex" height="1.62ex" role="img" focusable="false" viewbox="0 -716 750 716"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"/></g></g></g></svg></mjx-container></span>和矩阵<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.717ex" height="1.545ex" role="img" focusable="false" viewbox="0 -683 759 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"/></g></g></g></svg></mjx-container></span>的形状相同，对乘方具有一致要求</li>
+<li><code>A+B</code>要求矩阵<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.697ex" height="1.62ex" role="img" focusable="false" viewbox="0 -716 750 716"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"/></g></g></g></svg></mjx-container></span>和矩阵<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.717ex" height="1.545ex" role="img" focusable="false" viewbox="0 -683 759 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"/></g></g></g></svg></mjx-container></span>的形状相同，对算数减有一致要求</li>
+<li><code>A+a</code>表示对矩阵<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.697ex" height="1.62ex" role="img" focusable="false" viewbox="0 -716 750 716"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"/></g></g></g></svg></mjx-container></span>中的每个元素都<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="2.957ex" height="1.505ex" role="img" focusable="false" viewbox="0 -583 1307 665"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"/></g><g data-mml-node="mi" transform="translate(778,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"/></g></g></g></svg></mjx-container></span>，对其他算数运算有一致要求</li>
 </ul>
 <table>
 <thead>
-<tr>
-<th align="center">关系运算符</th>
-<th align="center">定义</th>
+<tr class="header">
+<th style="text-align: center;">关系运算符</th>
+<th style="text-align: center;">定义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>==</code></td>
-<td align="center">等于</td>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>==</code></td>
+<td style="text-align: center;">等于</td>
 </tr>
-<tr>
-<td align="center"><code>~=</code></td>
-<td align="center">不等于</td>
+<tr class="even">
+<td style="text-align: center;"><code>~=</code></td>
+<td style="text-align: center;">不等于</td>
 </tr>
-<tr>
-<td align="center"><code>&gt;</code>(<code>&lt;</code>)</td>
-<td align="center">大于&#x2F;小于</td>
+<tr class="odd">
+<td style="text-align: center;"><code>&gt;</code>(<code>&lt;</code>)</td>
+<td style="text-align: center;">大于/小于</td>
 </tr>
-<tr>
-<td align="center"><code>&gt;=</code>(<code>&lt;=</code>)</td>
-<td align="center">大于等于&#x2F;小于等于</td>
+<tr class="even">
+<td style="text-align: center;"><code>&gt;=</code>(<code>&lt;=</code>)</td>
+<td style="text-align: center;">大于等于/小于等于</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <table>
 <thead>
-<tr>
-<th align="center">逻辑运算符</th>
-<th align="center">定义</th>
+<tr class="header">
+<th style="text-align: center;">逻辑运算符</th>
+<th style="text-align: center;">定义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>&amp;</code></td>
-<td align="center">逻辑与</td>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>&amp;</code></td>
+<td style="text-align: center;">逻辑与</td>
 </tr>
-<tr>
-<td align="center">&#96;</td>
-<td align="center">&#96;</td>
+<tr class="even">
+<td style="text-align: center;"><code>|</code></td>
+<td style="text-align: center;">逻辑或</td>
 </tr>
-<tr>
-<td align="center"><code>~</code></td>
-<td align="center">逻辑非</td>
+<tr class="odd">
+<td style="text-align: center;"><code>~</code></td>
+<td style="text-align: center;">逻辑非</td>
 </tr>
-<tr>
-<td align="center"><code>xor</code></td>
-<td align="center">逻辑异或</td>
+<tr class="even">
+<td style="text-align: center;"><code>xor</code></td>
+<td style="text-align: center;">逻辑异或</td>
 </tr>
-<tr>
-<td align="center"><code>any</code></td>
-<td align="center">有非零元素则为真</td>
+<tr class="odd">
+<td style="text-align: center;"><code>any</code></td>
+<td style="text-align: center;">有非零元素则为真</td>
 </tr>
-<tr>
-<td align="center"><code>all</code></td>
-<td align="center">所有元素均非零则为真</td>
+<tr class="even">
+<td style="text-align: center;"><code>all</code></td>
+<td style="text-align: center;">所有元素均非零则为真</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>ps. 有关优先级</p>
 <ul>
 <li>算数运算符 &gt; 关系运算符 &gt; 逻辑运算符</li>
 <li>逻辑运算符中，<code>~</code>具有最高优先级，<code>&amp;</code>和<code>|</code>优先级相同</li>
 </ul>
 <hr>
-</div><div class="story post-story"><h2 id="复数及三角运算函数"><a href="#复数及三角运算函数" class="headerlink" title="复数及三角运算函数"></a>复数及三角运算函数</h2><table>
-<thead>
-<tr>
-<th align="center">复数运算函数</th>
-<th align="center">对应含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>abs(z)</code></td>
-<td align="center">返回绝对值或复数的模</td>
-</tr>
-<tr>
-<td align="center"><code>theta=angle(z)</code></td>
-<td align="center">返回复数的相位，范围$[-\pi,\pi]$</td>
-</tr>
-<tr>
-<td align="center"><code>z=complex(a,b)</code></td>
-<td align="center">返回复数$z&#x3D;a+bi$</td>
-</tr>
-<tr>
-<td align="center"><code>conj(z)</code></td>
-<td align="center">返回复数的共轭</td>
-</tr>
-<tr>
-<td align="center"><code>a=real(z)</code></td>
-<td align="center">返回复数的实部</td>
-</tr>
-<tr>
-<td align="center"><code>b=imag(z)</code></td>
-<td align="center">返回复数的虚部</td>
-</tr>
-<tr>
-<td align="center"><code>isreal(x)</code></td>
-<td align="center">判断矩阵是否含有复数</td>
-</tr>
-<tr>
-<td align="center"><code>unwrap</code></td>
-<td align="center">平移相位角</td>
-</tr>
-<tr>
-<td align="center"><code>cplxpair</code></td>
-<td align="center">将复数排序为复共轭对组</td>
-</tr>
-</tbody></table>
+</div><div class="story post-story"><h2 id="复数及三角运算函数">复数及三角运算函数</h2>
 <table>
 <thead>
-<tr>
-<th align="center">三角运算函数</th>
-<th align="center">对应含义</th>
+<tr class="header">
+<th style="text-align: center;">复数运算函数</th>
+<th style="text-align: center;">对应含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><code>sin()</code></td>
-<td align="center">正弦函数</td>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>abs(z)</code></td>
+<td style="text-align: center;">返回绝对值或复数的模</td>
 </tr>
-<tr>
-<td align="center"><code>cos()</code></td>
-<td align="center">余弦函数</td>
+<tr class="even">
+<td style="text-align: center;"><code>theta=angle(z)</code></td>
+<td style="text-align: center;">返回复数的相位，范围<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="6.603ex" height="2.262ex" role="img" focusable="false" viewbox="0 -750 2918.7 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z"/></g><g data-mml-node="mo" transform="translate(278,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"/></g><g data-mml-node="mi" transform="translate(1056,0)"><path data-c="1D70B" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"/></g><g data-mml-node="mo" transform="translate(1626,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"/></g><g data-mml-node="mi" transform="translate(2070.7,0)"><path data-c="1D70B" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"/></g><g data-mml-node="mo" transform="translate(2640.7,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z"/></g></g></g></svg></mjx-container></span></td>
 </tr>
-<tr>
-<td align="center"><code>tan()</code></td>
-<td align="center">正切函数</td>
+<tr class="odd">
+<td style="text-align: center;"><code>z=complex(a,b)</code></td>
+<td style="text-align: center;">返回复数<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="9.783ex" height="1.756ex" role="img" focusable="false" viewbox="0 -694 4324 776"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D467" d="M347 338Q337 338 294 349T231 360Q211 360 197 356T174 346T162 335T155 324L153 320Q150 317 138 317Q117 317 117 325Q117 330 120 339Q133 378 163 406T229 440Q241 442 246 442Q271 442 291 425T329 392T367 375Q389 375 411 408T434 441Q435 442 449 442H462Q468 436 468 434Q468 430 463 420T449 399T432 377T418 358L411 349Q368 298 275 214T160 106L148 94L163 93Q185 93 227 82T290 71Q328 71 360 90T402 140Q406 149 409 151T424 153Q443 153 443 143Q443 138 442 134Q425 72 376 31T278 -11Q252 -11 232 6T193 40T155 57Q111 57 76 -3Q70 -11 59 -11H54H41Q35 -5 35 -2Q35 13 93 84Q132 129 225 214T340 322Q352 338 347 338Z"/></g><g data-mml-node="mo" transform="translate(742.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mi" transform="translate(1798.6,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"/></g><g data-mml-node="mo" transform="translate(2549.8,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"/></g><g data-mml-node="mi" transform="translate(3550,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"/></g><g data-mml-node="mi" transform="translate(3979,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"/></g></g></g></svg></mjx-container></span></td>
 </tr>
-<tr>
-<td align="center"><code>cot()</code></td>
-<td align="center">余切函数</td>
+<tr class="even">
+<td style="text-align: center;"><code>conj(z)</code></td>
+<td style="text-align: center;">返回复数的共轭</td>
 </tr>
-<tr>
-<td align="center"><code>sec()</code></td>
-<td align="center">正割函数</td>
+<tr class="odd">
+<td style="text-align: center;"><code>a=real(z)</code></td>
+<td style="text-align: center;">返回复数的实部</td>
 </tr>
-<tr>
-<td align="center"><code>csc()</code></td>
-<td align="center">余割函数</td>
+<tr class="even">
+<td style="text-align: center;"><code>b=imag(z)</code></td>
+<td style="text-align: center;">返回复数的虚部</td>
 </tr>
-</tbody></table>
-<p>ps. 反三角函数&#x3D;<code>a</code>+<code>三角函数</code>，如反正弦为<code>asin()</code></p>
+<tr class="odd">
+<td style="text-align: center;"><code>isreal(x)</code></td>
+<td style="text-align: center;">判断矩阵是否含有复数</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>unwrap</code></td>
+<td style="text-align: center;">平移相位角</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>cplxpair</code></td>
+<td style="text-align: center;">将复数排序为复共轭对组</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">三角运算函数</th>
+<th style="text-align: center;">对应含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>sin()</code></td>
+<td style="text-align: center;">正弦函数</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>cos()</code></td>
+<td style="text-align: center;">余弦函数</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>tan()</code></td>
+<td style="text-align: center;">正切函数</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>cot()</code></td>
+<td style="text-align: center;">余切函数</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>sec()</code></td>
+<td style="text-align: center;">正割函数</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>csc()</code></td>
+<td style="text-align: center;">余割函数</td>
+</tr>
+</tbody>
+</table>
+<p>ps. 反三角函数=<code>a</code>+<code>三角函数</code>，如反正弦为<code>asin()</code></p>
 
 </div>
   </div>
@@ -2998,7 +3015,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-08-06T10:27:41+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-08-06T21:59:36+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年8月6日</p>
@@ -3077,7 +3094,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="prev" href="/2022/08/05/matlab-basic-2/">
           <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Matlab向量与多项式</p>
-          <p class="content">向量是由$n$个数$a_1,a_2,\cdots,a_n$组成的有序数组，记成$a&#x3D;\begin{pmatrix}a_1 \ a_2 \ \vdots \ a_n\end{pmatri...</p>
+          <p class="content">向量是由个数组成的有序数组，记成或，叫做维向量，向量的第个分量称为。
+向量生成与引用
+向量生成
+
+直接输入
+向量用[]扩起来，元素之间用,或空格隔开，;则相当于换行
+冒号法 t = 区间左端点 ...</p>
         </a>
       
       
@@ -3086,8 +3109,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class="content">常用指令
 
 
+
 指令含义
 指令
+
 
 
 
@@ -3107,7 +3132,7 @@ whos
 内存变量详细信息
 
 
-which + 文件...</p>
+which + ...</p>
         </a>
       
     </div>
@@ -4039,7 +4064,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/2.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/1.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.png"];
+  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/1.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/2.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.png","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.png"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4134,60 +4159,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
 <pjax>
-
-        <script>
-  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = "https://unpkg.com/volantis-static@0.0.1654736714924/libs/mathjax/es5/tex-mml-chtml.js";
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    // 文章章节标题不能为 “MathJax” ，否则会报错。
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typesetPromise();
-  }
-</script>
-
-
 
 </pjax>
 
@@ -4408,7 +4379,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/Matlab/","name":"Matlab"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/Matlab/基础教程/","name":"基础教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://pyxblog.cn/2022/08/05/matlab-basic-1/","name":"Matlab基础知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Matlab基础知识","description":"Matlab系列基础教程1-基础知识，包括Matlab中的常量、数据类型、运算符、复数与三角函数的基本用法。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://pyxblog.cn/2022/08/05/matlab-basic-1/"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://pyxblog.cn/2022/08/05/matlab-basic-1/","wordCount":0,"datePublished":"2022-08-05T14:19:06.000Z","dateModified":"2022-08-06T02:27:41.718Z","articleSection":"Matlab","keywords":"Matlab","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/Matlab/","name":"Matlab"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/Matlab/基础教程/","name":"基础教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://pyxblog.cn/2022/08/05/matlab-basic-1/","name":"Matlab基础知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Matlab基础知识","description":"Matlab系列基础教程1-基础知识，包括Matlab中的常量、数据类型、运算符、复数与三角函数的基本用法。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://pyxblog.cn/2022/08/05/matlab-basic-1/"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://pyxblog.cn/2022/08/05/matlab-basic-1/","wordCount":0,"datePublished":"2022-08-05T14:19:06.000Z","dateModified":"2022-08-06T13:59:36.834Z","articleSection":"Matlab","keywords":"Matlab","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
