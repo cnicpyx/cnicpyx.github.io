@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>个人简历-庞宇轩</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/typo.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script>
+        function load() {
+            document.getElementsByClassName('avatar')[0].style.display = 'block';
+            document.getElementsByClassName('load')[0].style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <article class="container">
+
+        <!-- 左边栏 start -->
+        <section class="side" id="side">
+
+            <!-- 左栏固定开关 -->
+            <label class="switch" style="display: none;" onchange="switchFixed()">
+                <script type="text/javaScript">
+                    function switchFixed(){
+                        var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
+                        document.getElementById('side').style.position = value;
+                    }
+                </script>
+                <input id="cb" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <style>
+                @media (min-width: 	750px){
+                    .switch{position:relative;display:inline-block!important;width:60px;height:34px;}
+                    .switch input{display:none;}
+                    .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s;}
+                    .slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:white;-webkit-transition:.4s;transition:.4s;}
+                    input:checked + .slider{background-color:#1abc9c;}
+                    input:focus + .slider{box-shadow:0 0 1px #1abc9c;}
+                    input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px);}.slider.round{border-radius:34px;}
+                    .slider.round:before{border-radius:50%;}
+                }
+            </style>
+            <!-- 左侧固定开关 -->
+
+            <!-- 左边栏-个人肖像 -->
+            <section class="me">
+                <section class="portrait">
+                    <div class="load">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- 头像照片 -->
+                    <img class="avatar" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/zjz.jpg" onload="load()">
+                </section>
+                <h1 class="name">庞宇轩</h1>
+                <h4 class="info-job">中共党员 / 男 / 满族</h4>
+            </section>
+
+            <!-- 左边栏-基本信息 -->
+            <section class="profile info-unit">
+                <h2>
+                    <i class="fa fa-user" aria-hidden="true"></i>基本信息</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>年龄</label>
+                        <span>21岁</span>
+                    </li>
+                    <li>
+                        <label>家乡</label>
+                        <span>山东·青岛</span>
+                    </li>
+                    <li>
+                        <label>本科院校</label>
+                        <span>中国传媒大学</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 左边栏-联系方式 -->
+            <section class="contact info-unit">
+                <h2>
+                    <i class="fa fa-phone" aria-hidden="true"></i>联系方式
+                </h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>手机</label>
+                        <a href="tel:18554851930" target="_blank">185-5485-1930</a>
+                    </li>
+                    <li>
+                        <label>邮箱</label>
+                        <a href="mailto:cuc_pyx@qq.com" target="_blank">cuc_pyx@qq.com</a>
+                    </li>
+                    <li>
+                        <label>个人博客</label>
+                        <a href="https://pyxblog.cn" target="_blank">
+                            <i class="fa fa-link" aria-hidden="true"></i>pyxblog.cn
+                        </a>
+                    </li>
+                    
+                </ul>
+            </section>
+
+            <!-- 左边栏-技能点 -->
+            <section class="skill info-unit">
+                <h2>
+                    <i class="fa fa-code" aria-hidden="true"></i>技能点</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>C/C++</label>
+                        <progress value="95" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>python</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Matlab</label>
+                        <progress value="95" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Java</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>爬虫</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>数据可视化</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>开发</label>
+                        <progress value="78" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>平面设计</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 左边栏-二维码 -->
+            <section class="qrcode info-unit">
+                <h2><i class="fa fa-qrcode" aria-hidden="true"></i>二维码</h2>
+                <hr/>
+                <img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/20220806113444.png" style="width: 100%;" alt="WeChat">
+            </section>
+
+            <!-- 左边栏-认证 -->
+            <div class="stack info-unit">
+                    <h2><i class="fa fa-check" aria-hidden="true"></i>能力认证</h2>
+                    <hr/>
+                    <ul>
+                        <li>
+                            <label>国家工信部</label>
+                            <span>工业互联网平台开发工程师初级 <nobr style='color:gray'>能力2级</nobr></span>
+                        </li>
+                        <li>
+                            <label>国家工信部</label>
+                            <span>工业和信息化人才专业知识测评——数学建模科目</span>
+                        </li>
+                        <li>
+                            <label>国家工信部</label>
+                            <span>工业和信息化人才专业知识测评——Office办公软件科目</span>
+                        </li>
+                        <li>
+                            <label>中国商业联合会</label>
+                            <span>全国商务外语翻译证书-中级笔译</span>
+                        </li>
+                    </ul>
+            </div>
+
+        </section>
+        <!-- 左边栏 End -->
+
+        <!-- ------------------------------------------------------------------------------------------ -->
+
+        <!-- 主页面 Start -->
+        <section class="main">
+
+            <!-- 教育背景 -->
+            <section class="edu info-unit">
+                <h2>
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>教育背景
+                </h2>
+                <hr/>
+                <ul>
+                    <h3>
+                        <span><b>中国传媒大学大学 - 广播电视工程专业</b></span>
+                        <time style='color:gray'>2019.09-至今</time>
+                    </h3>
+                    <li>
+                        <b>学业成绩</b>
+                        <p>
+                            GPA<mark>3.85/4.00</mark>
+                            平均成绩<mark>93</mark>
+                            综合排名<mark>1/82</mark>
+                            绩点排名<mark>2/82</mark>
+                        </p>
+                    </li>
+                    <li>
+                        <b>主修课程</b>
+                        <p>
+                            高等数学<mark>99</mark>｜
+                            C/C++程序设计<mark>100</mark>｜
+                            数据结构与算法<mark>100</mark>｜
+                            计算机网络程序设计<mark>98</mark>｜
+                            概率论与数理统计<mark>95</mark>｜
+                            信息论与编码原理<mark>96</mark>
+                        </p>
+                    </li>
+                    <li>
+                        <b>英语水平</b>
+                        <p>
+                            CET4<mark>593</mark>｜
+                            CET6<mark>472</mark>｜
+                            IELTS<mark>6.5</mark>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- ------------------------------------------------------- -->
+
+            <!-- 项目经历 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-terminal" aria-hidden="true"></i>项目经历
+                </h2>
+                <hr/>
+                <ul>
+                    <!-- MCL -->
+                    <li>
+                        <h3>
+                            <span><b>首届MCL大学生学术训练季</b></span>
+                            <span class="link">
+                                <a href="http://www.cuc.edu.cn/news/2020/0809/c1902a172348/page.htm" target="_blank">课题组</a>
+                            </span>
+                            <time style='color:gray'>2020.08-2021.03</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>
+                                <i class="fa fa-search" aria-hidden="true"></i>科研基础训练
+                            </li>
+                            <li>
+                                <i class="fa fa-book" aria-hidden="true"></i>推荐系统领域经典文献阅读&复现: SVD++, FM, ...
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 国重 -->
+                    <li>
+                        <h3>
+                            <span><b>媒体融合与传播国家重点实验室</b></span>
+                            <span class="link">
+                                <a href="http://mcc.cuc.edu.cn/mcc/default" target="_blank">实验室</a>
+                            </span>
+                            <time style='color:gray'>2020.10-至今</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>
+                                <i class="fa fa-cube" aria-hidden="true"></i>负责项目
+                                <br/>
+                                2021国家级创新训练项目：基于三重态域翻译网络和超分重建的老照片修复 <nobr style='color:gray'>优秀结项</nobr>
+                                <br/>
+                                2022国家级创业训练项目：拾忆——老旧影像修复及内容互动社区
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>产出成果
+                                <br/>
+                                国家发明专利：一种黑白照片自动上色系统 <nobr style='color:gray'>进入实质审查阶段</nobr>
+                                <br/>
+                                国家发明专利：一种老照片修复系统 <nobr style='color:gray'>进入实质审查阶段</nobr>
+                                <br/>
+                                计算机软件著作权4项  <nobr style='color:gray'>已授权，著作权人</nobr>
+                                <br/>
+                                外观设计专利5项  <nobr style='color:gray'>已授权，参与设计</nobr>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 互联网+ -->
+<!--                    <li>-->
+<!--                        <h3>-->
+<!--                            <span><b>「拾忆」“AI+人工”影像精修行业先驱者</b></span>-->
+<!--                            <span class="link">-->
+<!--                                <a href="https://www.shiyirep.com/" target="_blank">大学生创业团队</a>-->
+<!--                            </span>-->
+<!--                            <time style='color:gray'>2021.04-至今</time>-->
+<!--                        </h3>-->
+<!--                        <ul class="info-content">-->
+<!--                            <li>-->
+<!--                                <i class="fa fa-briefcase" aria-hidden="true"></i>-->
+<!--                                商业模式-->
+<!--                                <br/>-->
+<!--                                面向档案馆提供“AI预处理+人工优化”的高效影像精修服务-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <i class="fa fa-users" aria-hidden="true"></i>-->
+<!--                                创业团队-->
+<!--                                <br/>-->
+<!--                                来自国内外10所高校的26名本科生（我担任负责人）-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <i class="fa fa-institution" aria-hidden="true"></i>-->
+<!--                                合作方-->
+<!--                                <br/>-->
+<!--                                北京市朝阳区档案馆、南通市城市建设档案馆、米未传媒等20+机构&企业-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <i class="fa fa-check-square-o" aria-hidden="true"></i>-->
+<!--                                创业成果-->
+<!--                                <br/>-->
+<!--                                参考“所获荣誉”部分-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+
+                </ul>
+            </section>
+
+            <!-- ------------------------------------------------------- -->
+
+            <!-- 所获荣誉 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-trophy" aria-hidden="true"></i>所获荣誉
+                </h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <b>创新创业类</b>
+                        </h3>
+                        <i class="fa fa-star" aria-hidden="true"></i>[负责人]第七届"互联网+"大学生创新创业大赛全国铜奖、北京市金奖
+                        <br/>
+                        <i class="fa fa-star" aria-hidden="true"></i>[负责人]第八届"互联网+"大学生创新创业大赛入围国赛、北京市金奖
+                        <br/>
+                        [成员]2022"挑战杯"首都大学生创业计划竞赛金奖
+                        <br/>
+                        [负责人]首届"京彩大创"北京大学生创新创业大赛"百粒'金种子'项目"
+                        <br/>
+                        [负责人]第四届"京津冀-粤港澳"青年创新创业大赛京津冀赛区银奖
+                    </li>
+                    <li>
+                        <h3>
+                            <b>理工类</b>
+                        </h3>
+                        <i class="fa fa-star" aria-hidden="true"></i>第11届蓝桥杯C/C++程序设计竞赛北京赛区二等奖
+                        <br/>
+                        第12届蓝桥杯C/C++程序设计竞赛北京赛区三等奖
+                        <br/>
+                        <i class="fa fa-star" aria-hidden="true"></i>第13届蓝桥杯C/C++程序设计竞赛北京赛区二等奖
+                        <br/>
+                        第二届全国大学生算法设计与编程挑战赛（冬季赛）季军 <nobr>排名4/3043</nobr>
+                        <br/>
+                        第十届APMCM亚太地区大学生数学建模竞赛二等奖
+                    </li>
+                    <li>
+                        <h3>
+                            <b>设计类</b>
+                        </h3>
+                        第二届铸剑杯·文化创意大赛学生组全国决赛三等奖
+                        <br/>
+                        第三届香港当代设计奖·秋季赛中国大陆赛区银奖
+                        <br/>
+                        <i class="fa fa-star" aria-hidden="true"></i>第四届CYAA青锐奖·两岸青年设计师大赛金奖
+                        <br/>
+                        2022 G-CROSS CREATIVE AWARD - National Finals Bronze
+                        <br/>
+                        2021 BRITISH ECOLOGY DESIGN AWARD - Silver Award
+                    </li>
+                    <li>
+                        <h3>
+                            <b>外语类</b>
+                        </h3>
+                        第四届BETT全国商务英语翻译大赛笔译初赛一等奖
+                        <br/>
+                        第四届BETT全国商务英语翻译大赛笔译复赛三等奖
+                        <br/>
+                        全国大学生英语翻译大赛北京市二等奖
+                    </li>
+                    <li>
+                        <h3>
+                            <b>荣誉称号</b>
+                        </h3>
+                        <i class="fa fa-star" aria-hidden="true"></i>2022年度中传青年五四奖章·科创新秀（全校仅1人）
+                        <br/>
+                        中国传媒大学优秀学生干部
+                        <br/>
+                        中国传媒大学优秀团员、优秀团干部
+                    </li>
+                    <li>
+                        <h3>
+                            <b>奖学金</b>
+                        </h3>
+                        <i class="fa fa-star" aria-hidden="true"></i>2020年度中国电信奖学金·飞Young奖
+                        <br/>
+                        索尼集团（中国）卓越奖学金
+                        <br/>
+                        信通学院一等奖学金、科研竞赛单项奖学金、优秀学生干部单项奖学金
+                    </li>
+                </ul>
+            </section>
+            
+
+            <!-- 学生工作 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-archive" aria-hidden="true"></i>学生工作</h2>
+                <hr/>
+                <li>
+                    担任班长，带领班级获评校级优秀班集体
+                </li>
+                <li>
+                    担任系学生党支部副书记，参与党务工作
+                </li>
+                <li>
+                    担任信通团委实践部技术组组长，参与连续三届毕业生就业质量报告撰写
+                </li>
+            </section>
+        </section>
+    </article>
+
+
+
+    <footer class="footer">
+        <p>© 2022 清弦.文档最后更新时间为
+            <time>2022年08月08日</time>.</p>
+    </footer>
+
+    <!-- 侧栏 -->
+    <aside>
+        <ul>
+            <li>
+                <a href="https://blog.csdn.net/pyx2466079565" target="_blank">csdn主页</a>
+            </li>
+            <li>
+                <a href="https://pyxblog.cn/" target="_blank">清弦小站.</a>
+            </li>
+        </ul>
+    </aside>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
