@@ -9,8 +9,96 @@
 
 
     <url>
-        <loc>https://pyxblog.cn/2022/08/05/matlab-basic-1/</loc>
-        <lastmod>2022-08-06T13:59:36.834Z</lastmod>
+        <loc>https://pyxblog.cn/2022/08/07/python-spider-scrapy3/</loc>
+        <lastmod>2022-08-06T16:18:39.303Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/07/python-spider-scrapy2/</loc>
+        <lastmod>2022-08-06T16:16:02.052Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/07/python-spider-scrapy1/</loc>
+        <lastmod>2022-08-06T16:12:16.581Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/06/python-spider-demo1/</loc>
+        <lastmod>2022-08-06T16:06:17.936Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/06/latex-toolbook/</loc>
+        <lastmod>2022-08-06T15:55:48.414Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/06/pytorch-demo-2/</loc>
+        <lastmod>2022-08-06T15:44:48.720Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/06/pytorch-demo-1/</loc>
+        <lastmod>2022-08-06T15:44:45.804Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/06/python-basic/</loc>
+        <lastmod>2022-08-06T15:30:10.360Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/06/matlab-basic-6/</loc>
+        <lastmod>2022-08-06T15:26:06.922Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/06/matlab-basic-5/</loc>
+        <lastmod>2022-08-06T15:09:29.031Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/06/matlab-basic-3/</loc>
+        <lastmod>2022-08-06T15:06:09.966Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/08/06/matlab-basic-4/</loc>
+        <lastmod>2022-08-06T15:04:04.016Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,15 +106,7 @@
 
     <url>
         <loc>https://pyxblog.cn/2022/08/05/matlab-basic-2/</loc>
-        <lastmod>2022-08-06T13:59:29.722Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://pyxblog.cn/2022/08/02/test/</loc>
-        <lastmod>2022-08-06T02:27:41.719Z</lastmod>
+        <lastmod>2022-08-06T14:47:29.258Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -34,15 +114,15 @@
 
     <url>
         <loc>https://pyxblog.cn/2022/08/05/matlab-basic-0/</loc>
-        <lastmod>2022-08-06T02:27:41.718Z</lastmod>
+        <lastmod>2022-08-06T14:29:58.062Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://pyxblog.cn/2022/08/06/hello-world/</loc>
-        <lastmod>2022-08-06T02:27:41.717Z</lastmod>
+        <loc>https://pyxblog.cn/2022/08/05/matlab-basic-1/</loc>
+        <lastmod>2022-08-06T13:59:36.834Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
