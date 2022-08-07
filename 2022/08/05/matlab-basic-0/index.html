@@ -1769,7 +1769,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.26f8a394.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1659855573819),
+    lastupdate: new Date(1659856227166),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud"],
       for_post: ["blogger","toc","feedback"],
@@ -2650,78 +2650,82 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="常用指令">常用指令</h2>
-<table>
+    <div class="story post-story"><h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><table>
 <thead>
-<tr class="header">
+<tr>
 <th>指令含义</th>
 <th>指令</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
+<tbody><tr>
 <td><code>help</code>+<code>函数名</code></td>
 <td>精确查询函数</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>lookfor</code>+<code>函数信息</code></td>
 <td>模糊查询函数</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>who</code></td>
 <td>内存变量列表</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>whos</code></td>
 <td>内存变量详细信息</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>which</code> + <code>文件名</code></td>
 <td>查找文件位置</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>exist</code>+<code>变量名</code></td>
 <td>判断变量是否存在</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>path</code></td>
 <td>查看当前所有路径</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>addpath</code>+<code>路径</code></td>
 <td>添加路径</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>clc</code></td>
 <td>清除命令行</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>clear</code></td>
 <td>清除内存变量</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>close all</code></td>
 <td>关闭所有窗口</td>
 </tr>
-</tbody>
-</table>
-</div><div class="story post-story"><h2 id="应用示例">应用示例</h2>
-<ol type="1">
+</tbody></table>
+</div><div class="story post-story"><h2 id="应用示例"><a href="#应用示例" class="headerlink" title="应用示例"></a>应用示例</h2><ol>
 <li><p>使用 <code>help</code> 指令查询函数用法</p>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220805214704011.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220805214704011.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220805214704011" style="zoom:30%;"></p>
-<p>如同所示，使用 <code>help</code> 指令查询已知函数名的任意函数用法，其中大部分常用函数均有官方的中文版用法详解及相关实例，少部分尚未完成汉化（英文版文档），但也可以通过实例看懂。</p></li>
+ <img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220805214704011.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220805214704011.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220805214704011" style="zoom:30%;">
+ 
+ 
+<p> 如同所示，使用 <code>help</code> 指令查询已知函数名的任意函数用法，其中大部分常用函数均有官方的中文版用法详解及相关实例，少部分尚未完成汉化（英文版文档），但也可以通过实例看懂。</p>
+</li>
 <li><p>使用 <code>lookfor</code> 指令查找相关函数</p>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220805215002683.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220805215002683.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220805215002683" style="zoom:30%;"></p>
-<p>如同所示，使用 <code>help</code> 指令查询与 <code>plot</code> 相关的函数，会输出函数名/函数描述中带有"plot"字段的所有结果以供查看。</p></li>
+ <img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220805215002683.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220805215002683.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220805215002683" style="zoom:30%;">
+ 
+ 
+<p> 如同所示，使用 <code>help</code> 指令查询与 <code>plot</code> 相关的函数，会输出函数名&#x2F;函数描述中带有”plot”字段的所有结果以供查看。</p>
+</li>
 <li><p>一般情况下，在主函数中前三行会写：</p>
-<p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">close all</span><br><span class="line">clc</span><br></pre></td></tr></table></figure></p>
-<p>作用是在主函数最开始依次执行：</p>
+ <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">close all</span><br><span class="line">clc</span><br></pre></td></tr></table></figure>
+
+<p> 作用是在主函数最开始依次执行：</p>
 <ul>
 <li>清除内存变量</li>
 <li>关闭之前打开的图形窗口</li>
 <li>清空命令行（上一次运行代码的输入输出）</li>
 </ul>
-<p>大家可以养成习惯哦！</p></li>
+<p> 大家可以养成习惯哦！</p>
+</li>
 </ol>
 
 </div>
@@ -2847,10 +2851,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class="content">常量
 
 
-
 常量名称
 对应含义
-
 
 
 
@@ -2871,7 +2873,7 @@ NaN(nan)
 
 
 i(j)
-复...</p>
+复数中...</p>
         </a>
       
       
@@ -3779,7 +3781,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg"];
+  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
