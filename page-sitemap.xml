@@ -10,8 +10,8 @@
     
     
     <url>
-        <loc>https://pyxblog.cn/share/</loc>
-        <lastmod>2022-08-06T02:27:41.720Z</lastmod>
+        <loc>https://pyxblog.cn/about/</loc>
+        <lastmod>2022-08-07T06:54:24.922Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -28,7 +28,7 @@
     
     
     <url>
-        <loc>https://pyxblog.cn/tags/</loc>
+        <loc>https://pyxblog.cn/share/</loc>
         <lastmod>2022-08-06T02:27:41.720Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -37,8 +37,8 @@
     
     
     <url>
-        <loc>https://pyxblog.cn/about/</loc>
-        <lastmod>2022-08-06T02:27:41.719Z</lastmod>
+        <loc>https://pyxblog.cn/tags/</loc>
+        <lastmod>2022-08-06T02:27:41.720Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
