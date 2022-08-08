@@ -28,7 +28,7 @@
     
     
     <url>
-        <loc>https://pyxblog.cn/tags/</loc>
+        <loc>https://pyxblog.cn/share/</loc>
         <lastmod>2022-08-06T02:27:41.720Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -37,7 +37,7 @@
     
     
     <url>
-        <loc>https://pyxblog.cn/share/</loc>
+        <loc>https://pyxblog.cn/tags/</loc>
         <lastmod>2022-08-06T02:27:41.720Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
