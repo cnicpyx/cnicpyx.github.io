@@ -11,7 +11,16 @@
     
     <url>
         <loc>https://pyxblog.cn/about/</loc>
-        <lastmod>2022-08-17T10:39:16.851Z</lastmod>
+        <lastmod>2022-08-17T11:50:24.097Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://pyxblog.cn/friends/</loc>
+        <lastmod>2022-08-06T02:27:41.720Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -29,15 +38,6 @@
     
     <url>
         <loc>https://pyxblog.cn/tags/</loc>
-        <lastmod>2022-08-06T02:27:41.720Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://pyxblog.cn/friends/</loc>
         <lastmod>2022-08-06T02:27:41.720Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
