@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://pyxblog.cn/tags/html/">
+  
+  <link rel="canonical" href="https://pyxblog.cn/2022/09/22/rgb-hist/">
   <!-- 渲染优化 -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
       <link rel="dns-prefetch" href="https://unpkg.com">
@@ -33,18 +33,23 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="清弦小站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>标签：html - 清弦小站</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="BLOG - 庞宇轩 - 清弦小站">
+  <title>RGB文件三通道分量熵计算 - 清弦小站</title>
+  <meta name="keywords" content="python,numpy,matplotlib,null">
+  <meta desc name="description" content="基于python的RGB三通道分量熵计算参考代码。 - 庞宇轩 - 清弦小站">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="清弦小站">
-<meta property="og:url" content="https://pyxblog.cn/tags/html/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RGB文件三通道分量熵计算">
+<meta property="og:url" content="https://pyxblog.cn/2022/09/22/rgb-hist/index.html">
 <meta property="og:site_name" content="清弦小站">
-<meta property="og:description" content="BLOG">
+<meta property="og:description" content="基于python的RGB三通道分量熵计算参考代码。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-09-22T02:36:41.000Z">
+<meta property="article:modified_time" content="2022-09-22T02:51:21.048Z">
 <meta property="article:author" content="庞宇轩">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="numpy">
+<meta property="article:tag" content="matplotlib">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2497,7 +2502,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class="cover-wrapper  search" style="display: none;">
+      <div id="none" class="cover-wrapper post search" style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2563,25 +2568,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2022/09/06/resume/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-post" id="post" itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2022/09/22/rgb-hist/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="清弦小站">
   </span>
@@ -2590,64 +2579,253 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="BLOG">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/09/06/resume/" itemprop="url">
-        手把手教你制作在线简历
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
     
-      <p>使用Gitee Pages服务制作自己的在线简历，拥有良好的移动端和PC端适配性，零基础、零成本，快来试试吧！</p>
     
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
+      <h1 class="title" itemprop="name headline">
+        RGB文件三通道分量熵计算
+      </h1>
+      <div class="new-meta-box">
         
-        <time itemprop="dateCreated datePublished" datetime="2022-09-06T21:51:56+08:00">2022-09-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a>
           
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" itemprop="url"><span itemprop="name">小技巧</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/09/06/resume/" itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
+            
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/" rel="nofollow">
+    <img itemprop="image" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/avatar.jpeg" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/avatar.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">清弦.</p>
+  </a>
 </div>
 
+          
+        
+          
+            
+  <div class="new-meta-item category">
+    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/">数据压缩</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/" itemprop="url"><span itemprop="name">数据压缩</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-22T10:36:41+08:00">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年9月22日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>基于python的RGB三通道分量熵计算参考代码。</p>
+<div class="story post-story"><h2 id="素材">素材</h2>
+<p>测试图像下载地址：</p>
+<div class="btns circle grid4 center">
+            
+<a href="https://cowtransfer.com/s/b770911499254c" target="_blank" rel="external nofollow noopener noreferrer">
+
+<svg t="1663814639278" class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3569" width="40" height="40"><path d="M536.333474 724.156632a26.785684 26.785684 0 0 1-28.348632-28.348632V109.082947a28.348632 28.348632 0 1 1 56.589474 0v589.554527a27.971368 27.971368 0 0 1-28.240842 25.519158z" fill="#208BB5" p-id="3570"/><path d="M536.333474 797.857684l-269.258106-246.595368a28.133053 28.133053 0 0 1 36.837053-42.522948l229.48379 212.533895 229.591578-212.587789a28.133053 28.133053 0 0 1 36.837053 42.522947z" fill="#208BB5" p-id="3571"/><path d="M833.940211 959.299368H235.870316a28.348632 28.348632 0 0 1 0-56.589473h598.069895a28.348632 28.348632 0 1 1 0 56.589473z" fill="#83D2EA" p-id="3572"/></svg>
+
+<b style="font-size:15px">Download test.rgb</b>
+
+<p class="p ">256px<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.02ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.09ex" role="img" focusable="false" viewbox="0 -491 778 482"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"/></g></g></g></svg></mjx-container>256px</p>
+
+</a>
+
+          </div>
+<hr>
+</div><div class="story post-story"><h2 id="代码">代码</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">eps = np.spacing(<span class="number">1</span>)  <span class="comment"># 浮点精度，用于防止log(0)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图像，转化为256*256*3</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">"test.rgb"</span>, <span class="string">"rb"</span>)</span><br><span class="line">data = f.read( )</span><br><span class="line">f.close( )</span><br><span class="line">data = [<span class="built_in">int</span>(x) <span class="keyword">for</span> x <span class="keyword">in</span> data]</span><br><span class="line">data = np.array(data).reshape((<span class="number">256</span>, <span class="number">256</span>, <span class="number">3</span>)).astype(np.uint8)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制原图和三通道图像预览</span></span><br><span class="line">fig_img = plt.subplots(<span class="number">1</span>, <span class="number">4</span>)</span><br><span class="line">plt.subplot(<span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>)</span><br><span class="line">plt.imshow(data)</span><br><span class="line">plt.title(<span class="string">"original"</span>)</span><br><span class="line">plt.axis(<span class="string">'off'</span>)</span><br><span class="line">plt.subplot(<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>)</span><br><span class="line">plt.imshow(data[:, :, <span class="number">0</span>], cmap=<span class="string">"gray"</span>)</span><br><span class="line">plt.title(<span class="string">"r"</span>)</span><br><span class="line">plt.axis(<span class="string">'off'</span>)</span><br><span class="line">plt.subplot(<span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>)</span><br><span class="line">plt.imshow(data[:, :, <span class="number">1</span>], cmap=<span class="string">"gray"</span>)</span><br><span class="line">plt.title(<span class="string">"g"</span>)</span><br><span class="line">plt.axis(<span class="string">'off'</span>)</span><br><span class="line">plt.subplot(<span class="number">1</span>, <span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line">plt.imshow(data[:, :, <span class="number">2</span>], cmap=<span class="string">"gray"</span>)</span><br><span class="line">plt.title(<span class="string">"b"</span>)</span><br><span class="line">plt.axis(<span class="string">'off'</span>)</span><br><span class="line">plt.suptitle(<span class="string">'image show'</span>)</span><br><span class="line">plt.show( )</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制三通道直方图</span></span><br><span class="line">fig_hist = plt.subplots(<span class="number">3</span>, <span class="number">1</span>)</span><br><span class="line">plt.subplot(<span class="number">3</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">plt.hist(data[:, :, <span class="number">0</span>])</span><br><span class="line">plt.title(<span class="string">'r'</span>)</span><br><span class="line">plt.subplot(<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">plt.hist(data[:, :, <span class="number">1</span>])</span><br><span class="line">plt.title(<span class="string">'g'</span>)</span><br><span class="line">plt.subplot(<span class="number">3</span>, <span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line">plt.hist(data[:, :, <span class="number">2</span>])</span><br><span class="line">plt.title(<span class="string">'b'</span>)</span><br><span class="line">plt.suptitle(<span class="string">'hist'</span>)</span><br><span class="line">plt.show( )</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算概率分布</span></span><br><span class="line">p = np.zeros([<span class="number">3</span>, <span class="number">256</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">256</span>):</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">256</span>):</span><br><span class="line">            index = data[k][j][i]</span><br><span class="line">            p[i][index] = p[i][index] + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算熵</span></span><br><span class="line">H = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    tot = p[i].<span class="built_in">sum</span>( )</span><br><span class="line">    p[i] = p[i] / tot</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">256</span>):</span><br><span class="line">        H[i] = H[i] - p[i][j] * np.log2(p[i][j] + eps)</span><br><span class="line"><span class="built_in">print</span>(H)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+</div><div class="story post-story"><h2 id="结果">结果</h2>
+<p>实验图像：</p>
+<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220922104756473.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220922104756473.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220922104756473" style="zoom:30%;"></p>
+<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220922104833020.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220922104833020.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220922104833020" style="zoom:30%;"></p>
+<p>计算结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">6.856861210882921</span>, <span class="number">7.178462484835032</span>, <span class="number">7.229552890551773</span>]</span><br></pre></td></tr></table></figure>
+
+</div>
+  </div>
+  
+  
+    
+    <div class="footer">
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          <div class="copyright">
+            <blockquote>
+              
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+                
+              
+                
+                  <p>本文永久链接是：<a href="https://pyxblog.cn/2022/09/22/rgb-hist/">https://pyxblog.cn/2022/09/22/rgb-hist/</a></p>
+                
+              
+            </blockquote>
           </div>
         
       
-    
-  </section>
+      <!-- 打赏组件 -->
+      
+    </div>
+  
   
     
+
+
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-22T10:51:21+08:00">
+  <a class="notlink">
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年9月22日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/numpy/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>numpy</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/matplotlib/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>matplotlib</p></a></div>
+  <span hidden itemprop="keywords">python numpy matplotlib</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title rel="external nofollow noopener noreferrer" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://pyxblog.cn/2022/09/22/rgb-hist/&title=RGB文件三通道分量熵计算 - 清弦小站&summary=">
+          
+            <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title rel="external nofollow noopener noreferrer" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://pyxblog.cn/2022/09/22/rgb-hist/&title=RGB文件三通道分量熵计算 - 清弦小站&summary=">
+          
+            <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title rel="external nofollow noopener noreferrer" target="_blank" href="http://service.weibo.com/share/share.php?url=https://pyxblog.cn/2022/09/22/rgb-hist/&title=RGB文件三通道分量熵计算 - 清弦小站&summary=">
+          
+            <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        
+        <div class="hoverbox">
+          <a class="share"><img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC9ElEQVR42u3ay43DMAwFQPff9G4DCcSfjTAZ3YzIijS+PJC6/oyX40IABgwYMGDArIG5iuPtwsF5xw0G/+f0/9nzgAEDBgwYMGD2wXQ3nAU5rRN97/Sc3QcYMGDAgAEDZi/MMQAFn6sHrwa+sfOAAQMGDBgwYH4OJjp/KuDdtT8wYMCAAQMGzO/CZNedaqyBAQMGDBgwYMBUC0HRIJadv7YTCQYMGDBgwIB5DCY7qht96rl8HjBgwIABAwbMGpjumA6I3Q/TPg8YMGDAgAEDZg1Md2PZAtUUxNR6YMCAAQMGDJi9MHdd7JlupE1dKApfHAIDBgwYMGDArIHpFqaiG60WnLLrl8HBgAEDBgwYMGtgosFr+oLO1AGnCltgwIABAwYMmL0w0cLR6YDZdbLBrrrf6L7BgAEDBgwYMHtgooGuCpctTFULUunG2rt5YMCAAQMGDJg1MN2CU7cQNdUw6xaswIABAwYMGDD7YKIb6DbMsg2+6nvV38GAAQMGDBgw+2CyganayMquX/0g7YIbGDBgwIABA+ZrYLoXeLoFrex+uo0/MGDAgAEDBswemG7jKhvEuhd87gICAwYMGDBgwOyFyRac7gpqUw288kUlMGDAgAEDBswamGwjbbqw1b0A1IU7XhwCAwYMGDBgwHw8TDXIZd+760NMBVUwYMCAAQMGzF6YqcJPe4PFIFlt9IEBAwYMGDBg9sNEG17dBthUw60KAgYMGDBgwID5PpjshaBqg6w7Lxs8w6BgwIABAwYMmDUw3dENXlMfqFoAe9twAwMGDBgwYMB8PMzdjbRu4SgbLKPP4UIVGDBgwIABA+bjYboHfKrgNAUaDnhgwIABAwYMmDUw0wEqC1QtaE0FUzBgwIABAwbM78JUg9YUSHa9xwIeGDBgwIABA2YNTDX4dRt6p3WPhS0wYMCAAQMGzFqYbMNtCngqyFXfBwMGDBgwYMDshak2rq6bx1SQC38YMGDAgAEDBswaGAMMGDBgwIABs2z8A+LIZJ2zPY0PAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class="next" href="/2022/09/06/resume/">
+          <p class="title">手把手教你制作在线简历<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">这篇教程教你制作的简历本质上是部署在Gitee上，依赖Gitee Pages服务的静态页面，制作它需要的知识仅包括前端三件套，即HTML、CSS和Javascript。当然，即使你没有任何基础，...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
+  <article class="post white-box shadow floatable" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2022/09/22/rgb-hist/index.html#comments">
+    </span>
+    <p ct><i class="fas fa-comments"></i> 评论</p>
     
-  
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2681,6 +2859,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </section>
 
+    
+  
+
+  
+    
+    
+      
     
   
 
@@ -2737,83 +2922,41 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
   
 
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href="/blog/categories/"><i class="fas fa-align-left fa-fw" aria-hidden="true"></i><span class="name">专栏</span></a>
-    
-  </header>
-
-
-    <div class="content">
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box" title="/categories/Matlab/" href="/categories/Matlab/" active-action="action-categoriesMatlab"><div class="name">Matlab</div><div class="badge">(7)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/Matlab/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" href="/categories/Matlab/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" active-action="action-categoriesMatlabE59FBAE7A180E69599E7A88B"><div class="name">基础教程</div><div class="badge">(7)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/markdown%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" href="/categories/markdown%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" active-action="action-categoriesmarkdownE7B3BBE58897E69599E7A88B"><div class="name">markdown系列教程</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/python/" href="/categories/python/" active-action="action-categoriespython"><div class="name">python</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/python/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" href="/categories/python/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" active-action="action-categoriespythonE59FBAE7A180E69599E7A88B"><div class="name">基础教程</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" active-action="action-categoriesE5B08FE68A80E5B7A7"><div class="name">小技巧</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/" href="/categories/%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/" active-action="action-categoriesE695B0E68DAEE58E8BE7BCA9"><div class="name">数据压缩</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0"><div class="name">深度学习</div><div class="badge">(2)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%AE%9E%E6%88%98demo/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%AE%9E%E6%88%98demo/" active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0E5AE9EE68898demo"><div class="name">实战demo</div><div class="badge">(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E7%88%AC%E8%99%AB/" href="/categories/%E7%88%AC%E8%99%AB/" active-action="action-categoriesE788ACE899AB"><div class="name">爬虫</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/" href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/" active-action="action-categoriesE788ACE899ABE5AE9EE68898"><div class="name">实战</div><div class="badge">(4)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href="/blog/tags/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class="name">热门标签</span></a>
-    
-  </header>
-
-
-    <div class="content">
-      <a href="/tags/Matlab/" style="font-size: 22px; color: #636363">Matlab</a> <a href="/tags/PyTorch/" style="font-size: 16px; color: #8b8b8b">PyTorch</a> <a href="/tags/html/" style="font-size: 14px; color: #999">html</a> <a href="/tags/latex/" style="font-size: 14px; color: #999">latex</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/matplotlib/" style="font-size: 14px; color: #999">matplotlib</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/scrapy/" style="font-size: 18px; color: #7e7e7e">scrapy</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 16px; color: #8b8b8b">深度学习</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 20px; color: #707070">爬虫</a>
-    </div>
-  </section>
-
-
-    
-  
-
 
 <div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
+    
+  </header>
+
+
+    <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A0%E6%9D%90"><span class="toc-text">素材</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C"><span class="toc-text">结果</span></a></li></ol>
+    </div>
+  </section>
+
+  
 
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2841,13 +2984,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3898,7 +4042,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/tags/html/","name":"html"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"BLOG","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/数据压缩/","name":"数据压缩"}},{"@type":"ListItem","position":3,"item":{"@id":"https://pyxblog.cn/2022/09/22/rgb-hist/","name":"RGB文件三通道分量熵计算"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"RGB文件三通道分量熵计算","description":"基于python的RGB三通道分量熵计算参考代码。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://pyxblog.cn/2022/09/22/rgb-hist/"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://pyxblog.cn/2022/09/22/rgb-hist/","wordCount":0,"datePublished":"2022-09-22T02:36:41.000Z","dateModified":"2022-09-22T02:51:21.048Z","articleSection":"数据压缩","keywords":"python,numpy,matplotlib","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
