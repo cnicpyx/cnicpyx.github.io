@@ -10,6 +10,15 @@
     
     
     <url>
+        <loc>https://pyxblog.cn/python-homework/chapter3_2/</loc>
+        <lastmod>2022-10-08T12:59:53.058Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://pyxblog.cn/portfolio/</loc>
         <lastmod>2022-10-03T11:31:25.886Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,15 +48,6 @@
     <url>
         <loc>https://pyxblog.cn/report/0824/</loc>
         <lastmod>2022-08-31T13:09:59.304Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://pyxblog.cn/report0824/</loc>
-        <lastmod>2022-08-25T17:08:59.203Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
