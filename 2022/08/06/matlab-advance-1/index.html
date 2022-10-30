@@ -1769,7 +1769,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.26f8a394.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1666527815904),
+    lastupdate: new Date(1667143478408),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud"],
       for_post: ["blogger","toc","feedback"],
@@ -2652,6 +2652,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <p>Matlab进阶教程1-二维绘图，包含基本的绘图函数，坐标系的切换，图形窗口，图形标注及特殊图形的绘制（饼图、条形图等）。</p>
 <span id="more"></span>
+
+
+
 <p>Matlab基础教程系列：</p>
 <div class="btns circle grid3 center">
             
@@ -2704,222 +2707,235 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </a>
 
           </div>
-<div class="story post-story"><h2 id="基本绘图函数">基本绘图函数</h2>
-<h3 id="plot">plot</h3>
-<p>最基本的绘图函数。执行<code>plot</code>函数时，若当前已有图形窗口，则将图画在现有图形窗口上，<strong>覆盖</strong>原有图形；若当前没有图形窗口，则自动创建新的图形窗口。</p>
+
+<div class="story post-story"><h2 id="基本绘图函数"><a href="#基本绘图函数" class="headerlink" title="基本绘图函数"></a>基本绘图函数</h2><h3 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h3><p>最基本的绘图函数。执行<code>plot</code>函数时，若当前已有图形窗口，则将图画在现有图形窗口上，<strong>覆盖</strong>原有图形；若当前没有图形窗口，则自动创建新的图形窗口。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(X,Y);  <span class="comment">% 创建以X为自变量、Y为因变量的二维线图</span></span><br></pre></td></tr></table></figure>
+
 <p><code>X</code>和<code>Y</code>必须是<strong>同维向量</strong>，绘制以<code>X</code>为横坐标、<code>Y</code>为纵坐标的曲线。若：</p>
 <ul>
 <li><p><strong><code>X</code>是向量，<code>Y</code>是矩阵，则<code>X</code>的维数应与<code>Y</code>的某一维相等</strong>，绘制多条颜色不同的曲线，曲线数等于<code>Y</code>的另一维数，<code>X</code>则仍作为横坐标。当<code>Y</code>是方阵时，<strong>Matlab会优先处理列</strong>，即绘制<code>Y</code>的每一列对<code>X</code>的曲线。</p>
-<p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span>:<span class="number">0.01</span>:<span class="number">10</span>;  <span class="comment">% 1*1001</span></span><br><span class="line">y = [<span class="built_in">sin</span>(x);<span class="built_in">sin</span>(x)+<span class="number">1</span>;<span class="built_in">sin</span>(x)<span class="number">-1</span>];  <span class="comment">% 3*1001</span></span><br><span class="line"><span class="built_in">plot</span>(x,y); grid on; <span class="comment">% 3条曲线</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221110402401.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221110402401.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221110402401" style="zoom:33%;"></p></li>
-<li><p><code>X</code>是矩阵，<code>Y</code>是向量时，规则同上，但<strong><code>Y</code>会被当作横坐标</strong></p></li>
-<li><p><code>X</code>与<code>Y</code>皆为矩阵时，要求二者必须<strong>同维</strong>，以<code>X</code>的<strong>每一列</strong>作为横坐标、以<code>Y</code>对应对列元素作为纵坐标绘制曲线，曲线数等于列数。</p></li>
+  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span>:<span class="number">0.01</span>:<span class="number">10</span>;  <span class="comment">% 1*1001</span></span><br><span class="line">y = [<span class="built_in">sin</span>(x);<span class="built_in">sin</span>(x)+<span class="number">1</span>;<span class="built_in">sin</span>(x)<span class="number">-1</span>];  <span class="comment">% 3*1001</span></span><br><span class="line"><span class="built_in">plot</span>(x,y); grid on; <span class="comment">% 3条曲线</span></span><br></pre></td></tr></table></figure>
+
+  <img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221110402401.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221110402401.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221110402401" style="zoom:33%;">
+</li>
+<li><p><code>X</code>是矩阵，<code>Y</code>是向量时，规则同上，但**<code>Y</code>会被当作横坐标**</p>
+</li>
+<li><p><code>X</code>与<code>Y</code>皆为矩阵时，要求二者必须<strong>同维</strong>，以<code>X</code>的<strong>每一列</strong>作为横坐标、以<code>Y</code>对应对列元素作为纵坐标绘制曲线，曲线数等于列数。</p>
+</li>
 </ul>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(x,y,LineSpec);  <span class="comment">% 设置线型、标记符号和颜色</span></span><br><span class="line"><span class="built_in">plot</span>(x,y,<span class="string">&#x27;--or&#x27;</span>);  <span class="comment">% 带有圆形标记的红色虚线</span></span><br></pre></td></tr></table></figure>
+
 <p><code>LineSpec</code>是一个字符串，可以包含上述若干要素，基本线型、标记和颜色如下：</p>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">线型</th>
-<th style="text-align: center;">说明</th>
+<tr>
+<th align="center">线型</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>-(default)</code></td>
-<td style="text-align: center;">实线</td>
+<tbody><tr>
+<td align="center"><code>-(default)</code></td>
+<td align="center">实线</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>--</code></td>
-<td style="text-align: center;">虚线</td>
+<tr>
+<td align="center"><code>--</code></td>
+<td align="center">虚线</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>:</code></td>
-<td style="text-align: center;">点线</td>
+<tr>
+<td align="center"><code>:</code></td>
+<td align="center">点线</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>-.</code></td>
-<td style="text-align: center;">点划线</td>
+<tr>
+<td align="center"><code>-.</code></td>
+<td align="center">点划线</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">颜色</th>
-<th style="text-align: center;">说明</th>
+<tr>
+<th align="center">颜色</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>w</code></td>
-<td style="text-align: center;">白 white</td>
+<tbody><tr>
+<td align="center"><code>w</code></td>
+<td align="center">白 white</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>y</code></td>
-<td style="text-align: center;">黄 yellow</td>
+<tr>
+<td align="center"><code>y</code></td>
+<td align="center">黄 yellow</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>c</code></td>
-<td style="text-align: center;">青 cyan</td>
+<tr>
+<td align="center"><code>c</code></td>
+<td align="center">青 cyan</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>g</code></td>
-<td style="text-align: center;">绿 green</td>
+<tr>
+<td align="center"><code>g</code></td>
+<td align="center">绿 green</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>m</code></td>
-<td style="text-align: center;">品 magenta</td>
+<tr>
+<td align="center"><code>m</code></td>
+<td align="center">品 magenta</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>r</code></td>
-<td style="text-align: center;">红 red</td>
+<tr>
+<td align="center"><code>r</code></td>
+<td align="center">红 red</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>b</code></td>
-<td style="text-align: center;">蓝 blue</td>
+<tr>
+<td align="center"><code>b</code></td>
+<td align="center">蓝 blue</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>k</code></td>
-<td style="text-align: center;">黑 black</td>
+<tr>
+<td align="center"><code>k</code></td>
+<td align="center">黑 black</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">标记</th>
-<th style="text-align: center;">说明</th>
+<tr>
+<th align="center">标记</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>o</code></td>
-<td style="text-align: center;">圆圈</td>
+<tbody><tr>
+<td align="center"><code>o</code></td>
+<td align="center">圆圈</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>+</code></td>
-<td style="text-align: center;">加号</td>
+<tr>
+<td align="center"><code>+</code></td>
+<td align="center">加号</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>*</code></td>
-<td style="text-align: center;">星号</td>
+<tr>
+<td align="center"><code>*</code></td>
+<td align="center">星号</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>.</code></td>
-<td style="text-align: center;">点</td>
+<tr>
+<td align="center"><code>.</code></td>
+<td align="center">点</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>x</code></td>
-<td style="text-align: center;">叉号</td>
+<tr>
+<td align="center"><code>x</code></td>
+<td align="center">叉号</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>s</code></td>
-<td style="text-align: center;">方形 square</td>
+<tr>
+<td align="center"><code>s</code></td>
+<td align="center">方形 square</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>p</code></td>
-<td style="text-align: center;">五角形 pentagonal</td>
+<tr>
+<td align="center"><code>p</code></td>
+<td align="center">五角形 pentagonal</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>d</code></td>
-<td style="text-align: center;">菱形 diamond</td>
+<tr>
+<td align="center"><code>d</code></td>
+<td align="center">菱形 diamond</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>^</code></td>
-<td style="text-align: center;">上三角</td>
+<tr>
+<td align="center"><code>^</code></td>
+<td align="center">上三角</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>v</code></td>
-<td style="text-align: center;">下三角</td>
+<tr>
+<td align="center"><code>v</code></td>
+<td align="center">下三角</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>&gt;</code></td>
-<td style="text-align: center;">右三角</td>
+<tr>
+<td align="center"><code>&gt;</code></td>
+<td align="center">右三角</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>&lt;</code></td>
-<td style="text-align: center;">左三角</td>
+<tr>
+<td align="center"><code>&lt;</code></td>
+<td align="center">左三角</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>h</code></td>
-<td style="text-align: center;">六角形 hexagon</td>
+<tr>
+<td align="center"><code>h</code></td>
+<td align="center">六角形 hexagon</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>ps. 如果仅指定标记而忽略线型，则绘图时不会显示线条，只显示标记。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(x1,y1,...,xn,yn);  <span class="comment">% 在同一个坐标区域内绘制多张图</span></span><br><span class="line"><span class="built_in">plot</span>(x1,y1,LineSpec1,...,xn,yn,LineSpecn);</span><br></pre></td></tr></table></figure>
+
 <p>也可以使用<code>hold on</code>命令，将不同的图画在同一个坐标系里。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(y);  <span class="comment">% 创建以y中数据为因变量、相应索引为自变量的二维线图</span></span><br><span class="line"><span class="built_in">plot</span>(y,LineSpec)</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>若<code>y</code>是实向量，则x轴刻度范围为<span class="math inline">\([1,length(y)]\)</span></li>
+<li>若<code>y</code>是实向量，则x轴刻度范围为$[1,length(y)]$</li>
 <li>若<code>y</code>是实矩阵，则按列绘制曲线，相当于<code>plot(索引矩阵,y)</code>，自变量为索引</li>
 <li>若<code>y</code>是复矩阵，则按列绘制曲线，相当于<code>plot(real(y),imag(y))</code>，<strong>自变量为实部，因变量为虚部</strong></li>
 </ul>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(ax,_);  <span class="comment">% 指定坐标范围</span></span><br><span class="line"><span class="built_in">plot</span>(_,Name,Value);  <span class="comment">% 使用一个或多个(Name,Value)对，单独指定某些属性的值</span></span><br><span class="line">h = <span class="built_in">plot</span>(_);  <span class="comment">% 用变量h将图形储存，可以通过改变h的属性来实时修改图形</span></span><br></pre></td></tr></table></figure>
+
 <p>图形线条属性可以通过输出<code>h</code>来查看：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">          Color: [<span class="number">0.8500</span> <span class="number">0.3250</span> <span class="number">0.0980</span>]  <span class="comment">% 颜色</span></span><br><span class="line">      LineStyle: <span class="string">&#x27;-&#x27;</span>                     <span class="comment">% 线型</span></span><br><span class="line">      LineWidth: <span class="number">0.5000</span>                  <span class="comment">% 线宽</span></span><br><span class="line">         Marker: <span class="string">&#x27;none&#x27;</span>                  <span class="comment">% 符号</span></span><br><span class="line">     MarkerSize: <span class="number">6</span>                       <span class="comment">% 符号大小</span></span><br><span class="line">MarkerFaceColor: <span class="string">&#x27;none&#x27;</span>                  <span class="comment">% 符号填充颜色</span></span><br><span class="line">          XData: [<span class="number">1</span>×<span class="number">1001</span> double]         <span class="comment">% x轴数据</span></span><br><span class="line">          YData: [<span class="number">1</span>×<span class="number">1001</span> double]         <span class="comment">% y轴数据</span></span><br><span class="line">          ZData: [<span class="number">1</span>×<span class="number">0</span> double]            <span class="comment">% z轴数据</span></span><br></pre></td></tr></table></figure>
+
 <p>修改示例如下：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span>:<span class="number">0.01</span>:<span class="number">10</span>;</span><br><span class="line">y = [<span class="built_in">sin</span>(x);<span class="built_in">cos</span>(x)];</span><br><span class="line">h = <span class="built_in">plot</span>(x,y);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221115321302.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221115321302.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221115321302" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221115321302.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221115321302.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221115321302" style="zoom:33%;">
+
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; h(<span class="number">2</span>).YData = <span class="number">0.1</span>*x;  <span class="comment">% 修改第二条线的y轴数据</span></span><br><span class="line">&gt;&gt; h(<span class="number">1</span>).LineStyle = <span class="string">&#x27;--&#x27;</span>;  <span class="comment">% 修改第一条线的线型</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221115436168.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221115436168.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221115436168" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221115436168.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221115436168.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221115436168" style="zoom:33%;">
+
 <p>此外，还有一些常用的属性如下</p>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">属性</th>
-<th style="text-align: center;">说明</th>
-<th style="text-align: center;">值</th>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+<th align="center">值</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>LineJoin</code></td>
-<td style="text-align: center;">线条边角样式</td>
-<td style="text-align: center;"><code>round(default)</code> <code>miter</code> <code>chamfer</code></td>
+<tbody><tr>
+<td align="center"><code>LineJoin</code></td>
+<td align="center">线条边角样式</td>
+<td align="center"><code>round(default)</code> <code>miter</code> <code>chamfer</code></td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>MarkerEdgeColor</code></td>
-<td style="text-align: center;">标记轮廓颜色</td>
-<td style="text-align: center;"><code>none(default)</code> <code>auto</code> <code>颜色</code></td>
+<tr>
+<td align="center"><code>MarkerEdgeColor</code></td>
+<td align="center">标记轮廓颜色</td>
+<td align="center"><code>none(default)</code> <code>auto</code> <code>颜色</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <hr>
-<h3 id="fplot">fplot</h3>
-<p>专门用于绘制<strong>一元函数</strong>的命令。相比于<code>plot()</code>根据指定数据点绘图，<code>fplot()</code>会<strong>自适应</strong>地选取数据点，即在平滑处选取数据点稀疏、在陡峭处选取数据点密集，使图像更加光滑准确。</p>
+<h3 id="fplot"><a href="#fplot" class="headerlink" title="fplot"></a>fplot</h3><p>专门用于绘制<strong>一元函数</strong>的命令。相比于<code>plot()</code>根据指定数据点绘图，<code>fplot()</code>会<strong>自适应</strong>地选取数据点，即在平滑处选取数据点稀疏、在陡峭处选取数据点密集，使图像更加光滑准确。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fplot(f);  <span class="comment">% 在x的默认区间[-5,5]绘制由函数y=f(x)定义的曲线</span></span><br><span class="line">fplot(f,x_interval);  <span class="comment">% 在x的指定区间x_interval绘制由函数y=f(x)定义的曲线</span></span><br></pre></td></tr></table></figure>
+
 <p><code>f</code> 为m文件函数名或系统自带函数名，<code>x_interval</code>为一个二元向量，包含区间的两个端点。示例如下：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fplot(@<span class="built_in">exp</span>,[<span class="number">-1</span>,<span class="number">1</span>]); grid on;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221140815790.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221140815790.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221140815790" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221140815790.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221140815790.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221140815790" style="zoom:33%;">
+
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fplot(funx,funy);</span><br><span class="line"><span class="comment">% 在t的默认区间[-5,5]绘制由参数方程x=funx(t),y=funy(t)定义的曲线</span></span><br><span class="line">fplot(funx,funy,t_interval);</span><br><span class="line"><span class="comment">% 在t指定区间t_interval绘制由参数方程x=funx(t),y=funy(t)定义的曲线</span></span><br></pre></td></tr></table></figure>
+
 <p><code>funx</code>和<code>funy</code>为参数方程函数名，<code>t_interval</code>为一个二元向量，包含区间的两个端点。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xt = @(t) <span class="number">2</span>*<span class="built_in">cos</span>(t);</span><br><span class="line">yt = @(t) <span class="built_in">sin</span>(t);</span><br><span class="line">fplot(xt, yt); grid on;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221140844082.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221140844082.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221140844082" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221140844082.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221140844082.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221140844082" style="zoom:33%;">
+
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fplot(_,LineSpec);  <span class="comment">% 指定线型、标记符号和颜色</span></span><br><span class="line">fplot(_,Name,Value);  <span class="comment">% 指定线条属性</span></span><br><span class="line">fplot(ax,_);  <span class="comment">% 指定坐标范围</span></span><br><span class="line">fp = fplot(_);  <span class="comment">% 返回可修改的图形对象</span></span><br></pre></td></tr></table></figure>
+
 <hr>
-<h3 id="subplot">subplot</h3>
-<p>用于在同一个图形窗口中分割出多个视图区域。</p>
+<h3 id="subplot"><a href="#subplot" class="headerlink" title="subplot"></a>subplot</h3><p>用于在同一个图形窗口中分割出多个视图区域。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subplot(m,n,p);  <span class="comment">% 将当前窗口分割成m行n列的区域，用p指定当前位置</span></span><br></pre></td></tr></table></figure>
+
 <p>对<code>p</code>的编号采用从左至右、从上至下的原则。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">subplot(m,n,p,<span class="string">&#x27;replace&#x27;</span>);  <span class="comment">% 将视图替换为空坐标区</span></span><br><span class="line">subplot(<span class="string">&#x27;Position&#x27;</span>,pos);  <span class="comment">% 在pos指定的自定义位置创建坐标区</span></span><br></pre></td></tr></table></figure>
+
 <p><code>pos</code>的格式为<code>[left, bottom, width, height]</code>，即以左下角坐标、宽度和高度定义，若新坐标区与原有坐标区重叠，则原有坐标区会被替换。</p>
 <hr>
-</div><div class="story post-story"><h2 id="不同坐标系下的绘图">不同坐标系下的绘图</h2>
-<p>上述所有绘图命令均建立在平面直角坐标系中，下面介绍几种其他坐标系的绘图方法。</p>
-<h3 id="极坐标系-polarplot">极坐标系 <code>polarplot</code></h3>
-<p>与直角坐标系的<code>plot</code>函数几乎一致，只是将<code>x</code>换做<code>theta</code>，将<code>y</code>换做<code>rho</code></p>
+</div><div class="story post-story"><h2 id="不同坐标系下的绘图"><a href="#不同坐标系下的绘图" class="headerlink" title="不同坐标系下的绘图"></a>不同坐标系下的绘图</h2><p>上述所有绘图命令均建立在平面直角坐标系中，下面介绍几种其他坐标系的绘图方法。</p>
+<h3 id="极坐标系-polarplot"><a href="#极坐标系-polarplot" class="headerlink" title="极坐标系 polarplot"></a>极坐标系 <code>polarplot</code></h3><p>与直角坐标系的<code>plot</code>函数几乎一致，只是将<code>x</code>换做<code>theta</code>，将<code>y</code>换做<code>rho</code></p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">polarplot(theta,rho);  <span class="comment">% theta-极角(rad),rho-极半径</span></span><br><span class="line">polarplot(theta,rho,LineSpec);</span><br><span class="line">polarplot(theta1,rho1,...,thetan,rhon);</span><br><span class="line">polarplot(theta1,rho1,LineSpec1,...,thetan,rhon,LineSpecn);</span><br><span class="line">polarplot(z);  <span class="comment">% rho对应复数z的模长，theta对应幅角主值</span></span><br><span class="line">polarplot(z,LineSpec);</span><br><span class="line">ploarplot(_,Name,Value);</span><br><span class="line">p = polarplot(_);</span><br></pre></td></tr></table></figure>
+
 <p>示例：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">theta = <span class="number">0</span>:<span class="number">0.01</span>*<span class="built_in">pi</span>:<span class="number">6</span>*<span class="built_in">pi</span>;</span><br><span class="line">rho1 = theta/<span class="number">10</span>;</span><br><span class="line">rho2 = theta/<span class="number">12</span>;</span><br><span class="line">polarplot(theta,rho1,<span class="string">&#x27;-b&#x27;</span>,theta,rho2,<span class="string">&#x27;--r&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221150925082.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221150925082.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221150925082" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221150925082.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221150925082.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221150925082" style="zoom:33%;">
+
 <p>坐标转化：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[theta, rho] = <span class="built_in">cart2pol</span>(x, y);  <span class="comment">% 直角坐标转极坐标</span></span><br><span class="line">[x, y] = <span class="built_in">pol2cart</span>(theta, rho);  <span class="comment">% 极坐标转直角坐标</span></span><br><span class="line">R = deg2rad(D);  <span class="comment">% 角度转弧度</span></span><br><span class="line">D = rad2deg(R);  <span class="comment">% 弧度转角度</span></span><br></pre></td></tr></table></figure>
+
 <hr>
-<h3 id="对数坐标系">对数坐标系</h3>
-<p>对于某些变化迅速的变量，线性坐标可能无法形象展示其变化过程。若将部分或全部坐标取对数，就可以减缓变量的变化过程。常用的对数坐标系有：</p>
+<h3 id="对数坐标系"><a href="#对数坐标系" class="headerlink" title="对数坐标系"></a>对数坐标系</h3><p>对于某些变化迅速的变量，线性坐标可能无法形象展示其变化过程。若将部分或全部坐标取对数，就可以减缓变量的变化过程。常用的对数坐标系有：</p>
 <ul>
 <li><code>semilogx()</code> - x轴为对数坐标，y轴为线性坐标</li>
 <li><code>semilogy()</code> - y轴为对数坐标，x轴为线性坐标</li>
@@ -2927,138 +2943,155 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>函数调用规则与<code>plot</code>类似。示例如下：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span>:<span class="number">0.01</span>:<span class="number">10</span>;</span><br><span class="line">y = <span class="built_in">exp</span>(x);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>); <span class="built_in">plot</span>(x,y); grid on;  <span class="comment">% 直接绘制</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>); semilogy(x,y); grid on;  <span class="comment">% 对y轴取对数</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221151925082.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221151925082.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221151925082" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221151925082.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221151925082.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221151925082" style="zoom:33%;">
+
 <p>ps. 对数以10为底</p>
 <hr>
-<h3 id="双y轴坐标系">双y轴坐标系</h3>
-<p>对于同一个坐标系内的两条曲线，若二者的变化范围差距过大，会导致变化范围较小的曲线无法清晰显示。此时，可以使用<code>yyaxis left</code>与<code>yyaxis right</code>命令为坐标系创建两个y轴，并分别绘制。该命令仅起到定位作用，与<code>subplot</code>类似。</p>
+<h3 id="双y轴坐标系"><a href="#双y轴坐标系" class="headerlink" title="双y轴坐标系"></a>双y轴坐标系</h3><p>对于同一个坐标系内的两条曲线，若二者的变化范围差距过大，会导致变化范围较小的曲线无法清晰显示。此时，可以使用<code>yyaxis left</code>与<code>yyaxis right</code>命令为坐标系创建两个y轴，并分别绘制。该命令仅起到定位作用，与<code>subplot</code>类似。</p>
 <p>示例如下：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span>:<span class="number">0.01</span>:<span class="number">10</span>;</span><br><span class="line">y_large = <span class="built_in">sin</span>(x);</span><br><span class="line">y_small = <span class="number">0.1</span>*<span class="built_in">cos</span>(x);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>); <span class="built_in">plot</span>(x,y_large,x,y_small); grid on;</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>); grid on;</span><br><span class="line">yyaxis left; <span class="built_in">plot</span>(x,y_large);</span><br><span class="line">yyaxis right;<span class="built_in">plot</span>(x,y_small);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221152718402.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221152718402.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221152718402" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221152718402.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220221152718402.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220221152718402" style="zoom:33%;">
+
+
+
 <hr>
-</div><div class="story post-story"><h2 id="图形窗口">图形窗口</h2>
-<p>Matlab的图形窗口和命令行窗口是相互独立的，通过图形窗口可以<strong>修改和编辑图形界面</strong>、实现大量数据<strong>计算结果的可视化</strong>。</p>
-<h3 id="创建">创建</h3>
-<p>使用<code>figure</code>命令创建图形窗口</p>
+</div><div class="story post-story"><h2 id="图形窗口"><a href="#图形窗口" class="headerlink" title="图形窗口"></a>图形窗口</h2><p>Matlab的图形窗口和命令行窗口是相互独立的，通过图形窗口可以<strong>修改和编辑图形界面</strong>、实现大量数据<strong>计算结果的可视化</strong>。</p>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>使用<code>figure</code>命令创建图形窗口</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">figure</span>  <span class="comment">% 创建一个图形窗口</span></span><br><span class="line"><span class="built_in">figure</span>(Name,Value);  <span class="comment">% 使用(Name,Value)对来修改属性，如(&#x27;Name&#x27;,&#x27;图1&#x27;)</span></span><br><span class="line">f = <span class="built_in">figure</span>(_);  <span class="comment">% 使用变量f储存窗口对象，可以通过它改变窗口的属性</span></span><br><span class="line"><span class="built_in">figure</span>(f);  <span class="comment">% 指定当前绘图窗口为f</span></span><br><span class="line"><span class="built_in">figure</span>(num);  <span class="comment">% 创建一个编号为num的图形窗口</span></span><br></pre></td></tr></table></figure>
-<h3 id="相关命令">相关命令</h3>
-<table>
+
+<h3 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h3><table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">命令</th>
-<th style="text-align: center;">说明</th>
+<tr>
+<th align="center">命令</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>set(f,[Name1,...],[Value1,...])</code></td>
-<td style="text-align: center;">设定图形窗口的属性值</td>
+<tbody><tr>
+<td align="center"><code>set(f,[Name1,...],[Value1,...])</code></td>
+<td align="center">设定图形窗口的属性值</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>get(f)</code></td>
-<td style="text-align: center;">获取图形窗口的属性值</td>
+<tr>
+<td align="center"><code>get(f)</code></td>
+<td align="center">获取图形窗口的属性值</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>close</code> <code>close all</code></td>
-<td style="text-align: center;">关闭图形窗口</td>
+<tr>
+<td align="center"><code>close</code> <code>close all</code></td>
+<td align="center">关闭图形窗口</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>clf</code></td>
-<td style="text-align: center;">清空图形窗口（不会关闭）</td>
+<tr>
+<td align="center"><code>clf</code></td>
+<td align="center">清空图形窗口（不会关闭）</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <hr>
-</div><div class="story post-story"><h2 id="图形标注">图形标注</h2>
-<h3 id="坐标轴范围">坐标轴范围</h3>
-<p>使用<code>axis(limit)</code>指定当前坐标区的范围，<code>limit</code>只能是<strong>长度为4、6、8</strong>的向量。</p>
+</div><div class="story post-story"><h2 id="图形标注"><a href="#图形标注" class="headerlink" title="图形标注"></a>图形标注</h2><h3 id="坐标轴范围"><a href="#坐标轴范围" class="headerlink" title="坐标轴范围"></a>坐标轴范围</h3><p>使用<code>axis(limit)</code>指定当前坐标区的范围，<code>limit</code>只能是<strong>长度为4、6、8</strong>的向量。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axis([Xmin,Xmax,Ymin,Ymax]);  <span class="comment">% 2维</span></span><br><span class="line">axis([Xmin,Xmax,Ymin,Ymax,Zmin,Zmax]);  <span class="comment">% 3维</span></span><br><span class="line">axis([Xmin,Xmax,Ymin,Ymax,Zmin,Zmax,Cmin,Cmax]);  <span class="comment">% 4维</span></span><br></pre></td></tr></table></figure>
-<h3 id="图形注释">图形注释</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fill(x,y,<span class="string">&#x27;color&#x27;</span>);  <span class="comment">% 用指定颜色填充数据(x,y)构成的多边形</span></span><br><span class="line">title(<span class="string">&#x27;string&#x27;</span>);  <span class="comment">% 为图形添加标题</span></span><br><span class="line">xlabel(<span class="string">&#x27;string&#x27;</span>);  <span class="comment">% 为x轴添加标注</span></span><br><span class="line">ylabel(<span class="string">&#x27;string&#x27;</span>);</span><br><span class="line">zlabel(<span class="string">&#x27;string&#x27;</span>);</span><br><span class="line">text(x,y,<span class="string">&#x27;string&#x27;</span>);  <span class="comment">% 在指定位置添加字符串</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="图形注释"><a href="#图形注释" class="headerlink" title="图形注释"></a>图形注释</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fill(x,y,<span class="string">&#x27;color&#x27;</span>);  <span class="comment">% 用指定颜色填充数据(x,y)构成的多边形</span></span><br><span class="line">title(<span class="string">&#x27;string&#x27;</span>);  <span class="comment">% 为图形添加标题</span></span><br><span class="line">xlabel(<span class="string">&#x27;string&#x27;</span>);  <span class="comment">% 为x轴添加标注</span></span><br><span class="line">ylabel(<span class="string">&#x27;string&#x27;</span>);</span><br><span class="line">zlabel(<span class="string">&#x27;string&#x27;</span>);</span><br><span class="line">text(x,y,<span class="string">&#x27;string&#x27;</span>);  <span class="comment">% 在指定位置添加字符串</span></span><br></pre></td></tr></table></figure>
+
 <p>可以配合<code>num2str(num)</code>函数，为图像添加与数值有关的标注，字符串之间使用<code>[]</code>衔接。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span>:<span class="number">0.01</span>:<span class="number">10</span>;</span><br><span class="line">k = <span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">y = <span class="built_in">sin</span>(x) * k;</span><br><span class="line"><span class="built_in">plot</span>(x, y);</span><br><span class="line">title([<span class="string">&#x27;k=&#x27;</span>, num2str(k)]);  <span class="comment">% 标题显示随机数k的取值</span></span><br></pre></td></tr></table></figure>
-<h3 id="图例">图例</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">legend</span>(label1,...,labeln);  <span class="comment">% 按照曲线顺序设置图例</span></span><br><span class="line"><span class="built_in">legend</span>(_,<span class="string">&#x27;Location&#x27;</span>,lcn);  <span class="comment">% 指定图例的位置</span></span><br><span class="line"><span class="comment">% &#x27;north&#x27;|&#x27;south&#x27;|&#x27;east&#x27;|&#x27;west&#x27;|&#x27;northeast&#x27;|...</span></span><br><span class="line"><span class="built_in">legend</span>(_,<span class="string">&#x27;Orientation&#x27;</span>,ornt);  <span class="comment">% 指定图例的显示方式</span></span><br><span class="line"><span class="comment">% &#x27;vertical&#x27;(defalut)|&#x27;horizontal&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="网格线">网格线</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grid on;  <span class="comment">% 为当前坐标区添加主网格线</span></span><br><span class="line">grid;  <span class="comment">% 切换主网格线可见性</span></span><br><span class="line">grid minor;  <span class="comment">% 切换次网格线可见性</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">legend</span>(label1,...,labeln);  <span class="comment">% 按照曲线顺序设置图例</span></span><br><span class="line"><span class="built_in">legend</span>(_,<span class="string">&#x27;Location&#x27;</span>,lcn);  <span class="comment">% 指定图例的位置</span></span><br><span class="line"><span class="comment">% &#x27;north&#x27;|&#x27;south&#x27;|&#x27;east&#x27;|&#x27;west&#x27;|&#x27;northeast&#x27;|...</span></span><br><span class="line"><span class="built_in">legend</span>(_,<span class="string">&#x27;Orientation&#x27;</span>,ornt);  <span class="comment">% 指定图例的显示方式</span></span><br><span class="line"><span class="comment">% &#x27;vertical&#x27;(defalut)|&#x27;horizontal&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="网格线"><a href="#网格线" class="headerlink" title="网格线"></a>网格线</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grid on;  <span class="comment">% 为当前坐标区添加主网格线</span></span><br><span class="line">grid;  <span class="comment">% 切换主网格线可见性</span></span><br><span class="line">grid minor;  <span class="comment">% 切换次网格线可见性</span></span><br></pre></td></tr></table></figure>
+
 <hr>
-</div><div class="story post-story"><h2 id="绘制特殊图形">绘制特殊图形</h2>
-<h3 id="条形图bar">条形图<code>bar</code></h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bar(y);  <span class="comment">% 创建一个条形图，y中的每个元素对应一个条形。</span></span><br><span class="line">bar([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226185511989.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226185511989.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226185511989" style="zoom:33%;"></p>
-<p>当<code>y</code>是<span class="math inline">\(m\times n\)</span>的矩阵时，创建<span class="math inline">\(m\)</span>组，每组包含<span class="math inline">\(n\)</span>个条形：</p>
+</div><div class="story post-story"><h2 id="绘制特殊图形"><a href="#绘制特殊图形" class="headerlink" title="绘制特殊图形"></a>绘制特殊图形</h2><h3 id="条形图bar"><a href="#条形图bar" class="headerlink" title="条形图bar"></a>条形图<code>bar</code></h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bar(y);  <span class="comment">% 创建一个条形图，y中的每个元素对应一个条形。</span></span><br><span class="line">bar([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]);</span><br></pre></td></tr></table></figure>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226185511989.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226185511989.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226185511989" style="zoom:33%;">
+
+<p>当<code>y</code>是$m\times n$的矩阵时，创建$m$组，每组包含$n$个条形：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bar(<span class="built_in">rand</span>(<span class="number">2</span>,<span class="number">5</span>));</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226185654346.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226185654346.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226185654346" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226185654346.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226185654346.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226185654346" style="zoom:33%;">
+
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bar(x,y);  <span class="comment">% 在横坐标x指定的位置绘制y，要求x为严格单调递增的向量</span></span><br><span class="line">bar(_,width);  <span class="comment">% 设置条形的相对宽度</span></span><br><span class="line">bar(_,style);  <span class="comment">% 设置条形组的样式 </span></span><br><span class="line"><span class="comment">% &#x27;grouped&#x27;(defalut)|&#x27;stacked&#x27;|&#x27;hist&#x27;|&#x27;histc&#x27;</span></span><br><span class="line">bar(_,color);  <span class="comment">% 设置条形的颜色</span></span><br><span class="line">b = bar(_);  <span class="comment">% 保存对象，可以修改其属性值</span></span><br></pre></td></tr></table></figure>
+
 <p>此外，还有其他形式的条形图，调用格式类似：</p>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">函数</th>
-<th style="text-align: center;">说明</th>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>barh()</code></td>
-<td style="text-align: center;">水平条形图</td>
+<tbody><tr>
+<td align="center"><code>barh()</code></td>
+<td align="center">水平条形图</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>bar3()</code></td>
-<td style="text-align: center;">竖直三维条形图</td>
+<tr>
+<td align="center"><code>bar3()</code></td>
+<td align="center">竖直三维条形图</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>bar3h()</code></td>
-<td style="text-align: center;">水平三维条形图</td>
+<tr>
+<td align="center"><code>bar3h()</code></td>
+<td align="center">水平三维条形图</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <hr>
-<h3 id="区域图area">区域图<code>area</code></h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">area(x);  <span class="comment">% 与plot(x)一致，但会将曲线下方区域填充颜色</span></span><br><span class="line">area(x,y);  <span class="comment">% 与plot(x,y)一致，但会将曲线下方区域填充颜色</span></span><br><span class="line">area(x,Y);  <span class="comment">% 矩阵Y按列对向量x绘图，图像依次累加</span></span><br><span class="line">area(_,basevalue);  <span class="comment">% 指定区域填充的基值，默认为0</span></span><br><span class="line">ar = area(_);  <span class="comment">% 保存对象，可以修改其属性值</span></span><br></pre></td></tr></table></figure>
+<h3 id="区域图area"><a href="#区域图area" class="headerlink" title="区域图area"></a>区域图<code>area</code></h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">area(x);  <span class="comment">% 与plot(x)一致，但会将曲线下方区域填充颜色</span></span><br><span class="line">area(x,y);  <span class="comment">% 与plot(x,y)一致，但会将曲线下方区域填充颜色</span></span><br><span class="line">area(x,Y);  <span class="comment">% 矩阵Y按列对向量x绘图，图像依次累加</span></span><br><span class="line">area(_,basevalue);  <span class="comment">% 指定区域填充的基值，默认为0</span></span><br><span class="line">ar = area(_);  <span class="comment">% 保存对象，可以修改其属性值</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span>:<span class="number">0.5</span>:<span class="number">5</span>;</span><br><span class="line">Y = [<span class="built_in">ones</span>(<span class="built_in">size</span>(x))</span><br><span class="line">     <span class="built_in">rand</span>(<span class="built_in">size</span>(x))+<span class="number">1</span></span><br><span class="line">     <span class="built_in">rand</span>(<span class="built_in">size</span>(x))+<span class="number">1</span></span><br><span class="line">     <span class="built_in">rand</span>(<span class="built_in">size</span>(x))+<span class="number">1</span>];</span><br><span class="line">area(x,Y&#x27;,<span class="number">-1</span>);  <span class="comment">% 矩阵Y的行数须与向量x一致，指定基值为-1</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200515600.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200515600.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226200515600" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200515600.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200515600.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226200515600" style="zoom:33%;">
+
 <hr>
-<h3 id="饼图pie">饼图<code>pie</code></h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pie(x);  <span class="comment">% 使用x中的数据绘制饼图</span></span><br><span class="line">pie(x,explode);  <span class="comment">% 将扇区从饼图偏移一定位置</span></span><br><span class="line"><span class="comment">% explode与向量x长度相同，其中的值分别对应偏移大小</span></span><br><span class="line">pie(x,labels);  <span class="comment">% 指定扇区的文本标签，标签数必须等于向量x的长度，采用元胞表示</span></span><br><span class="line">pie(x,explode,labels);</span><br></pre></td></tr></table></figure>
+<h3 id="饼图pie"><a href="#饼图pie" class="headerlink" title="饼图pie"></a>饼图<code>pie</code></h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pie(x);  <span class="comment">% 使用x中的数据绘制饼图</span></span><br><span class="line">pie(x,explode);  <span class="comment">% 将扇区从饼图偏移一定位置</span></span><br><span class="line"><span class="comment">% explode与向量x长度相同，其中的值分别对应偏移大小</span></span><br><span class="line">pie(x,labels);  <span class="comment">% 指定扇区的文本标签，标签数必须等于向量x的长度，采用元胞表示</span></span><br><span class="line">pie(x,explode,labels);</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>];</span><br><span class="line">explode = [<span class="number">0</span>, <span class="number">0.1</span>, <span class="number">0.2</span>, <span class="number">0.3</span>];</span><br><span class="line">labels = &#123;<span class="string">&#x27;无偏移&#x27;</span>, <span class="string">&#x27;偏移0.1&#x27;</span>, <span class="string">&#x27;偏移0.2&#x27;</span>, <span class="string">&#x27;偏移0.3&#x27;</span>&#125;;</span><br><span class="line">pie(x, explode, labels);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194443387.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194443387.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226194443387" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194443387.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194443387.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226194443387" style="zoom:33%;">
+
 <p>可以用<code>pie3</code>绘制三维饼图。</p>
 <hr>
-<h3 id="直方图histogram与polarhistogram">直方图<code>histogram</code>与<code>polarhistogram</code></h3>
-<p>通过<code>help</code>指令查询详细信息。</p>
+<h3 id="直方图histogram与polarhistogram"><a href="#直方图histogram与polarhistogram" class="headerlink" title="直方图histogram与polarhistogram"></a>直方图<code>histogram</code>与<code>polarhistogram</code></h3><p>通过<code>help</code>指令查询详细信息。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="built_in">randn</span>(<span class="number">10000</span>, <span class="number">1</span>);</span><br><span class="line">histogram(x);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194701177.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194701177.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226194701177" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194701177.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194701177.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226194701177" style="zoom:33%;">
+
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">theta = [<span class="number">0.1</span> <span class="number">1.1</span> <span class="number">5.4</span> <span class="number">3.4</span> <span class="number">2.3</span> <span class="number">4.5</span> <span class="number">3.2</span> <span class="number">3.4</span> <span class="number">5.6</span> <span class="number">2.3</span> <span class="number">2.1</span> <span class="number">3.5</span> <span class="number">0.6</span> <span class="number">6.1</span>];</span><br><span class="line">polarhistogram(theta,<span class="number">6</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194946477.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194946477.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226194946477" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194946477.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226194946477.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226194946477" style="zoom:33%;">
+
 <hr>
-<h3 id="含误差的线图errorbar">含误差的线图<code>errorbar</code></h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">errorbar(y,err);  <span class="comment">% 创建y中数据的线图，并在每个数据点绘制一个垂直误差条</span></span><br><span class="line"><span class="comment">% err和y长度相同，对应了每个数据点的误差大小</span></span><br><span class="line">errorbar(x,y,err);  <span class="comment">% 横坐标x</span></span><br><span class="line">errorbar(x,y,neg,pos);  <span class="comment">% neg确定数据点向下误差，pos确定数据点向上误差</span></span><br><span class="line">errorbar(_,ornt);  <span class="comment">% 设置误差条的方向 &#x27;vertical&#x27;(default)|&#x27;horizontal&#x27;|&#x27;both&#x27;</span></span><br><span class="line">e = errorbar(_);</span><br></pre></td></tr></table></figure>
+<h3 id="含误差的线图errorbar"><a href="#含误差的线图errorbar" class="headerlink" title="含误差的线图errorbar"></a>含误差的线图<code>errorbar</code></h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">errorbar(y,err);  <span class="comment">% 创建y中数据的线图，并在每个数据点绘制一个垂直误差条</span></span><br><span class="line"><span class="comment">% err和y长度相同，对应了每个数据点的误差大小</span></span><br><span class="line">errorbar(x,y,err);  <span class="comment">% 横坐标x</span></span><br><span class="line">errorbar(x,y,neg,pos);  <span class="comment">% neg确定数据点向下误差，pos确定数据点向上误差</span></span><br><span class="line">errorbar(_,ornt);  <span class="comment">% 设置误差条的方向 &#x27;vertical&#x27;(default)|&#x27;horizontal&#x27;|&#x27;both&#x27;</span></span><br><span class="line">e = errorbar(_);</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span>:<span class="number">10</span>;</span><br><span class="line">y = x;</span><br><span class="line">err = [<span class="number">0.1</span>:<span class="number">0.1</span>:<span class="number">0.5</span>, <span class="number">0.1</span>:<span class="number">0.1</span>:<span class="number">0.5</span>];</span><br><span class="line">errorbar(x,y,err,<span class="string">&#x27;both&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226195818826.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226195818826.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226195818826" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226195818826.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226195818826.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226195818826" style="zoom:33%;">
+
 <hr>
-<h3 id="离散图针状图stem">离散图（针状图）<code>stem</code></h3>
-<p>用法与<code>plot</code>一致。</p>
+<h3 id="离散图（针状图）stem"><a href="#离散图（针状图）stem" class="headerlink" title="离散图（针状图）stem"></a>离散图（针状图）<code>stem</code></h3><p>用法与<code>plot</code>一致。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">y = <span class="number">1</span>:<span class="number">6</span>;</span><br><span class="line">stem(y);</span><br><span class="line"><span class="built_in">hold</span> on;</span><br><span class="line">stem(y+<span class="number">1</span>,<span class="string">&#x27;filled&#x27;</span>);  <span class="comment">% 绘制实心点</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200333141.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200333141.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226200333141" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200333141.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200333141.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226200333141" style="zoom:33%;">
+
 <p>可以用<code>stem3</code>绘制三维针状图</p>
 <hr>
-<h3 id="阶梯图stairs">阶梯图<code>stairs</code></h3>
-<p>用法与<code>plot</code>一致</p>
+<h3 id="阶梯图stairs"><a href="#阶梯图stairs" class="headerlink" title="阶梯图stairs"></a>阶梯图<code>stairs</code></h3><p>用法与<code>plot</code>一致</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span>:<span class="number">0.1</span>:<span class="number">2</span>*<span class="built_in">pi</span>;</span><br><span class="line">stairs(x, <span class="built_in">sin</span>(x));</span><br><span class="line"><span class="built_in">hold</span> on; grid on;</span><br><span class="line">stairs(x, <span class="built_in">cos</span>(x));</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200851931.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200851931.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226200851931" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200851931.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226200851931.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226200851931" style="zoom:33%;">
+
 <hr>
-<h3 id="罗盘图compass">罗盘图<code>compass</code></h3>
-<p>用箭头显示坐标为<span class="math inline">\((u,v)\)</span>的向量，<span class="math inline">\(u\)</span>和<span class="math inline">\(v\)</span>长度一致，箭头起点位于原点。</p>
+<h3 id="罗盘图compass"><a href="#罗盘图compass" class="headerlink" title="罗盘图compass"></a>罗盘图<code>compass</code></h3><p>用箭头显示坐标为$(u,v)$的向量，$u$和$v$长度一致，箭头起点位于原点。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">compass(u,v);</span><br><span class="line">compass(z);  <span class="comment">% 相当于compass(real(z), imag(z));</span></span><br></pre></td></tr></table></figure>
+
 <p>与其他画图函数类似，可以指定线型、标记符号和颜色，可以用对象保存图像。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">u = [<span class="number">1</span>, <span class="number">0</span>, <span class="number">-3</span>, <span class="number">0</span>];</span><br><span class="line">v = [<span class="number">0</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">-4</span>];</span><br><span class="line">compass(u,v);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226201308938.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226201308938.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226201308938" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226201308938.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226201308938.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226201308938" style="zoom:33%;">
+
 <hr>
-<h3 id="箭头图quiver">箭头图<code>quiver</code></h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">quiver(x,y,u,v);  <span class="comment">% 在(x,y)位置绘制由(u,v)确定的向量</span></span><br><span class="line">quiver(u,v);  <span class="comment">% 相当于quiver(1:n,1:m,u,v),其中u,v为m*n的矩阵</span></span><br></pre></td></tr></table></figure>
+<h3 id="箭头图quiver"><a href="#箭头图quiver" class="headerlink" title="箭头图quiver"></a>箭头图<code>quiver</code></h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">quiver(x,y,u,v);  <span class="comment">% 在(x,y)位置绘制由(u,v)确定的向量</span></span><br><span class="line">quiver(u,v);  <span class="comment">% 相当于quiver(1:n,1:m,u,v),其中u,v为m*n的矩阵</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[x, y] = <span class="built_in">meshgrid</span>(<span class="number">-2</span>:<span class="number">.2</span>:<span class="number">2</span>);  <span class="comment">% 返回网格坐标</span></span><br><span class="line">z = x.*<span class="built_in">exp</span>(-x.^<span class="number">2</span> - y.^<span class="number">2</span>);</span><br><span class="line">[dx, dy] = gradient(z, <span class="number">.2</span>, <span class="number">.2</span>);  <span class="comment">% 返回梯度</span></span><br><span class="line"></span><br><span class="line">contour(x, y, z);  <span class="comment">% 绘制等高线</span></span><br><span class="line"><span class="built_in">hold</span> on;</span><br><span class="line">quiver(x, y, dx, dy);</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226202158844.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226202158844.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226202158844" style="zoom:33%;"></p>
+
+<img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226202158844.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20220226202158844.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220226202158844" style="zoom:33%;">
+
 
 </div>
   </div>
@@ -3180,8 +3213,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="prev" href="/2022/08/06/python-basic/">
           <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>python快速入门</p>
-          <p class="content">数值类型与基本操作
-12345678910112**5 # 2的5次方1.3e5 1.3e-5 # 科学计数法0xFF # 16进制 0x是16进制前缀type(a) # 打印数据类型a = i...</p>
+          <p class="content">数值类型与基本操作12345678910112**5 # 2的5次方1.3e5 1.3e-5 # 科学计数法0xFF # 16进制 0x是16进制前缀type(a) # 打印数据类型a = in...</p>
         </a>
       
       
@@ -3189,7 +3221,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class="title">Matlab符号运算<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class="content">Matlab系列教程5-符号运算，包括符号表达式的创建，符号矩阵运算，符号运算及带入求值的基本操作。
 
-符号运算是数值计算的扩展，在运算过程中以符号表达式或符号矩阵为运算对象，实现了符号计算和数...</p>
+
+
+
+
+
+符号运算是数值计算的扩展，在运算过程中以符号表达式或符号矩阵为运算对象，实现了符...</p>
         </a>
       
     </div>
@@ -3332,7 +3369,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class="content">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E5%87%BD%E6%95%B0"><span class="toc-text">基本绘图函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#plot"><span class="toc-text">plot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fplot"><span class="toc-text">fplot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#subplot"><span class="toc-text">subplot</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8B%E7%9A%84%E7%BB%98%E5%9B%BE"><span class="toc-text">不同坐标系下的绘图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E5%9D%90%E6%A0%87%E7%B3%BB-polarplot"><span class="toc-text">极坐标系 polarplot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">对数坐标系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8Cy%E8%BD%B4%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">双y轴坐标系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E7%AA%97%E5%8F%A3"><span class="toc-text">图形窗口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA"><span class="toc-text">创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">相关命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E6%A0%87%E6%B3%A8"><span class="toc-text">图形标注</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E8%8C%83%E5%9B%B4"><span class="toc-text">坐标轴范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E6%B3%A8%E9%87%8A"><span class="toc-text">图形注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E4%BE%8B"><span class="toc-text">图例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E6%A0%BC%E7%BA%BF"><span class="toc-text">网格线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%88%B6%E7%89%B9%E6%AE%8A%E5%9B%BE%E5%BD%A2"><span class="toc-text">绘制特殊图形</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E5%BD%A2%E5%9B%BEbar"><span class="toc-text">条形图bar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E5%9F%9F%E5%9B%BEarea"><span class="toc-text">区域图area</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A5%BC%E5%9B%BEpie"><span class="toc-text">饼图pie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BEhistogram%E4%B8%8Epolarhistogram"><span class="toc-text">直方图histogram与polarhistogram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AB%E8%AF%AF%E5%B7%AE%E7%9A%84%E7%BA%BF%E5%9B%BEerrorbar"><span class="toc-text">含误差的线图errorbar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9B%BE%E9%92%88%E7%8A%B6%E5%9B%BEstem"><span class="toc-text">离散图（针状图）stem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B6%E6%A2%AF%E5%9B%BEstairs"><span class="toc-text">阶梯图stairs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%97%E7%9B%98%E5%9B%BEcompass"><span class="toc-text">罗盘图compass</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%9B%BEquiver"><span class="toc-text">箭头图quiver</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E5%87%BD%E6%95%B0"><span class="toc-text">基本绘图函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#plot"><span class="toc-text">plot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fplot"><span class="toc-text">fplot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#subplot"><span class="toc-text">subplot</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8B%E7%9A%84%E7%BB%98%E5%9B%BE"><span class="toc-text">不同坐标系下的绘图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E5%9D%90%E6%A0%87%E7%B3%BB-polarplot"><span class="toc-text">极坐标系 polarplot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">对数坐标系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8Cy%E8%BD%B4%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">双y轴坐标系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E7%AA%97%E5%8F%A3"><span class="toc-text">图形窗口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA"><span class="toc-text">创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">相关命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E6%A0%87%E6%B3%A8"><span class="toc-text">图形标注</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E8%8C%83%E5%9B%B4"><span class="toc-text">坐标轴范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E6%B3%A8%E9%87%8A"><span class="toc-text">图形注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E4%BE%8B"><span class="toc-text">图例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E6%A0%BC%E7%BA%BF"><span class="toc-text">网格线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%88%B6%E7%89%B9%E6%AE%8A%E5%9B%BE%E5%BD%A2"><span class="toc-text">绘制特殊图形</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E5%BD%A2%E5%9B%BEbar"><span class="toc-text">条形图bar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E5%9F%9F%E5%9B%BEarea"><span class="toc-text">区域图area</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A5%BC%E5%9B%BEpie"><span class="toc-text">饼图pie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BEhistogram%E4%B8%8Epolarhistogram"><span class="toc-text">直方图histogram与polarhistogram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AB%E8%AF%AF%E5%B7%AE%E7%9A%84%E7%BA%BF%E5%9B%BEerrorbar"><span class="toc-text">含误差的线图errorbar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9B%BE%EF%BC%88%E9%92%88%E7%8A%B6%E5%9B%BE%EF%BC%89stem"><span class="toc-text">离散图（针状图）stem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B6%E6%A2%AF%E5%9B%BEstairs"><span class="toc-text">阶梯图stairs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%97%E7%9B%98%E5%9B%BEcompass"><span class="toc-text">罗盘图compass</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%9B%BEquiver"><span class="toc-text">箭头图quiver</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4120,7 +4157,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
   <script>
-  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg"];
+  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
