@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://pyxblog.cn/2023/05/21/python-spider-txt365kk/</loc>
+        <lastmod>2023-05-21T12:29:57.075Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://pyxblog.cn/2022/08/06/matlab-advance-1/</loc>
         <lastmod>2022-12-24T06:46:55.527Z</lastmod>
         <changefreq>weekly</changefreq>
