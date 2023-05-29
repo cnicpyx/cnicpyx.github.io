@@ -28,33 +28,6 @@
     
     
     <url>
-        <loc>https://pyxblog.cn/python-homework/chapter4_1/</loc>
-        <lastmod>2022-10-23T12:23:05.897Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://pyxblog.cn/python-homework/chapter3_3/</loc>
-        <lastmod>2022-10-15T12:16:55.803Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://pyxblog.cn/python-homework/chapter3_2/</loc>
-        <lastmod>2022-10-08T12:59:53.058Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://pyxblog.cn/about/</loc>
         <lastmod>2022-08-17T11:57:36.675Z</lastmod>
         <changefreq>weekly</changefreq>
