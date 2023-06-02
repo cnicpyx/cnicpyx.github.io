@@ -9,32 +9,8 @@
 
 
     <url>
-        <loc>https://pyxblog.cn/2023/05/26/competition-guide/</loc>
-        <lastmod>2023-05-30T13:05:18.012Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://pyxblog.cn/2023/05/26/scientific-research-guide/</loc>
-        <lastmod>2023-05-30T12:57:17.358Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://pyxblog.cn/2023/05/28/volunteer-guide/</loc>
         <lastmod>2023-05-30T05:35:04.057Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://pyxblog.cn/2022/10/03/scientific-research-and-competition/</loc>
-        <lastmod>2023-05-28T08:43:48.458Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -67,14 +43,6 @@
     <url>
         <loc>https://pyxblog.cn/2022/09/30/entrance-exam-free-recommendation-1/</loc>
         <lastmod>2022-10-30T11:26:58.022Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://pyxblog.cn/2022/10/05/competitions/</loc>
-        <lastmod>2022-10-17T04:17:09.988Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
