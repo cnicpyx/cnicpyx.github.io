@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://pyxblog.cn/2023/05/26/competition-guide/</loc>
+        <lastmod>2023-05-30T13:05:18.012Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2023/05/26/scientific-research-guide/</loc>
+        <lastmod>2023-05-30T12:57:17.358Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://pyxblog.cn/2023/05/28/volunteer-guide/</loc>
         <lastmod>2023-05-30T05:35:04.057Z</lastmod>
         <changefreq>weekly</changefreq>
