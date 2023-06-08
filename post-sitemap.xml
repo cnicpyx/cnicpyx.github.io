@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/</loc>
+        <lastmod>2023-06-08T13:09:39.177Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://pyxblog.cn/2023/05/26/scientific-research-guide/</loc>
         <lastmod>2023-06-03T11:06:21.537Z</lastmod>
         <changefreq>weekly</changefreq>
