@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://pyxblog.cn/2023/08/19/chrome-extensions-1/</loc>
+        <lastmod>2023-08-19T13:10:19.006Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2022/10/16/career-planning/</loc>
+        <lastmod>2023-08-19T11:58:24.450Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://pyxblog.cn/2023/07/04/online-cv-2/</loc>
         <lastmod>2023-07-04T09:23:04.402Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -75,14 +91,6 @@
     <url>
         <loc>https://pyxblog.cn/2022/09/30/entrance-exam-free-recommendation-1/</loc>
         <lastmod>2022-10-30T11:26:58.022Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://pyxblog.cn/2022/10/16/career-planning/</loc>
-        <lastmod>2022-10-17T04:16:02.217Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
