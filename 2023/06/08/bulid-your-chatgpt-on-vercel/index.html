@@ -1768,7 +1768,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.26f8a394.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1692513864783),
+    lastupdate: new Date(1692619339948),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud"],
       for_post: ["blogger","toc","feedback"],
@@ -2668,88 +2668,59 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>本文教你如何通过Vercel一键部署你的私人ChatGPT网页端应用，设置访问密码，用户可以通过自己的APIKey使用ChatGPT，也可以向你付费获取访问密码。</p>
 <p>成品传送门：</p>
 <div class="tag link"><a class="link-card" title="在线ChatGPT" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.pyxchat.top/"><div class="left"><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/avatar.jpeg" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/avatar.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">在线ChatGPT</p><p class="url">https://www.pyxchat.top/</p></div></a></div>
-
 <p>私聊博主获取访问密码！</p>
 <span id="more"></span>
-
-<div class="story post-story"><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在本项目开始前，你需要做以下准备：</p>
-<ol>
-<li><p>注册一个<strong>GitHub账号</strong>，官网<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/">https://github.com/</a></p>
-</li>
-<li><p>获取你自己的<strong>APIKey</strong>，格式一般为 <code>sk-xxxxxx</code>，你可以选择如下方法获取：</p>
+<div class="story post-story"><h2 id="准备工作">准备工作</h2>
+<p>在本项目开始前，你需要做以下准备：</p>
+<ol type="1">
+<li>注册一个<strong>GitHub账号</strong>，官网<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/">https://github.com/</a></li>
+<li>获取你自己的<strong>APIKey</strong>，格式一般为 <code>sk-xxxxxx</code>，你可以选择如下方法获取：
 <ul>
 <li>使用魔法上网注册一个openAI账户，获取自己的APIKey</li>
 <li>购买APIKey，十块以内的基本上就够自己用</li>
 <li>上网找免费的共享APIKey</li>
-</ul>
-</li>
-<li><p>如果你想在国内访问自己的站点，需要提前购买一个<strong>域名</strong>，下文教程中以腾讯云域名为例</p>
-</li>
+</ul></li>
+<li>如果你想在国内访问自己的站点，需要提前购买一个<strong>域名</strong>，下文教程中以腾讯云域名为例</li>
 </ol>
 <hr>
-</div><div class="story post-story"><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>登陆GitHub，进入仓库：</p>
+</div><div class="story post-story"><h2 id="开始">开始</h2>
+<p>登陆GitHub，进入仓库：</p>
 <div class="tag link"><a class="link-card" title="ChatGPT Next Web" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Yidadaa/ChatGPT-Next-Web"><div class="left"><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/icon-github.jpg" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/icon-github.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">ChatGPT Next Web</p><p class="url">https://github.com/Yidadaa/ChatGPT-Next-Web</p></div></a></div>
-
 <p>点击Fork，将仓库拉取到你自己的账户中：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608175217822.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608175217822.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
-
-
 <p>给它起个名字，点击下方的Create fork：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608175954538.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608175954538.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
-
-
 <p>创建完成后，进入Vercel官网：</p>
 <div class="tag link"><a class="link-card" title="Vercel" target="_blank" rel="external nofollow noopener noreferrer" href="https://vercel.com/login"><div class="left"><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/icon-vercel.png" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/icon-vercel.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Vercel</p><p class="url">https://vercel.com/login</p></div></a></div>
-
 <p>使用GitHub账号登录：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608181941273.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608181941273.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <p>登陆成功后，直接跳转到dashboard页面，若未正常跳转，可以直接访问<a target="_blank" rel="external nofollow noopener noreferrer" href="https://vercel.com/dashboard">https://vercel.com/dashboard</a>。</p>
-<p>点击右侧的“Add New…”，选择“Project”：</p>
+<p>点击右侧的“Add New..."，选择“Project”：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608182217824.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608182217824.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <p>在列表中找到刚才Fork的仓库，点击右侧的Import：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608183150092.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608183150092.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <p>进入配置页面，点击Environment Variables配置环境变量：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608183340176.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608183340176.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <p>依次配置环境变量：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608183857920.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608183857920.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <p>配置完成后，点击下方的Deploy，即可部署成功。</p>
 <p>此时，你获得了一个 <code>.vercel.app</code> 结尾的链接，该链接在国内是无法访问的，你可以使用魔法上网访问。</p>
 <p><strong>如果想在国内环境下访问你的应用，则需要一个你自己的域名。</strong></p>
 <p>进入Dashboard，点击该项目，选择Settings栏目：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191354269.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191354269.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <p>在左边栏中选择Domains，将你的域名填入框中，并点击Add按钮：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191501964.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191501964.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191605383.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191605383.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <p>这里还需要将域名解析到指定服务器，以腾讯云域名为例，进入控制台页面，点击“云产品”，选择“域名注册”：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191823719.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191823719.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <p>进入后，找到你的域名，点击右侧的“解析”：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191856217.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608191856217.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
-
-
 <p>进入后，点击“添加记录”，按vercel中提示的信息创建记录：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608192049331.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608192049331.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608192333412.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608192333412.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608192425183.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608192425183.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
 <p>保存后，回到vercel页面中，等待它自动创建SSL证书，一段时间后变为如下状态：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608192534603.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230608192534603.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
-
-
-
 <p>此时，可以在国内直接访问域名，进入你的个人chatgpt应用了，开始愉快的割韭菜吧！</p>
 
 </div>
@@ -2816,7 +2787,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class="-mob-share-qq" title rel="external nofollow noopener noreferrer" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/&title=搭建你自己的ChatGPT应用！ - 清弦小站&summary=本文教你如何通过Vercel一键部署你的私人ChatGPT网页端应用，设置访问密码，用户可以通过自己的APIKey使用ChatGPT，也可以向你付费获取访问密码。
 成品传送门：
 在线ChatGPThttps://www.pyxchat.top/
-
 私聊博主获取访问密码！">
           
             <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
@@ -2828,7 +2798,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class="-mob-share-qzone" title rel="external nofollow noopener noreferrer" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/&title=搭建你自己的ChatGPT应用！ - 清弦小站&summary=本文教你如何通过Vercel一键部署你的私人ChatGPT网页端应用，设置访问密码，用户可以通过自己的APIKey使用ChatGPT，也可以向你付费获取访问密码。
 成品传送门：
 在线ChatGPThttps://www.pyxchat.top/
-
 私聊博主获取访问密码！">
           
             <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
@@ -2840,7 +2809,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class="-mob-share-weibo" title rel="external nofollow noopener noreferrer" target="_blank" href="http://service.weibo.com/share/share.php?url=https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/&title=搭建你自己的ChatGPT应用！ - 清弦小站&summary=本文教你如何通过Vercel一键部署你的私人ChatGPT网页端应用，设置访问密码，用户可以通过自己的APIKey使用ChatGPT，也可以向你付费获取访问密码。
 成品传送门：
 在线ChatGPThttps://www.pyxchat.top/
-
 私聊博主获取访问密码！">
           
             <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
@@ -3823,7 +3791,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
   <script>
-  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg"];
+  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4138,7 +4106,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/小技巧/","name":"小技巧"}},{"@type":"ListItem","position":3,"item":{"@id":"https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/","name":"搭建你自己的ChatGPT应用！"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"搭建你自己的ChatGPT应用！","description":"本文教你如何通过Vercel一键部署你的私人ChatGPT网页端应用，设置访问密码，用户可以通过自己的APIKey使用ChatGPT，也可以向你付费获取访问密码。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/","wordCount":135,"datePublished":"2023-06-08T09:30:29.000Z","dateModified":"2023-07-04T08:57:13.476Z","articleSection":"小技巧","image":{"@type":"ImageObject","url":"https://img-1306037672.cos.ap-beijing.myqcloud.com/pyxchat.png","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/小技巧/","name":"小技巧"}},{"@type":"ListItem","position":3,"item":{"@id":"https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/","name":"搭建你自己的ChatGPT应用！"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"搭建你自己的ChatGPT应用！","description":"本文教你如何通过Vercel一键部署你的私人ChatGPT网页端应用，设置访问密码，用户可以通过自己的APIKey使用ChatGPT，也可以向你付费获取访问密码。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://pyxblog.cn/2023/06/08/bulid-your-chatgpt-on-vercel/","wordCount":134,"datePublished":"2023-06-08T09:30:29.000Z","dateModified":"2023-07-04T08:57:13.476Z","articleSection":"小技巧","image":{"@type":"ImageObject","url":"https://img-1306037672.cos.ap-beijing.myqcloud.com/pyxchat.png","width":1024,"height":768}}]</script>
 
 
 
