@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://pyxblog.cn/tags/爬虫/">
+  
+  <link rel="canonical" href="https://pyxblog.cn/2023/09/19/algorithm-c1-d/">
   <!-- 渲染优化 -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
       <link rel="dns-prefetch" href="https://unpkg.com">
@@ -33,18 +33,21 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="清弦小站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>标签：爬虫 - 清弦小站</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="BLOG - 庞宇轩 - 清弦小站">
+  <title>题解 POJ-1328 Radar Installation - 清弦小站</title>
+  <meta name="keywords" content="算法,null">
+  <meta desc name="description" content="原题直达https://vjudge.net/contest/582185#problem/D - 庞宇轩 - 清弦小站">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="清弦小站">
-<meta property="og:url" content="https://pyxblog.cn/tags/%E7%88%AC%E8%99%AB/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="题解 POJ-1328 Radar Installation">
+<meta property="og:url" content="https://pyxblog.cn/2023/09/19/algorithm-c1-d/index.html">
 <meta property="og:site_name" content="清弦小站">
-<meta property="og:description" content="BLOG">
+<meta property="og:description" content="原题直达https:&#x2F;&#x2F;vjudge.net&#x2F;contest&#x2F;582185#problem&#x2F;D">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-09-19T09:07:56.000Z">
+<meta property="article:modified_time" content="2023-09-19T10:22:59.853Z">
 <meta property="article:author" content="庞宇轩">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2519,7 +2522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class="cover-wrapper  search" style="display: none;">
+      <div id="none" class="cover-wrapper post search" style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2581,33 +2584,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2023/05/21/python-spider-txt365kk/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-post" id="post" itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2023/09/19/algorithm-c1-d/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="清弦小站">
   </span>
@@ -2616,331 +2595,321 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="BLOG">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2023/05/21/python-spider-txt365kk/" itemprop="url">
-        python爬虫实战——小说爬取《我的师兄实在太稳健了》
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
     
-      <p>基于<code>requests</code>库和<code>lxml</code>库编写的爬虫，目标小说网站域名<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.365kk.cc/">http://www.365kk.cc/</a>，类似的小说网站殊途同归，均可采用本文方法爬取。</p>
-<p><strong>目标网站</strong>：<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.365kk.cc/">传送门</a></p>
-<p><strong>本文的目标书籍</strong>：<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.365kk.cc/255/255036/">《我的师兄实在太稳健了》</a></p>
-<div class="note quote gray"><p>渡劫只有九成八的把握，和送死有什么区别？</p></div>
     
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
+      <h1 class="title" itemprop="name headline">
+        题解 POJ-1328 Radar Installation
+      </h1>
+      <div class="new-meta-box">
         
-        <time itemprop="dateCreated datePublished" datetime="2023-05-21T14:22:30+08:00">2023-05-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="sep"></span><a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/">实战</a>
           
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url"><span itemprop="name">爬虫</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/" itemprop="url"><span itemprop="name">实战</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2023/05/21/python-spider-txt365kk/" itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
+            
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/" rel="nofollow">
+    <img itemprop="image" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/avatar.jpeg" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/avatar.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">清弦.</p>
+  </a>
 </div>
 
+          
+        
+          
+            
+  <div class="new-meta-item category">
+    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/">贪心</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url"><span itemprop="name">算法</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/" itemprop="url"><span itemprop="name">贪心</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-09-19T17:07:56+08:00">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年9月19日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <div class="tag link"><a class="link-card" title="原题直达" target="_blank" rel="external nofollow noopener noreferrer" href="https://vjudge.net/contest/582185#problem/D"><div class="left"><img src="https://vjudge.net/static/bundle/11b24ab2156955d8f3fa.ico" class="lazyload" data-srcset="https://vjudge.net/static/bundle/11b24ab2156955d8f3fa.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">原题直达</p><p class="url">https://vjudge.net/contest/582185#problem/D</p></div></a></div>
+<span id="more"></span>
+<div class="story post-story"><h2 id="题干">题干</h2>
+<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">原题面</a></li><li class="tab"><a class="#tab-id-2">参考翻译</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>Assume the coasting is an infinite straight line. Land is in one side of coasting, sea in the other. Each small island is a point locating in the sea side. And any radar installation, locating on the coasting, can only cover d distance, so an island in the sea can be covered by a radius installation, if the distance between them is at most d.</p>
+<p>We use Cartesian coordinate system, defining the coasting is the x-axis. The sea side is above x-axis, and the land side below. Given the position of each island in the sea, and given the distance of the coverage of the radar installation, your task is to write a program to find the minimal number of radar installations to cover all the islands. Note that the position of an island is represented by its x-y coordinates.</p>
+<div class="img-wrap">
+<div class="img-bg">
+<img class="img lazyload" src="https://vj.csgrandeur.cn/f6ffe515205096387436c13c7449b0ed?v=1694664412" data-srcset="https://vj.csgrandeur.cn/f6ffe515205096387436c13c7449b0ed?v=1694664412" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Figure A Sample Input of Radar Installations" style="width:800px;">
+</div>
+<span class="image-caption">Figure A Sample Input of Radar Installations</span>
+</div>
+<hr>
+<p><strong>Input</strong></p>
+<p>The input consists of several test cases. The first line of each case contains two integers n (1&lt;=n&lt;=1000) and d, where n is the number of islands in the sea and d is the distance of coverage of the radar installation. This is followed by n lines each containing two integers representing the coordinate of the position of each island. Then a blank line follows to separate the cases.</p>
+<p>The input is terminated by a line containing pair of zeros.</p>
+<p><strong>Output</strong></p>
+<p>For each test case output one line consisting of the test case number followed by the minimal number of radar installations needed. "-1" installation means no solution for that case.</p></div><div class="tab-pane" id="tab-id-2"><p>假设滑行是一条无限直线。海岸的一边是陆地，另一边是海洋。每个小岛都是位于海边的一个点。而任何雷达装置，定位在海岸上，只能覆盖d距离，所以一个半径的装置可以覆盖一个岛屿，如果他们之间的距离不超过d。</p>
+<p>我们用笛卡尔坐标系，定义滑行是x轴。海洋面在x轴上方，陆地面在x轴下方。给定每个岛屿在海上的位置，给定雷达安装的覆盖距离，你的任务是编写一个程序，找出覆盖所有岛屿的最小雷达安装数量。注意，岛屿的位置由它的x-y坐标表示。</p>
+<div class="img-wrap">
+<div class="img-bg">
+<img class="img lazyload" src="https://vj.csgrandeur.cn/f6ffe515205096387436c13c7449b0ed?v=1694664412" data-srcset="https://vj.csgrandeur.cn/f6ffe515205096387436c13c7449b0ed?v=1694664412" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图A 雷达安装输入样例" style="width:800px;">
+</div>
+<span class="image-caption">图A 雷达安装输入样例</span>
+</div>
+<hr>
+<p><strong>Input</strong></p>
+<p>输入由几个测试用例组成。每种情况的第一行包含两个整数n (1&lt;=n&lt;=1000)和d，其中n为海上岛屿的数量，d为雷达安装的覆盖距离。接下来是n行，每一行包含两个整数，代表每个岛屿的位置坐标。然后用空行分隔大小写。</p>
+<p>输入以包含一对零的行结束。</p>
+<p><strong>Output</strong></p>
+<p>对于每个测试用例输出一行，包含测试用例编号，然后是所需雷达安装的最小数量。“-1”安装意味着这种情况下没有解决方案。</p></div></div></div>
+<h3 id="测试案例">测试案例</h3>
+<p><strong>Input</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">3 2</span><br><span class="line">1 2</span><br><span class="line">-3 1</span><br><span class="line">2 1</span><br><span class="line"></span><br><span class="line">1 2</span><br><span class="line">0 2</span><br><span class="line"></span><br><span class="line">0 0</span><br></pre></td></tr></table></figure>
+<p><strong>Output</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Case 1: 2</span><br><span class="line">Case 2: 1</span><br></pre></td></tr></table></figure>
+<hr>
+</div><div class="story post-story"><h2 id="题意与思路">题意与思路</h2>
+<p>题意为给你若干个海岛的坐标，你需要在海岸线上布置雷达，雷达的覆盖面是半径为 <code>d</code> 的圆形，要求你给出一种布置雷达的方案，使得雷达总数最小。</p>
+<p>首先，我们需要判断布置雷达覆盖所有岛屿的方案是否存在，判断条件为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">岛屿距离海岸线的距离 &lt;= 雷达覆盖半径</span><br></pre></td></tr></table></figure>
+<p>如果方案存在，接下来我们开始探索具体的方案。</p>
+<p>对于某个海岛，<strong>以其坐标为圆心、<code>d</code> 为半径画圆</strong>，在这一范围内布置雷达可以检测到该海岛。由于雷达只能布置在海岸线上，所以实际上，只有<strong>该圆与 x 轴相交的区间</strong>上有雷达，才能覆盖到这一海岛。</p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919173130170.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919173130170.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+<p>因此，我们可以<strong>以海岛为圆心、<code>d</code> 为半径画出若干个圆</strong>，尝试遍历这些圆，讨论它们与 x 轴的相交情况以及它们彼此之间的相交情况，就有可能解决这一问题。</p>
+<p>按照一般习惯，我们尝试<strong>从左到右</strong>遍历这些圆，在遍历的过程中布置雷达。雷达可以布置在区间内的任意位置，但是为了使雷达总数最小，我们需要<strong>尽可能地让每一个雷达覆盖到更多的海岛</strong>。</p>
+<p>在从左到右遍历时，我们在当前区间范围内布置一个雷达，并<strong>希望它尽可能地照顾到更多右边的海岛</strong>，那么这一雷达最佳的位置应该是<strong>该区间的右端点</strong>。</p>
+<p>由此，我们得出了<strong>遍历过程中布置雷达的思路</strong>：</p>
+<ol type="1">
+<li>在<strong>第一个岛屿对应区间的右端点</strong>布置雷达，记录雷达的位置 <code>raderLoc</code></li>
+<li>考察下一个岛屿，如果：
+<ul>
+<li>当前<strong>处于 <code>raderLoc</code> 位置的雷达可以覆盖到该岛屿</strong>，则继续步骤2；</li>
+<li>当前<strong>处于 <code>raderLoc</code> 位置的雷达无法覆盖到该岛屿</strong>，则在该岛屿对应<strong>区间的右端点布置下一个雷达</strong>，并<strong>更新雷达的位置 <code>raderLoc</code></strong>；</li>
+</ul></li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> rader = <span class="number">1</span>;  <span class="comment">// 记录雷达总数</span></span><br><span class="line"><span class="type">double</span> raderLoc = 第一个岛屿的区间右端点;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt; n;i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(第i个岛屿能被当前雷达覆盖)</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    rader ++;  <span class="comment">// 新增雷达</span></span><br><span class="line">    raderLoc = 第i个岛屿的区间右端点;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解决了如何布置雷达的问题，还需要解决岛屿的顺序问题。给岛屿排序的思路有很多，例如：</p>
+<p><em>[思路1] 根据岛屿横坐标排序</em></p>
+<p><em>[思路2] 根据岛屿的区间左端点排序</em></p>
+<p><em>[思路3] 根据岛屿的区间右端点排序</em></p>
+<p>我们考察下面这种情况：</p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919175812957.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919175812957.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+<p>岛屿 <code>i</code> 和岛屿 <code>j</code> 的横坐标相同，对应区间分别为 <code>[li, ri]</code> 和 <code>[lj, rj]</code>，此时：</p>
+<ul>
+<li><p>如果<strong>按照区间左端点排序</strong>，则 <code>li &lt; lj</code>，遍历时：</p>
+<ul>
+<li>首先考虑岛屿 <code>i</code>，雷达被布置在 <code>raderLoc = ri</code></li>
+<li>接下来考虑岛屿 <code>j</code>，当前雷达位置 <code>raderLoc = ri</code>，无法覆盖到岛屿 <code>j</code>，因此在岛屿 <code>j</code> 的右端点设置下一个雷达 <code>raderLoc = rj</code></li>
+</ul>
+<p>然而，这样就导致<strong>岛屿 <code>i</code> 所对应的区间中出现了两个雷达</strong>，分别位于 <code>ri</code> 和 <code>rj</code>，产生了浪费，所以这种思路出了问题；</p>
+<blockquote>
+<p>当然，你也可以增加对这种情况的判别，不增设雷达，而是把<strong>处于 <code>ri</code> 的雷达挪动到 <code>rj</code></strong>，也是一种可行的思路。</p>
+</blockquote></li>
+<li><p>如果<strong>按照区间的右端点排序</strong>，则 <code>rj &lt; ri</code>，遍历时：</p>
+<ul>
+<li>首先考虑岛屿 <code>j</code>，雷达被布置在 <code>raderLoc = rj</code></li>
+<li>接下来考虑岛屿 <code>i</code>，当前雷达位置 <code>raderLoc = rj</code>，可以覆盖岛屿 <code>i</code>，无需布置新的雷达，与推论相符</li>
+</ul></li>
+</ul>
+<p>因此，我们<strong>采用<em>[思路3]</em>对所有岛屿进行排序</strong>。</p>
+<p>我们采用结构体来存储岛屿数据，并定义排序规则 <code>cmp()</code>：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">    <span class="type">double</span> x;  <span class="comment">// 岛屿横坐标</span></span><br><span class="line">    <span class="type">double</span> y;  <span class="comment">// 岛屿纵坐标</span></span><br><span class="line">    <span class="type">double</span> ro;  <span class="comment">// 岛屿对应区间的右端点</span></span><br><span class="line">    <span class="function"><span class="type">double</span> <span class="title">getRO</span><span class="params">()</span></span>&#123;  <span class="comment">// 用于计算ro</span></span><br><span class="line">        <span class="keyword">return</span> x + <span class="built_in">sqrt</span>(d * d - y * y);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">vector&lt;node&gt; vec;  <span class="comment">// 用于存储岛屿</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(node a, node b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.ro &lt; b.ro;  <span class="comment">// 依据区间右端点排序</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="built_in">sort</span>(vec.<span class="built_in">begin</span>(), vec.<span class="built_in">end</span>(), cmp);  <span class="comment">// 排序</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><p>需要特别注意，当有海岛距离海岸线超过 <code>d</code> 即方案不存在时，亦须<strong>先等待输入结束</strong>，再输出 Case x: -1，而<strong>不能检测到该岛屿时直接输出</strong>，<del>否则会报错，呜呜呜呜呜呜呜</del></p></div>
+<div class="note warning"><p>需要特别注意2，输入岛屿数据的时候不要用 <code>cin</code>，要用 <code>scanf</code>，因为 <code>cin</code> 比 <code>scanf</code> 慢，会报超时<del>呜呜呜呜呜呜呜</del></p></div>
+<hr>
+</div><div class="story post-story"><h2 id="题解">题解</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">double</span> d;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">    <span class="type">double</span> x;  <span class="comment">// 岛屿横坐标</span></span><br><span class="line">    <span class="type">double</span> y;  <span class="comment">// 岛屿纵坐标</span></span><br><span class="line">    <span class="type">double</span> ro;  <span class="comment">// 岛屿对应区间的右端点</span></span><br><span class="line">    <span class="function"><span class="type">double</span> <span class="title">getRO</span><span class="params">()</span></span>&#123;  <span class="comment">// 用于计算ro</span></span><br><span class="line">        <span class="keyword">return</span> x + <span class="built_in">sqrt</span>(d * d - y * y);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">vector&lt;node&gt; vec;  <span class="comment">// 用于存储岛屿</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(node a, node b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.ro &lt; b.ro;  <span class="comment">// 依据区间右端点排序</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> cnt = <span class="number">1</span>;  <span class="comment">// Case x</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d %lf&quot;</span>, &amp;n, &amp;d) != EOF)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span> &amp;&amp; d == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        vec.<span class="built_in">clear</span>();  <span class="comment">// 清空上一个Case储存的岛屿</span></span><br><span class="line"></span><br><span class="line">        <span class="type">double</span> maxDis = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line">            node t;</span><br><span class="line">            <span class="comment">// cin&gt;&gt;t.x&gt;&gt;t.y;</span></span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>, &amp;t.x, &amp;t.y);</span><br><span class="line">            maxDis = <span class="built_in">max</span>(maxDis, t.y);</span><br><span class="line">            <span class="keyword">if</span>(maxDis &gt; d) <span class="keyword">continue</span>;</span><br><span class="line">            t.ro = t.<span class="built_in">getRO</span>();</span><br><span class="line">            vec.<span class="built_in">push_back</span>(t);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;Case &quot;</span>&lt;&lt;cnt&lt;&lt;<span class="string">&quot;: &quot;</span>;</span><br><span class="line">        cnt ++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(maxDis &gt; d)&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;-1&quot;</span>&lt;&lt;endl;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">sort</span>(vec.<span class="built_in">begin</span>(), vec.<span class="built_in">end</span>(), cmp);</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> rader = <span class="number">1</span>;</span><br><span class="line">        <span class="type">double</span> raderLoc = vec[<span class="number">0</span>].ro;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt; n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(d * d &gt;= (vec[i].x - raderLoc) * (vec[i].x - raderLoc) + vec[i].y * vec[i].y)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            rader ++;</span><br><span class="line">            raderLoc = vec[i].ro;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        cout&lt;&lt;rader&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</div>
+  </div>
+  
+  
+    
+    <div class="footer">
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          <div class="copyright">
+            <blockquote>
+              
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+                
+              
+                
+                  <p>本文永久链接是：<a href="https://pyxblog.cn/2023/09/19/algorithm-c1-d/">https://pyxblog.cn/2023/09/19/algorithm-c1-d/</a></p>
+                
+              
+            </blockquote>
           </div>
         
       
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
+      
         
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2022/08/07/python-spider-scrapy3/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清弦小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清弦小站">
-    <meta itemprop="description" content="BLOG">
-  </span>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-19T18:22:59+08:00">
+  <a class="notlink">
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年9月19日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AE%97%E6%B3%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>算法</p></a></div>
+  <span hidden itemprop="keywords">算法</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title rel="external nofollow noopener noreferrer" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://pyxblog.cn/2023/09/19/algorithm-c1-d/&title=题解 POJ-1328 Radar Installation - 清弦小站&summary=原题直达https://vjudge.net/contest/582185#problem/D">
+          
+            <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title rel="external nofollow noopener noreferrer" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://pyxblog.cn/2023/09/19/algorithm-c1-d/&title=题解 POJ-1328 Radar Installation - 清弦小站&summary=原题直达https://vjudge.net/contest/582185#problem/D">
+          
+            <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title rel="external nofollow noopener noreferrer" target="_blank" href="http://service.weibo.com/share/share.php?url=https://pyxblog.cn/2023/09/19/algorithm-c1-d/&title=题解 POJ-1328 Radar Installation - 清弦小站&summary=原题直达https://vjudge.net/contest/582185#problem/D">
+          
+            <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        
+        <div class="hoverbox">
+          <a class="share"><img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC/ElEQVR42u3aQXIbMQwEQP3/08kH4lpgANlC3LypLGvJ5mUKs68/1j/XCwEYMGDAgAFzBuYVrrdv8OE5X/19eh4wYMCAAQMGzD2Y6YbT35k+/+lz+/fAgAEDBgwYMGdhHgPQw/enINXg1oUrnwcMGDBgwIAB8+th3hUcp/sDAwYMGDBgwIDpBrZy4VUs+MCAAQMGDBgwYLYKr+mLR9NB1Mc1kWDAgAEDBgyYb4NJD/apn+PzgAEDBgwYMGDOwExXdeA0DWjVADg+DxgwYMCAAQPmDEwakNJibfq8rYAHBgwYMGDAgPn/YKrFVTXQTX+v+v21wAkGDBgwYMCAOQPTPVj3BZ9p4OpCdAPg4wQPDBgwYMCAAXMGplu0dUG2AuT2AA0MGDBgwIABcxdmOujZKti6F7IV/MCAAQMGDBgwd2G6BVY6CHp3QJzuEwwYMGDAgAFzF6ZaWHUhUoB3F29xEwkGDBgwYMCA+XGYKch0kLQFt/WiEhgwYMCAAQPmDsy04Nra6BZE9e9fngcMGDBgwIABcwZmOnhKN9Q96PS55SALBgwYMGDAgDkHszV4SgdQ04BZDYiP5wUDBgwYMGDAnIHpBq9uYNoKiN0L+bbCDQwYMGDAgAHz4zDlQU4xCE6h0iJvPLgCAwYMGDBgwJyBSQuydNCVDpjSi2wPvsCAAQMGDBgw52CmhVo3eKVBcOt75SYSDBgwYMCAAXMGZmsj6YtB7YM0///x4sCAAQMGDBgw52HSjUwLu+7gKx14xQEPDBgwYMCAAfMxMNOVvsgzBU0DZLlwAwMGDBgwYMB8PMwrXN1A2H1BeavQa18QGDBgwIABA+YcTDfQVQ+ebngaGLugYMCAAQMGDJj7MGmA6m5wGgzTgPp48WDAgAEDBgyYXwezNigKA97aAA0MGDBgwIABA2Y4gOoO0tYGW2DAgAEDBgyYszDdwq1ayHWDV1qYdcHAgAEDBgwYMPdh0uIqhU0PnMKVLwwMGDBgwIABcwbGAgMGDBgwYMAcW38BBdJjrCRxuwUAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class="next" href="/2023/09/19/algorithm-c1-c/">
+          <p class="title">题解 POJ-1013 Counterfeit Dollar<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">原题直达https://vjudge.net/contest/582185#problem/C
+
+题干
+原题面参考翻译Sally Jones has a dozen Voyageur silve...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2023/09/19/algorithm-c1-d/index.html#comments">
     </span>
-  
-  
+    <p ct><i class="fas fa-comments"></i> 评论</p>
     
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/08/07/python-spider-scrapy3/" itemprop="url">
-        scrapy爬虫实战03-爬取其他文件格式
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
-    
-      <p>Scrapy框架爬虫实战03，是对zcool精选图片的爬取，并以标题为文件名进行分割存储。对Scrapy框架有一定的理解后，再阅读本篇博客为好。</p>
-    
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-07T00:15:29+08:00">2022-08-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="sep"></span><a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/">实战</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url"><span itemprop="name">爬虫</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/" itemprop="url"><span itemprop="name">实战</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/08/07/python-spider-scrapy3/" itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2022/08/07/python-spider-scrapy2/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清弦小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清弦小站">
-    <meta itemprop="description" content="BLOG">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/08/07/python-spider-scrapy2/" itemprop="url">
-        scrapy爬虫实战02-CrawlSpider入门
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
-    
-      <p>Scrapy框架实战2，主要是crawlSpider爬虫的入门，CrawlSpider要比基础的spider实用一些，不过还是建议看过Scrapy框架实战1的同学再来看这篇文章。</p>
-    
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-07T00:12:29+08:00">2022-08-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="sep"></span><a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/">实战</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url"><span itemprop="name">爬虫</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/" itemprop="url"><span itemprop="name">实战</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/08/07/python-spider-scrapy2/" itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2022/08/07/python-spider-scrapy1/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清弦小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清弦小站">
-    <meta itemprop="description" content="BLOG">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/08/07/python-spider-scrapy1/" itemprop="url">
-        Scrapy爬虫实战01-古诗文网
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
-    
-      <p>Scrapy框架的应用案例1，基础的scrapy框架使用，过程应该还挺详细，便于大家查阅参考。</p>
-    
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-07T00:06:53+08:00">2022-08-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="sep"></span><a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/">实战</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url"><span itemprop="name">爬虫</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/" itemprop="url"><span itemprop="name">实战</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/08/07/python-spider-scrapy1/" itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2022/08/06/python-spider-demo1/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清弦小站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清弦小站">
-    <meta itemprop="description" content="BLOG">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/08/06/python-spider-demo1/" itemprop="url">
-        python爬虫实战演示
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
-    
-      <p>一些基于python的爬虫实战，记录了我和反爬斗智斗勇的心路历程。这篇文章最开始发表于2021年暑期，后来还被举报下架了，所以其中提到的网站反爬虫很可能已经“魔高一丈”，如果实现不了，不必纠结。</p>
-    
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-06T23:56:53+08:00">2022-08-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="sep"></span><a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/">实战</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url"><span itemprop="name">爬虫</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/" itemprop="url"><span itemprop="name">实战</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/08/06/python-spider-demo1/" itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2974,6 +2943,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </section>
 
+    
+  
+
+  
+    
+    
+      
     
   
 
@@ -3030,101 +3006,41 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
   
 
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href="/blog/categories/"><i class="fas fa-align-left fa-fw" aria-hidden="true"></i><span class="name">专栏</span></a>
-    
-  </header>
-
-
-    <div class="content">
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box" title="/categories/Matlab/" href="/categories/Matlab/" active-action="action-categoriesMatlab"><div class="name">Matlab</div><div class="badge">(7)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/Matlab/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" href="/categories/Matlab/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" active-action="action-categoriesMatlabE59FBAE7A180E69599E7A88B"><div class="name">基础教程</div><div class="badge">(6)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/Matlab/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B/" href="/categories/Matlab/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B/" active-action="action-categoriesMatlabE8BF9BE998B6E69599E7A88B"><div class="name">进阶教程</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/markdown%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" href="/categories/markdown%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" active-action="action-categoriesmarkdownE7B3BBE58897E69599E7A88B"><div class="name">markdown系列教程</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/python/" href="/categories/python/" active-action="action-categoriespython"><div class="name">python</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/python/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" href="/categories/python/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" active-action="action-categoriespythonE59FBAE7A180E69599E7A88B"><div class="name">基础教程</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E5%88%86%E4%BA%AB/" href="/categories/%E5%88%86%E4%BA%AB/" active-action="action-categoriesE58886E4BAAB"><div class="name">分享</div><div class="badge">(9)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E5%88%86%E4%BA%AB/%E6%8E%A8%E5%85%8D/" href="/categories/%E5%88%86%E4%BA%AB/%E6%8E%A8%E5%85%8D/" active-action="action-categoriesE58886E4BAABE68EA8E5858D"><div class="name">推免</div><div class="badge">(2)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E5%88%86%E4%BA%AB/%E6%97%A5%E5%B8%B8/" href="/categories/%E5%88%86%E4%BA%AB/%E6%97%A5%E5%B8%B8/" active-action="action-categoriesE58886E4BAABE697A5E5B8B8"><div class="name">日常</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E5%88%86%E4%BA%AB/%E7%94%9F%E6%B6%AF/" href="/categories/%E5%88%86%E4%BA%AB/%E7%94%9F%E6%B6%AF/" active-action="action-categoriesE58886E4BAABE7949FE6B6AF"><div class="name">生涯</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" active-action="action-categoriesE5B08FE68A80E5B7A7"><div class="name">小技巧</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/" href="/categories/%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/" active-action="action-categoriesE695B0E68DAEE58E8BE7BCA9"><div class="name">数据压缩</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0"><div class="name">深度学习</div><div class="badge">(2)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%AE%9E%E6%88%98demo/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%AE%9E%E6%88%98demo/" active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0E5AE9EE68898demo"><div class="name">实战demo</div><div class="badge">(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E7%88%AC%E8%99%AB/" href="/categories/%E7%88%AC%E8%99%AB/" active-action="action-categoriesE788ACE899AB"><div class="name">爬虫</div><div class="badge">(5)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/" href="/categories/%E7%88%AC%E8%99%AB/%E5%AE%9E%E6%88%98/" active-action="action-categoriesE788ACE899ABE5AE9EE68898"><div class="name">实战</div><div class="badge">(5)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E7%AE%97%E6%B3%95/" href="/categories/%E7%AE%97%E6%B3%95/" active-action="action-categoriesE7AE97E6B395"><div class="name">算法</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80/" href="/categories/%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80/" active-action="action-categoriesE7AE97E6B395E59FBAE7A180"><div class="name">基础</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E7%AE%97%E6%B3%95/%E6%80%9D%E7%BB%B4/" href="/categories/%E7%AE%97%E6%B3%95/%E6%80%9D%E7%BB%B4/" active-action="action-categoriesE7AE97E6B395E6809DE7BBB4"><div class="name">思维</div><div class="badge">(2)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/" href="/categories/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/" active-action="action-categoriesE7AE97E6B395E8B4AAE5BF83"><div class="name">贪心</div><div class="badge">(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href="/blog/tags/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class="name">热门标签</span></a>
-    
-  </header>
-
-
-    <div class="content">
-      <a href="/tags/Matlab/" style="font-size: 22.33px; color: #606060">Matlab</a> <a href="/tags/PyTorch/" style="font-size: 15.67px; color: #8e8e8e">PyTorch</a> <a href="/tags/latex/" style="font-size: 14px; color: #999">latex</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/matplotlib/" style="font-size: 14px; color: #999">matplotlib</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/scrapy/" style="font-size: 17.33px; color: #828282">scrapy</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 15.67px; color: #8e8e8e">前端</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 15.67px; color: #8e8e8e">深度学习</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 20.67px; color: #6c6c6c">爬虫</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 19px; color: #777">算法</a>
-    </div>
-  </section>
-
-
-    
-  
-
 
 <div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
+    
+  </header>
+
+
+    <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E5%B9%B2"><span class="toc-text">题干</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B"><span class="toc-text">测试案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E6%84%8F%E4%B8%8E%E6%80%9D%E8%B7%AF"><span class="toc-text">题意与思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li></ol>
+    </div>
+  </section>
+
+  
 
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3152,13 +3068,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4209,7 +4126,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/tags/爬虫/","name":"爬虫"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"BLOG","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/算法/","name":"算法"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/算法/贪心/","name":"贪心"}},{"@type":"ListItem","position":3,"item":{"@id":"https://pyxblog.cn/2023/09/19/algorithm-c1-d/","name":"题解 POJ-1328 Radar Installation"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"题解 POJ-1328 Radar Installation","description":"原题直达https://vjudge.net/contest/582185#problem/D","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://pyxblog.cn/2023/09/19/algorithm-c1-d/"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://pyxblog.cn/2023/09/19/algorithm-c1-d/","wordCount":47,"datePublished":"2023-09-19T09:07:56.000Z","dateModified":"2023-09-19T10:22:59.853Z","articleSection":"算法","keywords":"算法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
