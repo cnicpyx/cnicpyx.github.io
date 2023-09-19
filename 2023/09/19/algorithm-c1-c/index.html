@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://pyxblog.cn/2022/08/06/pytorch-demo-2/">
+  <link rel="canonical" href="https://pyxblog.cn/2023/09/19/algorithm-c1-c/">
   <!-- 渲染优化 -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
       <link rel="dns-prefetch" href="https://unpkg.com">
@@ -33,23 +33,21 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="清弦小站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>pytorch实现线性回归 - 清弦小站</title>
-  <meta name="keywords" content="python,PyTorch,深度学习,null">
-  <meta desc name="description" content="使用pytorch框架实现基础的线性回归。 - 庞宇轩 - 清弦小站">
+  <title>题解 POJ-1013 Counterfeit Dollar - 清弦小站</title>
+  <meta name="keywords" content="算法,null">
+  <meta desc name="description" content="原题直达https://vjudge.net/contest/582185#problem/C - 庞宇轩 - 清弦小站">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="pytorch实现线性回归">
-<meta property="og:url" content="https://pyxblog.cn/2022/08/06/pytorch-demo-2/index.html">
+<meta property="og:title" content="题解 POJ-1013 Counterfeit Dollar">
+<meta property="og:url" content="https://pyxblog.cn/2023/09/19/algorithm-c1-c/index.html">
 <meta property="og:site_name" content="清弦小站">
-<meta property="og:description" content="使用pytorch框架实现基础的线性回归。">
+<meta property="og:description" content="原题直达https:&#x2F;&#x2F;vjudge.net&#x2F;contest&#x2F;582185#problem&#x2F;C">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-08-06T15:42:03.000Z">
-<meta property="article:modified_time" content="2022-08-06T15:44:48.720Z">
+<meta property="article:published_time" content="2023-09-19T03:59:02.000Z">
+<meta property="article:modified_time" content="2023-09-19T06:12:34.481Z">
 <meta property="article:author" content="庞宇轩">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="PyTorch">
-<meta property="article:tag" content="深度学习">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2588,7 +2586,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-post" id="post" itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2022/08/06/pytorch-demo-2/">
+  <link itemprop="mainEntityOfPage" href="https://pyxblog.cn/2023/09/19/algorithm-c1-c/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="清弦小站">
   </span>
@@ -2609,7 +2607,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        pytorch实现线性回归
+        题解 POJ-1013 Counterfeit Dollar
       </h1>
       <div class="new-meta-box">
         
@@ -2628,14 +2626,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class="new-meta-item category">
     <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="sep"></span><a class="category-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%AE%9E%E6%88%98demo/">实战demo</a>
+    <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/%E6%80%9D%E7%BB%B4/">思维</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">深度学习</span></a>
+        <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url"><span itemprop="name">算法</span></a>
       </span>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E5%AE%9E%E6%88%98demo/" itemprop="url"><span itemprop="name">实战demo</span></a>
+        <a href="/categories/%E7%AE%97%E6%B3%95/%E6%80%9D%E7%BB%B4/" itemprop="url"><span itemprop="name">思维</span></a>
       </span>
     
   </div>
@@ -2644,10 +2642,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-08-06T23:42:03+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-09-19T11:59:02+08:00">
   <a class="notlink">
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年8月6日</p>
+    <p>发布于：2023年9月19日</p>
   </a>
 </div>
 
@@ -2670,13 +2668,65 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <ul>
-<li>用cpu就能很快跑出来</li>
-<li>不需要额外的输入文件</li>
+    <div class="tag link"><a class="link-card" title="原题直达" target="_blank" rel="external nofollow noopener noreferrer" href="https://vjudge.net/contest/582185#problem/C"><div class="left"><img src="https://vjudge.net/static/bundle/11b24ab2156955d8f3fa.ico" class="lazyload" data-srcset="https://vjudge.net/static/bundle/11b24ab2156955d8f3fa.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">原题直达</p><p class="url">https://vjudge.net/contest/582185#problem/C</p></div></a></div>
+<span id="more"></span>
+<div class="story post-story"><h2 id="题干">题干</h2>
+<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">原题面</a></li><li class="tab"><a class="#tab-id-2">参考翻译</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>Sally Jones has a dozen Voyageur silver dollars. However, only eleven of the coins are true silver dollars; one coin is counterfeit even though its color and size make it indistinguishable from the real silver dollars. The counterfeit coin has a different weight from the other coins but Sally does not know if it is heavier or lighter than the real coins. Happily, Sally has a friend who loans her a very accurate balance scale. The friend will permit Sally three weighings to find the counterfeit coin. For instance, if Sally weighs two coins against each other and the scales balance then she knows these two coins are true. Now if Sally weighs one of the true coins against a third coin and the scales do not balance then Sally knows the third coin is counterfeit and she can tell whether it is light or heavy depending on whether the balance on which it is placed goes up or down, respectively. By choosing her weighings carefully, Sally is able to ensure that she will find the counterfeit coin with exactly three weighings.</p>
+<hr>
+<p><strong>Input</strong></p>
+<p>The first line of input is an integer n (n &gt; 0) specifying the number of cases to follow. Each case consists of three lines of input, one for each weighing. Sally has identified each of the coins with the letters A--L. Information on a weighing will be given by two strings of letters and then one of the words <code>up</code> <code>down</code> or <code>even</code>. The first string of letters will represent the coins on the left balance; the second string, the coins on the right balance. (Sally will always place the same number of coins on the right balance as on the left balance.) The word in the third position will tell whether the right side of the balance goes up, down, or remains even.</p>
+<p><strong>Output</strong></p>
+<p>For each case, the output will identify the counterfeit coin by its letter and tell whether it is heavy or light. The solution will always be uniquely determined.</p></div><div class="tab-pane" id="tab-id-2"><p>莎莉·琼斯有一打航海银元。然而，只有11枚硬币是真正的银元;一枚硬币是伪造的，尽管它的颜色和大小使它与真正的银元无法区分。这枚假币的重量与其他硬币不同，但莎莉不知道它是比真硬币重还是轻。 幸运的是，Sally有一个朋友借给她一个非常精确的天平。这位朋友将允许莎莉称三次以找到那枚假币。例如，如果Sally将两枚硬币放在一起称重，天平平衡，那么她就知道这两枚硬币是真的。如果莎莉的体重是 一枚真硬币和第三枚硬币的天平不平衡，那么莎莉就知道第三枚硬币是假的，她可以根据放置硬币的天平是上升还是下降来判断它是轻还是重。 通过仔细选择重量，莎莉能够确保她找到的假币正好有三个重量。</p>
+<hr>
+<p><strong>Input</strong></p>
+<p>输入的第一行是一个整数n (n &gt;0)指定要遵循的案例数。每个案例由三行输入组成，每一行用于称重。莎莉把每一枚硬币都标上了字母A- L。称重信息将由两串字母和一个单词“上”、“下”或“平”组成。第一串字母代表左边天平上的硬币;第二串，硬币在正确的平衡上。(Sally总是会把相同数量的硬币放在右边的天平和左边的天平上。)第三个位置的单词将告诉我们天平的右侧是上升、下降还是保持平衡。</p>
+<p><strong>Output</strong></p>
+<p>对于每种情况，输出将根据字母识别假币，并告诉它是重还是轻。解决方案总是唯一确定的。</p></div></div></div>
+<h3 id="测试案例">测试案例</h3>
+<p><strong>Input</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 </span><br><span class="line">ABCD EFGH even </span><br><span class="line">ABCI EFJK up </span><br><span class="line">ABIJ EFGH even </span><br></pre></td></tr></table></figure>
+<p><strong>Output</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">K is the counterfeit coin and it is light. </span><br></pre></td></tr></table></figure>
+<hr>
+</div><div class="story post-story"><h2 id="题意与思路">题意与思路</h2>
+<p>题目给出的条件为：</p>
+<ul>
+<li>共有12枚硬币，分别用 <code>ABCDEFGHIJKL</code> 表示</li>
+<li>12枚硬币中，有11枚完全一样的真币和1枚假币</li>
+<li>假币的重量与真币不同，但暂时不知道它是更轻还是更重</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x_values = [i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">11</span>)] <span class="comment"># [0,1,2,3,4,5,6,7,8,9,10]</span></span><br><span class="line">x_train = np.array(x_values, dtype=np.float32)</span><br><span class="line">x_train = x_train.reshape(-<span class="number">1</span>, <span class="number">1</span>) <span class="comment"># 将x_train调整为11*1的矩阵</span></span><br><span class="line"></span><br><span class="line">y_values = [<span class="number">2.5</span>*i+<span class="number">3.5</span> <span class="keyword">for</span> i <span class="keyword">in</span> x_values] <span class="comment"># y=2.5x+3.5</span></span><br><span class="line">y_train = np.array(y_values, dtype=np.float32)</span><br><span class="line">y_train = y_train.reshape(-<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinearRegressionModel</span>(nn.Module): <span class="comment"># 继承自nn包的Module类</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, input_dim, output_dim</span>):</span><br><span class="line">        <span class="built_in">super</span>(LinearRegressionModel, self).__init__() <span class="comment"># 执行父类的构造函数</span></span><br><span class="line">        self.linear = nn.Linear(input_dim, output_dim)</span><br><span class="line">        <span class="comment"># nn.Linear(输入数据维度, 输出数据维度) 全连接层</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        out = self.linear(x)</span><br><span class="line">        <span class="keyword">return</span> out</span><br><span class="line"></span><br><span class="line">input_dim = <span class="number">1</span></span><br><span class="line">output_dim = <span class="number">1</span></span><br><span class="line">model = LinearRegressionModel(input_dim, output_dim)</span><br><span class="line"></span><br><span class="line">epochs = <span class="number">1000</span> <span class="comment"># 训练次数</span></span><br><span class="line">learning_rate = <span class="number">0.01</span> <span class="comment"># 学习率</span></span><br><span class="line">optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)</span><br><span class="line"><span class="comment"># 优化器，使用基本的优化器SGD，传入需要更新的参数（model中的全部参数）和学习率</span></span><br><span class="line">criterion = nn.MSELoss() <span class="comment"># 回归任务可选用MSE等</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(epochs):</span><br><span class="line">    epoch += <span class="number">1</span></span><br><span class="line">    <span class="comment"># x_train和y_train均为numpy.ndarry格式，需要转换为tensor格式才可以传入框架</span></span><br><span class="line">    inputs = torch.from_numpy(x_train)</span><br><span class="line">    labels = torch.from_numpy(y_train)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 每次迭代开始时 梯度需要清零</span></span><br><span class="line">    optimizer.zero_grad()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 前向传播</span></span><br><span class="line">    outputs = model.forward(inputs)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算损失</span></span><br><span class="line">    loss = criterion(outputs, labels)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 反向传播</span></span><br><span class="line">    loss.backward()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 更新权重参数</span></span><br><span class="line">    optimizer.step()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 每50个epoch输出一次，以显示训练进度</span></span><br><span class="line">    <span class="keyword">if</span> epoch % <span class="number">50</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'epoch {}, loss {}'</span>.<span class="built_in">format</span>(epoch, loss.item()))</span><br><span class="line"></span><br><span class="line">y_predicted = model.forward(torch.from_numpy(x_train)).data.numpy()</span><br><span class="line"><span class="comment"># 前向传播 传入训练数据x 输出预测结果y 用以测试</span></span><br><span class="line"><span class="comment"># .data.numpy() 将结果转换成numpy</span></span><br><span class="line"><span class="built_in">print</span>(y_predicted)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>在此基础上，使用一个天平称量三次：</p>
+<ul>
+<li>每次称量时，天平两端的硬币数量相等，但<strong>不一定为4</strong></li>
+<li><strong>题目确保一定可以通过三次称量找到这枚假币</strong></li>
+</ul>
+<p>由于有且仅有一枚假币的重量与其他硬币不同，因此<strong>：</strong></p>
+<ul>
+<li>只要天平出现<strong>倾斜</strong>，就表明<strong>假币一定出现在了天平的某一侧</strong>，且假币出现的那一侧总是较轻/较重</li>
+<li>如果天平<strong>平衡</strong>，说明<strong>假币一定没有出现在天平上</strong>，也就是说当前天平上的所有硬币都是真币</li>
+</ul>
+<p>据此，我们制定策略——给每个硬币<strong>假定一个初始重量</strong> <code>0</code>：</p>
+<ul>
+<li>当某一硬币<strong>出现在较轻一侧</strong>时，令其重量 <code>-1</code></li>
+<li>当某一硬币<strong>出现在较重一侧</strong>时，令其重量 <code>+1</code></li>
+<li>当某一硬币<strong>出现在平衡的比较轮次</strong>中，将其排除</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">calculate</span><span class="params">(string sl, string sr, string e)</span></span>&#123;</span><br><span class="line">    <span class="comment">// sl - 天平左侧字符串</span></span><br><span class="line">    <span class="comment">// sr - 天平右侧字符串</span></span><br><span class="line">    <span class="comment">// e  - 天平比较结果</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(e == <span class="string">&quot;even&quot;</span>)&#123;  <span class="comment">// 天平平衡-&gt;左右两侧硬币为真，排除</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; sl.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            isTrue[sl[i]] = <span class="literal">true</span>;</span><br><span class="line">            isTrue[sr[i]] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(e == <span class="string">&quot;up&quot;</span>)&#123;  <span class="comment">// 天平右侧较轻-&gt;右侧重量--，左侧重量++</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; sl.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            score[sl[i]] ++;</span><br><span class="line">            score[sr[i]] --;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;  <span class="comment">// 天平右侧较重-&gt;右侧重量++，左侧重量--</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; sl.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            score[sl[i]] --;</span><br><span class="line">            score[sr[i]] ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>分析三次称量可能出现的情况，我们可以将结果分为三类：</p>
+<ul>
+<li><p>三次倾斜</p>
+<p>此时，假币必然出现在<strong>每一次称量结果中的同一侧</strong>，那么它的重量将经过三次 <code>+1</code> 或 <code>-1</code>，由于题目确保一定能找到假币，说明<strong>重量绝对值为 3 的硬币必然有且仅有 1 枚</strong>，成功找到假币；</p></li>
+<li><p>三次平衡</p>
+<p>此时，三次平衡可以排除若干真币，由于题目确保一定能找到假币，说明<strong>必然仅剩一枚假币</strong>，成功找到假币；</p></li>
+<li><p>若干次平衡、若干次倾斜</p>
+<p>此时，假币必然出现在倾斜的那几组中，经过重量的判别调整，可能会有<strong>若干个重量绝对值相等且最大的硬币</strong>，由于题目确保一定能找到假币，<strong>必然可以通过平衡的结果，对这些硬币进行排除，最后仅留下一枚硬币</strong>，成功找到假币；</p></li>
+</ul>
+<p>最后，只要考察重量绝对值最大的硬币的<strong>重量是负数还是正数</strong>，即可得出该硬币是较重还是较轻。</p>
+<hr>
+</div><div class="story post-story"><h2 id="题解">题解</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> score[<span class="number">200</span>];</span><br><span class="line"><span class="type">bool</span> isTrue[<span class="number">200</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">calculate</span><span class="params">(string sl, string sr, string e)</span></span>&#123;</span><br><span class="line">    <span class="comment">// sl - 天平左侧字符串</span></span><br><span class="line">    <span class="comment">// sr - 天平右侧字符串</span></span><br><span class="line">    <span class="comment">// e  - 天平比较结果</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(e == <span class="string">&quot;even&quot;</span>)&#123;  <span class="comment">// 天平平衡-&gt;左右两侧硬币为真，排除</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; sl.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            isTrue[sl[i]] = <span class="literal">true</span>;</span><br><span class="line">            isTrue[sr[i]] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(e == <span class="string">&quot;up&quot;</span>)&#123;  <span class="comment">// 天平右侧较轻-&gt;右侧重量--，左侧重量++</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; sl.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            score[sl[i]] ++;</span><br><span class="line">            score[sr[i]] --;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;  <span class="comment">// 天平右侧较重-&gt;右侧重量++，左侧重量--</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; sl.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            score[sl[i]] --;</span><br><span class="line">            score[sr[i]] ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    string s1l, s1r, e1;</span><br><span class="line">    string s2l, s2r, e2;</span><br><span class="line">    string s3l, s3r, e3;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">        <span class="built_in">memset</span>(score, <span class="number">0</span>, <span class="built_in">sizeof</span>(score));</span><br><span class="line">        <span class="built_in">memset</span>(isTrue, <span class="number">0</span>, <span class="built_in">sizeof</span>(isTrue));</span><br><span class="line"></span><br><span class="line">        cin&gt;&gt;s1l&gt;&gt;s1r&gt;&gt;e1;</span><br><span class="line">        cin&gt;&gt;s2l&gt;&gt;s2r&gt;&gt;e2;</span><br><span class="line">        cin&gt;&gt;s3l&gt;&gt;s3r&gt;&gt;e3;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">calculate</span>(s1l, s1r, e1);</span><br><span class="line">        <span class="built_in">calculate</span>(s2l, s2r, e2);</span><br><span class="line">        <span class="built_in">calculate</span>(s3l, s3r, e3);</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> maxAbsScore = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> maxScore = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">char</span> counterfeit;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="string">&#x27;A&#x27;</span>;i &lt;= <span class="string">&#x27;L&#x27;</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(isTrue[i]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">abs</span>(score[i]) &gt; maxAbsScore)&#123;</span><br><span class="line">                maxAbsScore = <span class="built_in">abs</span>(score[i]);</span><br><span class="line">                maxScore = score[i];</span><br><span class="line">                counterfeit = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        cout&lt;&lt;counterfeit&lt;&lt;<span class="string">&quot; is the counterfeit coin and it is &quot;</span>;</span><br><span class="line">        <span class="keyword">if</span>(maxScore &lt; <span class="number">0</span>)</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;light.&quot;</span>&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;heavy.&quot;</span>&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+</div>
   </div>
   
   
@@ -2698,7 +2748,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 
               
                 
-                  <p>本文永久链接是：<a href="https://pyxblog.cn/2022/08/06/pytorch-demo-2/">https://pyxblog.cn/2022/08/06/pytorch-demo-2/</a></p>
+                  <p>本文永久链接是：<a href="https://pyxblog.cn/2023/09/19/algorithm-c1-c/">https://pyxblog.cn/2023/09/19/algorithm-c1-c/</a></p>
                 
               
             </blockquote>
@@ -2717,10 +2767,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-08-06T23:44:48+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-19T14:12:34+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年8月6日</p>
+    <p>更新于：2023年9月19日</p>
   </a>
 </div>
 
@@ -2729,8 +2779,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/PyTorch/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>PyTorch</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>深度学习</p></a></div>
-  <span hidden itemprop="keywords">python PyTorch 深度学习</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AE%97%E6%B3%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>算法</p></a></div>
+  <span hidden itemprop="keywords">算法</span>
 
 
         
@@ -2741,7 +2791,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title rel="external nofollow noopener noreferrer" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://pyxblog.cn/2022/08/06/pytorch-demo-2/&title=pytorch实现线性回归 - 清弦小站&summary=">
+        <a class="-mob-share-qq" title rel="external nofollow noopener noreferrer" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://pyxblog.cn/2023/09/19/algorithm-c1-c/&title=题解 POJ-1013 Counterfeit Dollar - 清弦小站&summary=原题直达https://vjudge.net/contest/582185#problem/C">
           
             <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2749,7 +2799,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title rel="external nofollow noopener noreferrer" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://pyxblog.cn/2022/08/06/pytorch-demo-2/&title=pytorch实现线性回归 - 清弦小站&summary=">
+        <a class="-mob-share-qzone" title rel="external nofollow noopener noreferrer" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://pyxblog.cn/2023/09/19/algorithm-c1-c/&title=题解 POJ-1013 Counterfeit Dollar - 清弦小站&summary=原题直达https://vjudge.net/contest/582185#problem/C">
           
             <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2757,7 +2807,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-weibo" title rel="external nofollow noopener noreferrer" target="_blank" href="http://service.weibo.com/share/share.php?url=https://pyxblog.cn/2022/08/06/pytorch-demo-2/&title=pytorch实现线性回归 - 清弦小站&summary=">
+        <a class="-mob-share-weibo" title rel="external nofollow noopener noreferrer" target="_blank" href="http://service.weibo.com/share/share.php?url=https://pyxblog.cn/2023/09/19/algorithm-c1-c/&title=题解 POJ-1013 Counterfeit Dollar - 清弦小站&summary=原题直达https://vjudge.net/contest/582185#problem/C">
           
             <img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2769,7 +2819,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="hoverbox">
           <a class="share"><img src="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class="target">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADBklEQVR42u3aQVLEMAwEwP3/p+EBsGWP5IRoad+gsonUuUxJeX05v54XAjBgwIABA2YMzKt4ftww/P+ywMXvVs+r9gMGDBgwYMCAmQdzVcFXg+0+b/t+YMCAAQMGDJixMMsAtPl39/er4JbCbdcDBgwYMGDAgPm3MNUBVnpdWh8YMGDAgAEDBszu9aev2w18YMCAAQMGDJj/C1NdeFUbOTWIetwmEgwYMGDAgAFzG0x6qoXe9Xe5HzBgwIABAwbMGJju2Q14pz8c2n1e3A8YMGDAgAEDZgxMNSB1B1rV550KeGDAgAEDBgyY+TC7i6+rGq0uzqofFG1/OAQGDBgwYMCAeTxMN7iljVQHTClE+kLBgAEDBgwYMHNhugu3FK66mKsu+NoTPDBgwIABAwbMY2FOLbK69zkVMNO6wIABAwYMGDCfA1MdTFUDXwoXN7z7ezBgwIABAwbMGJjdB6UF7ga16uDp1OLtbcADAwYMGDBgwIyDqS7i0gBWDXgpTHnhBgYMGDBgwIB5PEwa4I4FqeICr1v3sl4wYMCAAQMGzBiYU8EqHRyljZ76UGh5HRgwYMCAAQNmHEw1eHWDXxWgOhBb1gkGDBgwYMCAGQeTBrjTDXQHY+l9wIABAwYMGDDzYaqDpLsGVmkAPb6JBAMGDBgwYMA8HmY3eJ3+oCi9T3sQteoLDBgwYMCAATMOpjsAqg64ugOx6nXlQRUYMGDAgAED5vEw3UVZGhS7C710oPW2XjBgwIABAwbMeJg02KWLtd1Gug3HC0IwYMCAAQMGzBiY7qkOsuJFWPFFxC8YDBgwYMCAATMG5urAdNfg6RQoGDBgwIABA2YezOlAdyp4dQdjcV1gwIABAwYMmLEw1QB1KoCtGq8+f3tgBgYMGDBgwIABEwa86kAqHaDFCzcwYMCAAQMGzMfDpAuubgBMB1J/FvDAgAEDBgwYMLfBpAu3asGnAln6Am7bRIIBAwYMGDBgboOpLq6qAbE74OoGurfAYMCAAQMGDJgxMA4YMGDAgAEDZtj5BlrOZn/01YIxAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC9UlEQVR42u3aSVbFMAwEwNz/0nABeLFaCkRQ3v0hHiqbfpKvD+PLcSEAAwYMGDBg1sBc4Xh8gzfrfPd79zxgwIABAwYMmH0wUxuuztNd/+5zeT4wYMCAAQMGzFqY2wA0tJG7gJZCts8DBgwYMGDAgPm3MFPBbXp/YMCAAQMGDBgwpxCn81bXn1oXDBgwYMCAAfP3YNKG11MHrTb8XtOJBAMGDBgwYMD8GEx1pBd5fupzfB4wYMCAAQMGzBqY7jgNbunnaqGrfR4wYMCAAQMGzBqYNCBVG2DV36cuLlUhwYABAwYMGDB7YdLgln5fDXrpvscuDoEBAwYMGDBgXgeTBrBqQSktNFXXOw2AtwEPDBgwYMCAAfNamNNAdRrI0oLT9PzxvsCAAQMGDBgwa2C6Da40cE0FvangBwYMGDBgwIDZB9M9YPW59Pnq+tXACAYMGDBgwIDZC3P8YPi/FODpxlu54QYGDBgwYMCAeQ1Me6Kh57pwV3F8uy4YMGDAgAEDZg1Mt8E1tdEpiG7BDAwYMGDAgAGzB+a08JQGsWoBKi1YVaHAgAEDBgwYMPthuoWo08LTNED1xZy+eDBgwIABAwbMHpjqxqYOmB70bh/ti0lgwIABAwYMmLUw5QZV+P/TAJheKIoLV2DAgAEDBgyYtTDVgFadJy0wVYNdXPgCAwYMGDBgwPxZmLSRNd2we+pFggEDBgwYMGD2w6QFo4/i6B60+2LLAQ8MGDBgwIABswYmBas23KoXhboFr3bAAwMGDBgwYMD8Okx3HF/IGQZNC2PHDTcwYMCAAQMGzOthrnBU4aYvCp1eHCq/IDBgwIABAwbMOpipQHca8LoFp2lQMGDAgAEDBsx+mG6Amrr4U11/KpiCAQMGDBgwYMDEhaKhwBjDgwEDBgwYMGD+LUxaiJoKkO3CFhgwYMCAAQNmLUxacKoe7PT7duGp+BwYMGDAgAEDZh9M2rjqFojKG384OIIBAwYMGDBg9sAYYMCAAQMGDJhl4xMHt2OsSOME6QAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -2794,39 +2844,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class="prev" href="/2022/08/06/latex-toolbook/">
-          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>常用LaTex公式及用法</p>
-          <p class="content">整理了一些使用频率相对较高的LaTex公式，用到新的会不断往里补充，也欢迎大家在评论区补充！
-
-运算符
-常用二元运算
-
-
-
-
-
-
-
-
-
-
-
-
-
-\pm
-\cdot
-\times
-\mp
-\div...</p>
-        </a>
       
-      
-        <a class="next" href="/2022/08/06/pytorch-demo-1/">
-          <p class="title">pytorch实现Minist手写数字识别<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class="content">
-代码中的 import xxx 和 from xxx import xxx 为依赖包，可按编译器的提示自行安装。
+        <a class="next" href="/2023/09/18/algorithm-c1-b/">
+          <p class="title">题解 HDU-1050 Moving Tables<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">原题直达https://vjudge.net/contest/582185#problem/B
 
-数据集下载地址：http://deeplearning.net/data/m...</p>
+题干
+原题面参考翻译The famous ACM (Advanced Computer Make...</p>
         </a>
       
     </div>
@@ -2842,7 +2866,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/08/06/pytorch-demo-2/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/09/19/algorithm-c1-c/index.html#comments">
     </span>
     <p ct><i class="fas fa-comments"></i> 评论</p>
     
@@ -2959,9 +2983,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class>
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
+    
+  </header>
+
+
+    <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E5%B9%B2"><span class="toc-text">题干</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B"><span class="toc-text">测试案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E6%84%8F%E4%B8%8E%E6%80%9D%E8%B7%AF"><span class="toc-text">题意与思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -4062,7 +4096,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/深度学习/","name":"深度学习"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/深度学习/实战demo/","name":"实战demo"}},{"@type":"ListItem","position":3,"item":{"@id":"https://pyxblog.cn/2022/08/06/pytorch-demo-2/","name":"pytorch实现线性回归"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"pytorch实现线性回归","description":"使用pytorch框架实现基础的线性回归。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://pyxblog.cn/2022/08/06/pytorch-demo-2/"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://pyxblog.cn/2022/08/06/pytorch-demo-2/","wordCount":0,"datePublished":"2022-08-06T15:42:03.000Z","dateModified":"2022-08-06T15:44:48.720Z","articleSection":"深度学习","keywords":"python,PyTorch,深度学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","sameAs":["https://github.com/volantis-x"],"description":"BLOG"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pyxblog.cn/","name":"清弦小站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/算法/","name":"算法"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pyxblog.cn/categories/算法/思维/","name":"思维"}},{"@type":"ListItem","position":3,"item":{"@id":"https://pyxblog.cn/2023/09/19/algorithm-c1-c/","name":"题解 POJ-1013 Counterfeit Dollar"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清弦小站","url":"https://pyxblog.cn/","keywords":null,"description":"BLOG","author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/","description":"BLOG"},"publisher":{"@type":"Organization","name":"清弦小站","url":"https://pyxblog.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://pyxblog.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"题解 POJ-1013 Counterfeit Dollar","description":"原题直达https://vjudge.net/contest/582185#problem/C","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://pyxblog.cn/2023/09/19/algorithm-c1-c/"},"author":{"@type":"Person","name":"庞宇轩","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://pyxblog.cn/"},"publisher":{"@type":"Organization","name":"清弦小站","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://pyxblog.cn/2023/09/19/algorithm-c1-c/","wordCount":47,"datePublished":"2023-09-19T03:59:02.000Z","dateModified":"2023-09-19T06:12:34.481Z","articleSection":"算法","keywords":"算法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
