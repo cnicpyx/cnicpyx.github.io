@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://pyxblog.cn/2023/09/19/algorithm-c1-h/</loc>
+        <lastmod>2023-09-19T15:45:24.920Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/2023/09/19/algorithm-c1-e/</loc>
+        <lastmod>2023-09-19T15:18:04.300Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://pyxblog.cn/2023/09/19/algorithm-c1-d/</loc>
         <lastmod>2023-09-19T10:22:59.853Z</lastmod>
         <changefreq>weekly</changefreq>
