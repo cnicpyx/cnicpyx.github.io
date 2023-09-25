@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/tree/5.7.1">
-  <meta name="generator" content="Hexo 6.2.0">
-  <meta name="Volantis" content="5.7.1">
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0">
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
@@ -25,8 +25,10 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
+  <!-- front-matter head_begin begin -->
+  <!-- front-matter head_begin end -->
     <link rel="shortcut icon" type="image/x-icon" href="https://img-1306037672.cos.ap-beijing.myqcloud.com/icon-blue.png">
-  <link rel="preload" href="/css/style.26f8a394.css" as="style">
+  <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -51,15 +53,6 @@
     /* 首屏样式 */
     #safearea {
   display: none;
-}
-/*
-  * Workaround for Chrome bug, part 1
-  * Chunk rendering for all but the first article.
-  * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
-*/
-.post-story + .post-story {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
 }
 :root {
   --color-site-body: #f4f4f4;
@@ -124,13 +117,13 @@ html >::-webkit-scrollbar-track-piece {
   background: transparent;
 }
 html >::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
 html >::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
 }
 body {
   background-color: var(--color-site-body);
@@ -1685,8 +1678,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.26f8a394.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.26f8a394.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1721,7 +1714,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     '<div class="kill-ie">'+
         `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
         `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
+        `<a href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
 </script>
 
@@ -1751,7 +1744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="kill-noscript">
         <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br>
         <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br>
-        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+        <a href="https://www.baidu.com/s?wd=启用JavaScript" rel="external nofollow noopener noreferrer" target="_blank"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -1759,14 +1752,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
-  volantis.debug = false; // 开启调试模式
+  volantis.debug = "env"; // 调试模式
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.26f8a394.css"}},
+    debug: "env",
+    cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1695606127046),
+    lastupdate: new Date(1695619344048),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud"],
       for_post: ["blogger","toc","feedback"],
@@ -2109,8 +2102,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     volantis.requestAnimationFrame(loop)
   }
   volantis.scroll.handleScrollEvents()
+  volantis.scroll.ele = null;
   // 触发页面滚动至目标元素位置
-  volantis.scroll.to = (ele, option = {}) =>{
+  volantis.scroll.to = (ele, option = {}) => {
+    if (!ele) return;
+    volantis.scroll.ele = ele;
     // 默认配置
     opt = {
       top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
@@ -2136,8 +2132,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // 用于处理 lazyload 引起的 cls 导致的定位失败问题
     // option.observer = false
     if (option.observer) {
-      setTimeout(()=>{
-        volantis.scroll.unengine.push(()=>{
+      setTimeout(() => {
+        if (volantis.scroll.ele != ele) {
+          return
+        }
+        volantis.scroll.unengine.push(() => {
           let me = ele.getBoundingClientRect().top
           if(!(me >= -option.observerDic && me <= option.observerDic)){
             volantis.scroll.to(ele, option)
@@ -2179,6 +2178,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- Custom Files headEnd begin-->
   
   <!-- Custom Files headEnd end-->
+  <!-- front-matter head_end begin -->
+  <!-- front-matter head_end end -->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
     <!-- import body_begin begin-->
@@ -2186,6 +2187,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
+    <!-- front-matter body_begin begin -->
+    <!-- front-matter body_begin end -->
     <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style="opacity: 0">
   <div class="container">
   <div id="wrapper">
@@ -2292,7 +2295,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" target="_blank" rel="external nofollow noopener noreferrer" href="https://aboutpyx.cn/" title="关于作者" active-action="action-https:aboutpyxcn">
+                <a class="menuitem flat-box faa-parent animated-hover" href="https://aboutpyx.cn/" title="关于作者" active-action="action-https:aboutpyxcn" rel="external nofollow noopener noreferrer" target="_blank">
                   <i class="fa-solid fa-user-secret fa-fw"></i>关于作者
                 </a>
                 
@@ -2325,7 +2328,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.pyxchat.top/" title="ChatGPT" active-action="action-https:wwwpyxchattop">
+                <a class="menuitem flat-box faa-parent animated-hover" href="https://www.pyxchat.top/" title="ChatGPT" active-action="action-https:wwwpyxchattop" rel="external nofollow noopener noreferrer" target="_blank">
                   <i class="fa-solid fa-robot fa-fw"></i>ChatGPT
                 </a>
                 
@@ -2445,7 +2448,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" target="_blank" rel="external nofollow noopener noreferrer" href="https://aboutpyx.cn/" title="关于作者" active-action="action-https:aboutpyxcn">
+                <a class="menuitem flat-box faa-parent animated-hover" href="https://aboutpyx.cn/" title="关于作者" active-action="action-https:aboutpyxcn" rel="external nofollow noopener noreferrer" target="_blank">
                   <i class="fa-solid fa-user-secret fa-fw"></i>关于作者
                 </a>
                 
@@ -2478,7 +2481,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.pyxchat.top/" title="ChatGPT" active-action="action-https:wwwpyxchattop">
+                <a class="menuitem flat-box faa-parent animated-hover" href="https://www.pyxchat.top/" title="ChatGPT" active-action="action-https:wwwpyxchattop" rel="external nofollow noopener noreferrer" target="_blank">
                   <i class="fa-solid fa-robot fa-fw"></i>ChatGPT
                 </a>
                 
@@ -2562,7 +2565,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               <p>友链</p>
             </a>
           
-            <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.pyxchat.top/" active-action="action-https:wwwpyxchattop">
+            <a href="https://www.pyxchat.top/" active-action="action-https:wwwpyxchattop" rel="external nofollow noopener noreferrer" target="_blank">
               <p>清弦's ChatGPT</p>
             </a>
           
@@ -2636,7 +2639,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 <a class href="/categories/%E5%88%86%E4%BA%AB/">
                   <span><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;分享</span>
                   <span class="title">
-                    (10)
+                    (14)
                   </span>
                 </a>
               
@@ -2650,7 +2653,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 <a class=" child" href="/categories/%E5%88%86%E4%BA%AB/%E6%97%A5%E5%B8%B8/">
                   <span><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;日常</span>
                   <span class="title">
-                    (4)
+                    (8)
                   </span>
                 </a>
               
@@ -2658,13 +2661,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   <span><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;生涯</span>
                   <span class="title">
                     (4)
-                  </span>
-                </a>
-              
-                <a class href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/">
-                  <span><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;小技巧</span>
-                  <span class="title">
-                    (3)
                   </span>
                 </a>
               
@@ -2750,7 +2746,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <br>
           
 
-
         </article>
       </div>
     
@@ -2767,7 +2762,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="content">
     
       
-        <a class="avatar flat-box circle" target="_blank" rel="external nofollow noopener noreferrer" href="https://aboutpyx.cn/">
+        <a class="avatar flat-box circle" href="https://aboutpyx.cn/" rel="external nofollow noopener noreferrer" target="_blank">
           <img no-lazy src="https://img-1306037672.cos.ap-beijing.myqcloud.com/avatar.jpeg">
         </a>
       
@@ -2824,7 +2819,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         </a></li>
       
-        <li><a class="flat-box" title="https://img-1306037672.cos.ap-beijing.myqcloud.com/20220806113444.png" target="_blank" rel="external nofollow noopener noreferrer" href="https://img-1306037672.cos.ap-beijing.myqcloud.com/20220806113444.png" active-action="action-https:img-1306037672cosap-beijingmyqcloudcom20220806113444png">
+        <li><a class="flat-box" title="https://img-1306037672.cos.ap-beijing.myqcloud.com/20220806113444.png" href="https://img-1306037672.cos.ap-beijing.myqcloud.com/20220806113444.png" active-action="action-https:img-1306037672cosap-beijingmyqcloudcom20220806113444png" rel="external nofollow noopener noreferrer" target="_blank">
           <div class="name">
             
               <i class="fa-brands fa-weixin fa-fw" aria-hidden="true"></i>
@@ -2938,7 +2933,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <br><br>
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow noopener noreferrer" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
@@ -2954,6 +2949,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files footer end-->
   </footer>
 
+
+
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
         <a id="s-top" class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title="top"></a>
       </div>
@@ -2985,7 +2988,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.af2d54c8.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -3155,7 +3158,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="/js/plugins/rightMenus.1aa99ff1.js"></script>
+<script src="/js/plugins/rightMenus.js"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3255,8 +3258,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
 
-  
-<script>
+  <script>
 const rootElement = document.documentElement;
 const darkModeStorageKey = "color-scheme";
 const rootElementDarkModeAttributeName = "color-scheme";
@@ -3369,7 +3371,6 @@ const darkModelListeners={
 }
 window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
 window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
-
 </script>
 
 
@@ -3380,19 +3381,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/tags/sites.76bf19b8.js")
+        volantis.js("/js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/tags/friends.f372da57.js")
+        volantis.js("/js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/tags/contributors.aec80453.js")
+        volantis.js("/js/plugins/tags/contributors.js")
       }
     
   };
@@ -3449,33 +3450,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-
-
-   <script type="text/javascript">
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal("#l_main .reveal", {
-      distance: "32px",
-      duration: "800",
-      interval: "20",
-      scale: "1",
-      easing: "ease-out",
-    });
-  }
-  function init_scrollrebeal() {
-    if (typeof ScrollReveal == "undefined") {
-      volantis.requestAnimationFrame(init_scrollrebeal);
-    } else {
-      pjax_scrollrebeal();
-    }
-  }
-  volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/scrollreveal/dist/scrollreveal.min.js");
-  document.addEventListener("DOMContentLoaded", init_scrollrebeal);
-  volantis.pjax.push(
-    pjax_scrollrebeal,
-    "pjax_scrollrebeal",
-    (setRequestAnimationFrame = false)
-  );
-</script>
 
 
 
@@ -3546,7 +3520,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.0e52f222.js");
+    return volantis.js("/js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -3645,7 +3619,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
   <script>
-  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg"];
+  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3686,7 +3660,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.8bf0ab10.js').then(()=>{
+    volantis.js('/js/plugins/parallax.js').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -3854,94 +3828,6 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   });
 </script>
 
-<script>
-  try {
-    // https://web.dev/content-visibility/
-    // https://www.caniuse.com/?search=content-visibility
-    // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-    // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-    // 备注 目前已知的问题:
-    // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-    // scrollreveal 插件潜在问题 目前尚不明确
-
-    let eqIsh = (a, b, fuzz = 2) => {
-      return Math.abs(a - b) <= fuzz;
-    };
-
-    let rectNotEQ = (a, b) => {
-      return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-    };
-
-    // Keep a map of elements and the dimensions of
-    // their place-holders, re-setting the element's
-    // intrinsic size when we get updated measurements
-    // from observers.
-    let spaced = new WeakMap();
-
-    // Only call this when known cheap, post layout
-    let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-      let old = spaced.get(el);
-      // Set intrinsic size to prevent jumping on un-painting:
-      //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-      if (!old || rectNotEQ(old, rect)) {
-        spaced.set(el, rect);
-        el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-      }
-    };
-
-    let iObs = new IntersectionObserver(
-      (entries, o) => {
-        entries.forEach((entry) => {
-          // We don't care if the element is intersecting or
-          // has been laid out as our page structure ensures
-          // they'll get the right width.
-          reserveSpace(entry.target, entry.boundingClientRect);
-        });
-      },
-      { rootMargin: "500px 0px 500px 0px" }
-    );
-
-    let rObs = new ResizeObserver((entries, o) => {
-      entries.forEach((entry) => {
-        reserveSpace(entry.target, entry.contentRect);
-      });
-    });
-
-    let resizeResilientDeferredRendering = (Selector) => {
-      let articles = document.querySelectorAll(Selector);
-
-      if (articles.length) {
-        articles.forEach((el) => {
-          iObs.observe(el);
-          rObs.observe(el);
-        });
-
-        // Workaround for Chrome bug, part 2.
-        //
-        // Re-enable browser management of rendering for the
-        // first article after the first paint. Double-rAF
-        // to ensure we get called after a layout.
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            articles[0].style["content-visibility"] = "auto";
-          });
-        });
-      }
-    };
-
-    let contentVisibilityScrollFix = () => {
-      if (!("content-visibility" in document.documentElement.style)) {
-        return;
-      }
-      resizeResilientDeferredRendering(".post-story");
-    };
-    contentVisibilityScrollFix();
-    volantis.pjax.push(contentVisibilityScrollFix);
-  } catch (error) {
-    console.log(error);
-  }
-</script>
 
 
 <script>
@@ -4044,5 +3930,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
     <!-- Custom Files bodyEnd begin-->
     
     <!-- Custom Files bodyEnd end-->
+    <!-- front-matter body_end begin -->
+    <!-- front-matter body_end end -->
   </body>
 </html>
