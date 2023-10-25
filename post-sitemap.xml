@@ -9,6 +9,38 @@
 
 
     <url>
+        <loc>https://pyxblog.cn/blogs/algorithm-c2-d/</loc>
+        <lastmod>2023-10-25T05:02:40.943Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/blogs/algorithm-c2-c/</loc>
+        <lastmod>2023-10-22T08:27:32.544Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/blogs/algorithm-c2-a/</loc>
+        <lastmod>2023-10-22T08:02:48.664Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/blogs/algorithm-c2-b/</loc>
+        <lastmod>2023-10-22T07:48:01.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://pyxblog.cn/blogs/pseudocode/</loc>
         <lastmod>2023-10-07T03:59:04.492Z</lastmod>
         <changefreq>weekly</changefreq>
