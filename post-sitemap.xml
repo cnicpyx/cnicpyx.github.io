@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://pyxblog.cn/blogs/algorithm-c2-f/</loc>
+        <lastmod>2023-10-30T00:48:59.951Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pyxblog.cn/blogs/algorithm-c2-e/</loc>
+        <lastmod>2023-10-29T06:36:58.253Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://pyxblog.cn/blogs/algorithm-c2-d/</loc>
         <lastmod>2023-10-25T05:02:40.943Z</lastmod>
         <changefreq>weekly</changefreq>
