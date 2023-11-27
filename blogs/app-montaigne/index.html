@@ -1762,7 +1762,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1700551322434),
+    lastupdate: new Date(1701056996869),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud"],
       for_post: ["blogger","toc","feedback"],
@@ -2674,47 +2674,67 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>利用第三方代理平台montaigne和苹果备忘录的投送分享，部署属于自己的简约风个人站，更改备忘录内容，实现分钟级别的实时更新，完全免费！</p>
 <p>先看效果！</p>
 <div class="tag link"><a class="link-card" title="清弦小站. 极简版分站" href="https://qxstation.montaigne.io/" rel="external nofollow noopener noreferrer" target="_blank"><div class="left"><img src="https://img-1306037672.cos.ap-beijing.myqcloud.com/avatar.jpeg" class="lazyload" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/avatar.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">清弦小站. 极简版分站</p><p class="url">https://qxstation.montaigne.io/</p></div></a></div>
+
 <span id="more"></span>
-<h2 id="基本配置与部署">基本配置与部署</h2>
-<p>访问网站：<a href="https://app.montaigne.io/auth/signin" rel="external nofollow noopener noreferrer" target="_blank">传送门</a></p>
+
+<h2 id="基本配置与部署"><a href="#基本配置与部署" class="headerlink" title="基本配置与部署"></a>基本配置与部署</h2><p>访问网站：<a href="https://app.montaigne.io/auth/signin" rel="external nofollow noopener noreferrer" target="_blank">传送门</a></p>
 <div class="note info"><p>montaigne是一个类似于vercel的小众静态站点托管平台。</p></div>
+
 <p>进入后，点击 “Sign in with Apple” ，跳转至苹果官网，登陆你的Apple ID：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929220613190.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929220613190.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="通过Apple ID登陆" style="width:800px;"></div><span class="image-caption">通过Apple ID登陆</span></div>
+
 <div class="note info"><p>这一步类似于你通过微信授权登录一些app，可以在苹果官网<a href="https://appleid.apple.com/account/manage" rel="external nofollow noopener noreferrer" target="_blank">传送门</a>页面中的“通过 Apple 登录”管理此类授权。</p></div>
+
 <p>登陆后，会自动返回Montaigne，点击Create Site按钮或直接点击页面上边栏中的 <code>new site</code> 开始创建你的第一个站点：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929221523486.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929221523486.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建你的站点" style="width:800px;"></div><span class="image-caption">创建你的站点</span></div>
+
 <p>首先，为你的站点起个名字，如 <code>qxstation</code>，最终的网站域名将被自动设置为 <code>qxstation.montaigne.io</code>：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929221849808.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929221849808.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="填写你的网站域名" style="width:800px;"></div><span class="image-caption">填写你的网站域名</span></div>
+
 <p>接下来，打开你的备忘录，这里以持有率更高（可能）的苹果终端 iPad 为例：</p>
-<p><strong>Step 1 /</strong> 在横屏模式下，点击<strong>左上角的按钮</strong>，显示出侧边栏：</p>
+<p><strong>Step 1 &#x2F;</strong> 在横屏模式下，点击<strong>左上角的按钮</strong>，显示出侧边栏：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929222327724.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929222327724.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:600px;"></div></div>
-<p><strong>Step 2 /</strong> 点击<strong>左下角的按钮</strong>，新建文件夹，文件夹名称<strong>填入之前的域名</strong>，要注意：</p>
+
+<p><strong>Step 2 &#x2F;</strong> 点击<strong>左下角的按钮</strong>，新建文件夹，文件夹名称<strong>填入之前的域名</strong>，要注意：</p>
 <ul>
 <li>文件夹名称的格式应为 <code>&lt;yourname&gt;.montaigne.io</code>，<strong>不要只填你起的名字</strong>；</li>
 <li>注意<strong>不要带多余的空格</strong>；</li>
 </ul>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929222914920.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929222914920.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="新建文件夹" style="width:600px;"></div><span class="image-caption">新建文件夹</span></div>
-<p><strong>Step 3 /</strong> 长按文件夹，点击 <code>共享文件夹</code> -&gt; <code>通过链接邀请</code>：</p>
+
+<p><strong>Step 3 &#x2F;</strong> 长按文件夹，点击 <code>共享文件夹</code> -&gt; <code>通过链接邀请</code>：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929223421430.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929223421430.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:600px;"></div></div>
+
 <div class="note info"><p>这一步可能长按文件夹后不会出现 <code>共享文件夹</code> 选项，这是因为你的文件夹创建在了本地，只需长按将其拖动至 iCloud 中即可。如果你的备忘录没有开通 iCloud 功能，可以进入 <code>设置</code> -&gt; <code>左上角用户卡片</code> -&gt; <code>iCloud</code>，在 <code>使用 iCloud 的 APP</code> 栏目中打开备忘录的开关，然后重新进入备忘录。</p></div>
-<p><strong>Step 4 /</strong> 在收件人中填写 <code>share@montaigne.io</code> 然后点击下方的 <code>共享链接</code>：</p>
+
+<p><strong>Step 4 &#x2F;</strong> 在收件人中填写 <code>share@montaigne.io</code> 然后点击下方的 <code>共享链接</code>：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929223953195.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929223953195.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="填写共享链接的接收方" style="width:600px;"></div><span class="image-caption">填写共享链接的接收方</span></div>
-<p><strong>Step 5 /</strong> 此时，你的剪贴板中会出现一个链接，回到Montaigne，将其粘贴到 <code>paste link</code> 框中，并点击 <code>save</code>：</p>
+
+<p><strong>Step 5 &#x2F;</strong> 此时，你的剪贴板中会出现一个链接，回到Montaigne，将其粘贴到 <code>paste link</code> 框中，并点击 <code>save</code>：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929224237945.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929224237945.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="将共享链接粘贴至 Montaigne" style="width:800px;"></div><span class="image-caption">将共享链接粘贴至 Montaigne</span></div>
+
 <div class="note info"><p>这一步可能会没法把链接直接粘贴到框中，可以<strong>先将其粘贴到微信里</strong>，再重新复制一遍，这样就可以回到 Montaigne 中粘贴链接了。</p></div>
+
 <p>至此，你已经完成了网站的搭建和基本配置，虽然点击 <code>save</code> 后网页可能会进入长时间的等待，可能还会显示 504 ，但这并不影响你在 <a href="https://app.montaigne.io/" rel="external nofollow noopener noreferrer" target="_blank">Montaigne 的主页</a>中查看自己已经创建好的站点：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929224626359.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929224626359.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="直接回到主页查看站点" style="width:800px;"></div><span class="image-caption">直接回到主页查看站点</span></div>
+
 <hr>
-<h2 id="内容编辑与站点设置">内容编辑与站点设置</h2>
-<p>回到你的 iPad，在刚才创建的文件夹中新建一个备忘录，随便写点内容！</p>
+<h2 id="内容编辑与站点设置"><a href="#内容编辑与站点设置" class="headerlink" title="内容编辑与站点设置"></a>内容编辑与站点设置</h2><p>回到你的 iPad，在刚才创建的文件夹中新建一个备忘录，随便写点内容！</p>
 <p>从主页点击进入你的站点，其中：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929224901038.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929224901038.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="开始站点配置" style="width:800px;"></div><span class="image-caption">开始站点配置</span></div>
+
 <ul>
 <li>点击 <code>live</code> 按钮可以直接访问你的站点；</li>
 <li>点击 <code>settings</code> 按钮可以进入站点设置页面，就留给大家自行探索啦！</li>
 </ul>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929230919853.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929230919853.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="网站设置" style="width:800px;"></div><span class="image-caption">网站设置</span></div>
+
+
+
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929231550622.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230929231550622.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="网站效果" style="width:800px;"></div><span class="image-caption">网站效果</span></div>
+
+
+
 <hr>
 <p>经过测试，实际使用中网站内容的更新延时大概可以保持在 1min 之内。</p>
 <p>出门在外，动动手指，就可以更新你的站点，展示你的想法，有没有很酷！</p>
@@ -3765,7 +3785,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
   <script>
-  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg"];
+  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg"];
   let index = 0;
   let IntervalParallax = null;
 

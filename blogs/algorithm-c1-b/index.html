@@ -1762,7 +1762,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1700551322434),
+    lastupdate: new Date(1701056996869),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud"],
       for_post: ["blogger","toc","feedback"],
@@ -2672,79 +2672,84 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <div class="tag link"><a class="link-card" title="原题直达" href="https://vjudge.net/contest/582185#problem/B" rel="external nofollow noopener noreferrer" target="_blank"><div class="left"><img src="https://vjudge.net/static/bundle/11b24ab2156955d8f3fa.ico" class="lazyload" data-srcset="https://vjudge.net/static/bundle/11b24ab2156955d8f3fa.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">原题直达</p><p class="url">https://vjudge.net/contest/582185#problem/B</p></div></a></div>
+
+
+
 <span id="more"></span>
-<h2 id="题干">题干</h2>
-<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">原题面</a></li><li class="tab"><a class="#tab-id-2">参考翻译</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>The famous ACM (Advanced Computer Maker) Company has rented a floor of a building whose shape is in the following figure.</p>
-<div class="img-wrap">
-<div class="img-bg">
-<img class="img lazyload" src="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" data-srcset="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;">
-</div>
-</div>
-<p>The floor has 200 rooms each on the north side and south side along the corridor. Recently the Company made a plan to reform its system. The reform includes moving a lot of tables between rooms. Because the corridor is narrow and all the tables are big, only one table can pass through the corridor. Some plan is needed to make the moving efficient. The manager figured out the following plan: Moving a table from a room to another room can be done within 10 minutes. When moving a table from room i to room j, the part of the corridor between the front of room i and the front of room j is used. So, during each 10 minutes, several moving between two rooms not sharing the same part of the corridor will be done simultaneously. To make it clear the manager illustrated the possible cases and impossible cases of simultaneous moving.</p>
-<div class="img-wrap">
-<div class="img-bg">
-<img class="img lazyload" src="https://vj.csgrandeur.cn/bb95b88268c2f9e12a0430067bc6669e?v=1694920114" data-srcset="https://vj.csgrandeur.cn/bb95b88268c2f9e12a0430067bc6669e?v=1694920114" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;">
-</div>
-</div>
-<p>For each room, at most one table will be either moved in or moved out. Now, the manager seeks out a method to minimize the time to move all the tables. Your job is to write a program to solve the manager’s problem.</p>
+
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">原题面</a></li><li class="tab"><a class="#tab-id-2">参考翻译</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>The famous ACM (Advanced Computer Maker) Company has rented a floor of a building whose shape is in the following figure. </p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" data-srcset="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+
+<p>The floor has 200 rooms each on the north side and south side along the corridor. Recently the Company made a plan to reform its system. The reform includes moving a lot of tables between rooms. Because the corridor is narrow and all the tables are big, only one table can pass through the corridor. Some plan is needed to make the moving efficient. The manager figured out the following plan: Moving a table from a room to another room can be done within 10 minutes. When moving a table from room i to room j, the part of the corridor between the front of room i and the front of room j is used. So, during each 10 minutes, several moving between two rooms not sharing the same part of the corridor will be done simultaneously. To make it clear the manager illustrated the possible cases and impossible cases of simultaneous moving. </p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://vj.csgrandeur.cn/bb95b88268c2f9e12a0430067bc6669e?v=1694920114" data-srcset="https://vj.csgrandeur.cn/bb95b88268c2f9e12a0430067bc6669e?v=1694920114" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+
+<p>For each room, at most one table will be either moved in or moved out. Now, the manager seeks out a method to minimize the time to move all the tables. Your job is to write a program to solve the manager’s problem. </p>
 <hr>
 <p><strong>Input</strong></p>
-<p>The input consists of T test cases. The number of test cases T is given in the first line of the input. Each test case begins with a line containing an integer N , 1&lt;=N&lt;=200 , that represents the number of tables to move. Each of the following N lines contains two positive integers s and t, representing that a table is to move from room number s to room number t (each room number appears at most once in the N lines). From the N+3-rd line, the remaining test cases are listed in the same manner as above.</p>
+<p>The input consists of T test cases. The number of test cases T is given in the first line of the input. Each test case begins with a line containing an integer N , 1&lt;&#x3D;N&lt;&#x3D;200 , that represents the number of tables to move. Each of the following N lines contains two positive integers s and t, representing that a table is to move from room number s to room number t (each room number appears at most once in the N lines). From the N+3-rd line, the remaining test cases are listed in the same manner as above. </p>
 <p><strong>Output</strong></p>
-<p>The output should contain the minimum time in minutes to complete the moving, one per line.</p></div><div class="tab-pane" id="tab-id-2"><p>著名的ACM(高级计算机制造商)公司租用了一层楼，其形状如下图所示。</p>
-<div class="img-wrap">
-<div class="img-bg">
-<img class="img lazyload" src="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" data-srcset="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;">
-</div>
-</div>
+<p>The output should contain the minimum time in minutes to complete the moving, one per line. </p></div><div class="tab-pane" id="tab-id-2"><p>著名的ACM(高级计算机制造商)公司租用了一层楼，其形状如下图所示。</p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" data-srcset="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+
 <p>这一层沿走廊的南北两侧各有200个房间。最近公司制定了一项制度改革计划。改革包括在房间之间移动许多桌子。因为走廊很窄，所有的桌子都很大，所以只有一张桌子可以通过走廊。为了使搬家更有效率，需要一些计划。经理想出了如下计划:把一张桌子从一个房间搬到另一个房间可以在10分钟内完成。当将桌子从房间i移动到房间j时，使用房间i前面和房间j前面之间的走廊部分。因此，在每10分钟内，在两个房间之间的几个移动将同时进行，而不是共享走廊的同一部分。为了说清楚，经理举例说明了同时搬家的可能情况和不可能情况。</p>
-<div class="img-wrap">
-<div class="img-bg">
-<img class="img lazyload" src="https://vj.csgrandeur.cn/bb95b88268c2f9e12a0430067bc6669e?v=1694920114" data-srcset="https://vj.csgrandeur.cn/bb95b88268c2f9e12a0430067bc6669e?v=1694920114" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;">
-</div>
-</div>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://vj.csgrandeur.cn/bb95b88268c2f9e12a0430067bc6669e?v=1694920114" data-srcset="https://vj.csgrandeur.cn/bb95b88268c2f9e12a0430067bc6669e?v=1694920114" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+
 <p>对于每个房间，最多有一张桌子将被搬进或搬出。现在，经理寻找一种方法来最小化移动所有桌子的时间。你的工作是写一个程序来解决经理的问题。</p>
 <hr>
 <p><strong>Input</strong></p>
-<p>输入由T测试用例组成。测试用例的数量T在输入的第一行给出。每个测试用例都以包含整数N的一行开始，1&lt;=N&lt;=200，表示要移动的桌子的数量。下面的N行中的每一行都包含两个正整数s和t，表示一个表将从房间号s移动到房间号t(每个房间号在N行中最多出现一次)。从第N+3行开始，剩余的测试用例以与上面相同的方式列出。</p>
+<p>输入由T测试用例组成。测试用例的数量T在输入的第一行给出。每个测试用例都以包含整数N的一行开始，1&lt;&#x3D;N&lt;&#x3D;200，表示要移动的桌子的数量。下面的N行中的每一行都包含两个正整数s和t，表示一个表将从房间号s移动到房间号t(每个房间号在N行中最多出现一次)。从第N+3行开始，剩余的测试用例以与上面相同的方式列出。</p>
 <p><strong>Output</strong></p>
 <p>输出应该包含以分钟为单位完成移动的最小时间，每行一个。</p></div></div></div>
-<h3 id="测试案例">测试案例</h3>
-<p><strong>Input</strong></p>
+
+
+
+<h3 id="测试案例"><a href="#测试案例" class="headerlink" title="测试案例"></a>测试案例</h3><p><strong>Input</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">3 </span><br><span class="line">4 </span><br><span class="line">10 20 </span><br><span class="line">30 40 </span><br><span class="line">50 60 </span><br><span class="line">70 80 </span><br><span class="line">2 </span><br><span class="line">1 3 </span><br><span class="line">2 200 </span><br><span class="line">3 </span><br><span class="line">10 100 </span><br><span class="line">20 80 </span><br><span class="line">30 50 </span><br></pre></td></tr></table></figure>
+
 <p><strong>Output</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">20</span><br><span class="line">30</span><br></pre></td></tr></table></figure>
+
+
+
 <hr>
-<h2 id="题意与思路">题意与思路</h2>
-<p>题意大概为：</p>
+<h2 id="题意与思路"><a href="#题意与思路" class="headerlink" title="题意与思路"></a>题意与思路</h2><p>题意大概为：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" data-srcset="https://vj.csgrandeur.cn/a74c8ffcd138148ec900dc6bb09d32dd?v=1694920114" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+
 <ul>
 <li>有上图所示两排房间，各200间，中间有一条很窄的走廊</li>
 <li>有若干桌子需要从某些房间通过走廊挪动到其他房间</li>
 <li>每次挪动无论距离长短均耗时10分钟</li>
 <li>走廊很窄，其宽度只能<strong>容纳一张桌子</strong></li>
-<li>当一次挪动开始时，此后的10分钟内，<strong>其他桌子不能出现在它移动的路径中</strong>，例如：
-<ul>
+<li>当一次挪动开始时，此后的10分钟内，<strong>其他桌子不能出现在它移动的路径中</strong>，例如：<ul>
 <li>当有一台桌子开始从 <code>room 10</code> 挪动到 <code>room 1</code> 时，另外一台需要从 <code>room 2</code> 挪动到 <code>room 4</code> 的桌子不能同时开始挪动</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <p>首先，可以看出，在这个问题中，<code>room 1</code> 和 <code>room 2</code> 实际上是等效的，因为桌子无论是从前者出发还是从后者出发，需要走的路径完全一致。</p>
 <p>因此，我们不妨先将问题简化一下——将两边的房间合并到同一边，将一个个房间视为x轴上的一个个坐标，桌子移动的路线则等效为x轴上的区间。</p>
 <p>那么问题就变成了：我们现在有若干个区间，<strong>如何在保证区间不相交的前提下，尽可能密集地把它们排列在x轴上的若干层中，使得总层数最小</strong>：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919001421401.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919001421401.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+
+
+
+
+
 <p>接下来，我们从最简单的情况开始考虑：</p>
 <p>只需要一层就可以排列所有区间，使得任意两个区间都不相交，此时意味着所有桌子可以在一次操作（10分钟）之内移动完成</p>
 <p>当新增一个区间，使得<u>层数不得不从1变为2</u>时，这意味着<strong>新增的区间至少与第一层中的一个区间有交集</strong>：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919001857012.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919001857012.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+
 <p>这是因为：如果新增的这一区间与第一层中的所有区间都没有交集，那么它<strong>完全可以被合并到第一层</strong>，而不会使得层数增长。</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919002431860.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/image-20230919002431860.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+
 <p>在这种思路的启发下，我们可以推论出：假设最终的最优解为N层，<strong>对于第N层来说，一定至少存在一个区间，它与前(N-1)层均有交集。</strong></p>
 <p>我们使用类似的思路证明：如果对于第N层中的任意一个区间 x，都可以在前 (N-1) 层中找到某一层 i，使得区间 x 与第 i 层没有交集，那么区间 x 一定可以被合并到第 i 层：</p>
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://img-1306037672.cos.ap-beijing.myqcloud.com/20230919003555.png" data-srcset="https://img-1306037672.cos.ap-beijing.myqcloud.com/20230919003555.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:800px;"></div></div>
+
 <p>综上，我们<strong>只需要统计 x 轴上每个点被区间覆盖的次数，这个次数的最大值就一定等于层数</strong>。</p>
 <hr>
-<h2 id="题解">题解</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> h[<span class="number">220</span>] = &#123;&#125;;  <span class="comment">// 用于记录每个点被覆盖的次数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> T, N, s, e;</span><br><span class="line">    cin&gt;&gt;T;  <span class="comment">// T组测试案例</span></span><br><span class="line">    <span class="keyword">while</span> (T--)&#123;</span><br><span class="line">        cin&gt;&gt;N;  <span class="comment">// 要移动的桌子数，即区间总数</span></span><br><span class="line">        <span class="built_in">memset</span>(h, <span class="number">0</span>, <span class="built_in">sizeof</span>(h));</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; N;i++)&#123;</span><br><span class="line">            cin&gt;&gt;s&gt;&gt;e;</span><br><span class="line">            s = (s + s % <span class="number">2</span>) / <span class="number">2</span>;  <span class="comment">// 将两侧的房间合并到x轴上</span></span><br><span class="line">            e = (e + e % <span class="number">2</span>) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(s &gt; e)&#123;  <span class="comment">// 由于题目并未规定桌子移动的起点小于终点，因此须手动调整</span></span><br><span class="line">                <span class="type">int</span> t = s;</span><br><span class="line">                s = e;</span><br><span class="line">                e = t;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = s;j &lt;= e;j++)</span><br><span class="line">                h[j]++;  <span class="comment">// 统计x轴上每个点被覆盖的次数</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> maxVal = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt;= <span class="number">200</span>;i++)&#123;</span><br><span class="line">            maxVal = <span class="built_in">max</span>(maxVal, h[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;maxVal * <span class="number">10</span>&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> h[<span class="number">220</span>] = &#123;&#125;;  <span class="comment">// 用于记录每个点被覆盖的次数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> T, N, s, e;</span><br><span class="line">    cin&gt;&gt;T;  <span class="comment">// T组测试案例</span></span><br><span class="line">    <span class="keyword">while</span> (T--)&#123;</span><br><span class="line">        cin&gt;&gt;N;  <span class="comment">// 要移动的桌子数，即区间总数</span></span><br><span class="line">        <span class="built_in">memset</span>(h, <span class="number">0</span>, <span class="built_in">sizeof</span>(h));</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; N;i++)&#123;</span><br><span class="line">            cin&gt;&gt;s&gt;&gt;e;</span><br><span class="line">            s = (s + s % <span class="number">2</span>) / <span class="number">2</span>;  <span class="comment">// 将两侧的房间合并到x轴上</span></span><br><span class="line">            e = (e + e % <span class="number">2</span>) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(s &gt; e)&#123;  <span class="comment">// 由于题目并未规定桌子移动的起点小于终点，因此须手动调整</span></span><br><span class="line">                <span class="type">int</span> t = s;</span><br><span class="line">                s = e;</span><br><span class="line">                e = t;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = s;j &lt;= e;j++)</span><br><span class="line">                h[j]++;  <span class="comment">// 统计x轴上每个点被覆盖的次数</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> maxVal = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt;= <span class="number">200</span>;i++)&#123;</span><br><span class="line">            maxVal = <span class="built_in">max</span>(maxVal, h[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;maxVal * <span class="number">10</span>&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
   </div>
   
@@ -2867,8 +2872,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>菜鸟题解 POJ-1013 Counterfeit Dollar</p>
           <p class="content">原题直达https://vjudge.net/contest/582185#problem/C
 
-题干
-原题面参考翻译Sally Jones has a dozen Voyageur silve...</p>
+
+
+
+
+题干原题面参考翻译Sally Jones has a dozen Voyageur si...</p>
         </a>
       
       
@@ -2876,8 +2884,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class="title">菜鸟题解 POJ-3299 Humidex<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class="content">原题直达https://vjudge.net/contest/582185#problem/A
 
-题干
-原题面参考翻译Adapted from Wikipedia, the free encyc...</p>
+
+
+
+
+题干原题面参考翻译Adapted from Wikipedia, the free en...</p>
         </a>
       
     </div>
@@ -3787,7 +3798,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
   <script>
-  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg"];
+  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg"];
   let index = 0;
   let IntervalParallax = null;
 

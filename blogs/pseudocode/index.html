@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1700551322434),
+    lastupdate: new Date(1701056996869),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud"],
       for_post: ["blogger","toc","feedback"],
@@ -2657,52 +2657,63 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>伪代码的主要目标是描述算法梗概，在清晰展示算法思路的同时，回避繁琐的代码实现和调试过程。在伪代码的编写过程中，需要注意：</p>
-<ol type="1">
+<ol>
 <li>每行只写一条语句；</li>
 <li>遵循一般的缩进规则；</li>
 <li>尽可能的描述思路，省略细节；</li>
 <li>必要时<strong>使用自然语言表达算法</strong>，以回避某些与算法思路无关的代码步骤；</li>
 </ol>
 <span id="more"></span>
-<h2 id="头信息">头信息</h2>
-<p>在伪代码的开始，需要给出一些注解信息，如：</p>
+
+<h2 id="头信息"><a href="#头信息" class="headerlink" title="头信息"></a>头信息</h2><p>在伪代码的开始，需要给出一些注解信息，如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">algorithm: 二分查找</span><br><span class="line">author: 清弦.</span><br><span class="line">date: 2023-10-07</span><br><span class="line">Input: 有序数组 arr, 目标元素 tar</span><br><span class="line">Output: 目标元素 tar 在数组 arr 中的下标 index</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>ps. 除了代码片的标题外，其余信息均可省略。</p>
 </blockquote>
 <hr>
-<h2 id="变量">变量</h2>
-<p>伪代码中，变量一般无需声明，但对于重要的变量，需<strong>在注释中给出其含义</strong>。</p>
-<p>注释的规范可以任意选择，例如 C/C++ 语法中的 <code>//</code>，python 中的 <code>#</code>，Matlab 中的 <code>%</code> 等。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>伪代码中，变量一般无需声明，但对于重要的变量，需<strong>在注释中给出其含义</strong>。</p>
+<p>注释的规范可以任意选择，例如 C&#x2F;C++ 语法中的 <code>//</code>，python 中的 <code>#</code>，Matlab 中的 <code>%</code> 等。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m = (left + right) / 2;  % m 为当前区间的中点</span><br></pre></td></tr></table></figure>
+
 <p>当然，对于一些有特殊初始值的变量，也可以使用 <code>let</code> 给出其初始值：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let left = 0, right = length - 1;  % length 为数组长度</span><br></pre></td></tr></table></figure>
+
+
+
 <hr>
-<h2 id="代数运算">代数运算</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">幂运算 ^</span><br><span class="line">取模 mod</span><br><span class="line">逻辑与 and</span><br><span class="line">逻辑或 or</span><br><span class="line">逻辑非 not</span><br><span class="line">逻辑异或 xor</span><br></pre></td></tr></table></figure>
-<p>上述未涉及到的代数运算可直接参考 C/C++ 语法规范。</p>
+<h2 id="代数运算"><a href="#代数运算" class="headerlink" title="代数运算"></a>代数运算</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">幂运算 ^</span><br><span class="line">取模 mod</span><br><span class="line">逻辑与 and</span><br><span class="line">逻辑或 or</span><br><span class="line">逻辑非 not</span><br><span class="line">逻辑异或 xor</span><br></pre></td></tr></table></figure>
+
+<p>上述未涉及到的代数运算可直接参考 C&#x2F;C++ 语法规范。</p>
 <hr>
-<h2 id="过程">过程</h2>
-<p>过程的编写需要做到 <strong>规范缩进、有始有终</strong>。</p>
-<h3 id="分支">分支</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if Case1 then</span><br><span class="line">	codeblock 1</span><br><span class="line">else if Case2 then</span><br><span class="line">	codeblock 2</span><br><span class="line">else</span><br><span class="line">	codeblock 3</span><br><span class="line">end if</span><br></pre></td></tr></table></figure>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>过程的编写需要做到 <strong>规范缩进、有始有终</strong>。</p>
+<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if Case1 then</span><br><span class="line">	codeblock 1</span><br><span class="line">else if Case2 then</span><br><span class="line">	codeblock 2</span><br><span class="line">else</span><br><span class="line">	codeblock 3</span><br><span class="line">end if</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h3 id="循环">循环</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while n &lt; 10 do</span><br><span class="line">	n = n + 1;</span><br><span class="line">end while</span><br></pre></td></tr></table></figure>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while n &lt; 10 do</span><br><span class="line">	n = n + 1;</span><br><span class="line">end while</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for i in arr do</span><br><span class="line">	i = i + 1;</span><br><span class="line">end for</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for i = l to r do</span><br><span class="line">	i = i + 1;</span><br><span class="line">end for</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="函数">函数</h2>
-<p>必要时，需以注释的形式给出对于函数功能和输入输出的描述。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>必要时，需以注释的形式给出对于函数功能和输入输出的描述。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function lower_bound(arr[], tar)</span><br><span class="line">	...</span><br><span class="line">	return index;</span><br><span class="line">end func</span><br></pre></td></tr></table></figure>
+
 <p>当整个代码片中只有函数内容时，可以将函数声明作为代码片的 <code>title</code>，后续代码直接顶格编写即可，无需使用 <code>end func</code> 作为结尾：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function lower_bound(arr[], tar)</span><br><span class="line"></span><br><span class="line">let left = 0, right = arr.length - 1;</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 <hr>
-<h2 id="示例">示例</h2>
-<p>二分查找伪代码</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>二分查找伪代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">algorithm: 二分查找</span><br><span class="line">author: 清弦.</span><br><span class="line">date: 2023-10-07</span><br><span class="line">Input: 有序数组 arr, 目标元素 tar</span><br><span class="line">Output: 目标元素 tar 在数组 arr 中的下标 index</span><br><span class="line"></span><br><span class="line">let left = 0, right = arr.length - 1;</span><br><span class="line">let index = -1;  % 若在循环过程中没有找到tar，则index的值不会被更新</span><br><span class="line">while left &lt;= right do</span><br><span class="line">	mid = (left + right) / 2;</span><br><span class="line">	if arr[mid] == tar then</span><br><span class="line">		index = mid;</span><br><span class="line">		break;</span><br><span class="line">	else if arr[mid] &lt; tar then</span><br><span class="line">		left = mid + 1;</span><br><span class="line">	else</span><br><span class="line">		right = mid - 1;</span><br><span class="line">	end if</span><br><span class="line">end while</span><br></pre></td></tr></table></figure>
+
+
+
 <p>函数形式的二分查找伪代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">algorithm: 二分查找</span><br><span class="line">author: 清弦.</span><br><span class="line">date: 2023-10-07</span><br><span class="line">Input: 有序数组 arr, 目标元素 tar</span><br><span class="line">Output: 目标元素 tar 在数组 arr 中的下标 index</span><br><span class="line"></span><br><span class="line">function binary_search(arr, tar)</span><br><span class="line"></span><br><span class="line">let left = 0, right = arr.length - 1</span><br><span class="line">while left &lt;= right do</span><br><span class="line">	mid = (left + right) / 2;</span><br><span class="line">	if arr[mid] == tar then</span><br><span class="line">		return mid;</span><br><span class="line">	else if arr[mid] &lt; tar then</span><br><span class="line">		left = mid + 1;</span><br><span class="line">	else</span><br><span class="line">		right = mid - 1;</span><br><span class="line">	end if</span><br><span class="line">end while</span><br><span class="line"></span><br><span class="line">return -1;</span><br></pre></td></tr></table></figure>
+
 
   </div>
   
@@ -2839,8 +2850,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>菜鸟题解 POJ-2299 Ultra-QuickSort</p>
           <p class="content">原题直达https://vjudge.net/contest/582185#problem/G
 
-题干
-原题面参考翻译In this problem, you have to analyze a...</p>
+
+
+
+
+题干原题面参考翻译In this problem, you have to analyz...</p>
         </a>
       
       
@@ -3758,7 +3772,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
   <script>
-  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg"];
+  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg"];
   let index = 0;
   let IntervalParallax = null;
 

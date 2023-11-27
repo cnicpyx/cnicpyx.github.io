@@ -1762,7 +1762,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1700551322434),
+    lastupdate: new Date(1701056996869),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud"],
       for_post: ["blogger","toc","feedback"],
@@ -2673,79 +2673,84 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <p>Matlab系列教程5-符号运算，包括符号表达式的创建，符号矩阵运算，符号运算及带入求值的基本操作。</p>
 <span id="more"></span>
+
+
+
+
+
 <p>符号运算是数值计算的扩展，在运算过程中以符号表达式或符号矩阵为运算对象，实现了符号计算和数值计算的相互结合，使应用更灵活。</p>
-<h2 id="创建符号表达式">创建符号表达式</h2>
-<p>创建符号表达式，需要<strong>先创建符号变量</strong>，再使用它们编写表达式。</p>
+<h2 id="创建符号表达式"><a href="#创建符号表达式" class="headerlink" title="创建符号表达式"></a>创建符号表达式</h2><p>创建符号表达式，需要<strong>先创建符号变量</strong>，再使用它们编写表达式。</p>
 <p>使用关键字<code>syms</code>创建符号变量：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">syms a b c  <span class="comment">% 一次可以创建多个变量，变量之间只能用空格衔接</span></span><br><span class="line">syms A [<span class="number">3</span> <span class="number">4</span>]  <span class="comment">% 创建符号矩阵</span></span><br><span class="line"><span class="comment">% A =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% [ A1_1, A1_2, A1_3, A1_4]</span></span><br><span class="line"><span class="comment">% [ A2_1, A2_2, A2_3, A2_4]</span></span><br><span class="line"><span class="comment">% [ A3_1, A3_2, A3_3, A3_4]</span></span><br><span class="line"></span><br><span class="line">syms <span class="string">&#x27;A%d%d&#x27;</span> [<span class="number">2</span> <span class="number">2</span>]  <span class="comment">% 可以通过占位符%d来改变默认格式</span></span><br><span class="line"><span class="comment">% A =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% [ A11, A12]</span></span><br><span class="line"><span class="comment">% [ A21, A22]</span></span><br><span class="line"></span><br><span class="line">syms M <span class="number">3</span>  <span class="comment">% 3阶方阵</span></span><br><span class="line"><span class="comment">% M =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% [ M1_1, M1_2, M1_3]</span></span><br><span class="line"><span class="comment">% [ M2_1, M2_2, M2_3]</span></span><br><span class="line"><span class="comment">% [ M3_1, M3_2, M3_3]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p>先将变量创建好，才能将含有该变量字符串转化为符号表达式</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">syms x</span><br><span class="line">str = <span class="string">&#x27;x^3+2*x+1&#x27;</span>;  <span class="comment">% 不识别2x，即*不可省略</span></span><br><span class="line">S = eval(str);  <span class="comment">% 将字符串转化为符号表达式</span></span><br><span class="line"><span class="comment">% S =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% x^3 + 2*x + 1</span></span><br></pre></td></tr></table></figure>
+
 <p>也可以通过多项式部分提到的函数<code>ploy2sym(p)</code>，将系数向量转化为符号表达式</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">P = [<span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">1</span>];</span><br><span class="line">S = poly2sym(P);</span><br><span class="line"><span class="comment">% S =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% x^3 + 2*x^2 + 2*x + 1</span></span><br></pre></td></tr></table></figure>
-<p>可以通过函数<code>sym(A)</code>将矩阵<span class="math inline">\(A\)</span>转化为符号表达式<code>sym</code>格式。只有符号表达式可以与符号表达式计算，数值表达式无法直接与符号表达式进行计算。</p>
+
+<p>可以通过函数<code>sym(A)</code>将矩阵$A$转化为符号表达式<code>sym</code>格式。只有符号表达式可以与符号表达式计算，数值表达式无法直接与符号表达式进行计算。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">A = <span class="built_in">ones</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">S = sym(A)  <span class="comment">% 2*3 sym</span></span><br><span class="line"><span class="comment">% S =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% [ 1, 1, 1]</span></span><br><span class="line"><span class="comment">% [ 1, 1, 1]</span></span><br></pre></td></tr></table></figure>
+
 <p>使用<code>sym()</code>函数处理数值表达式时，应从尽量小的单位入手，以免产生精度上的误差，如</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; sym(<span class="number">1</span>/<span class="number">1234567</span>)  <span class="comment">% 错误</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"> </span><br><span class="line"><span class="number">7650239286923505</span>/<span class="number">9444732965739290427392</span></span><br><span class="line"> </span><br><span class="line">&gt;&gt; <span class="number">1</span>/sym(<span class="number">1234567</span>)  <span class="comment">% 正确</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"> </span><br><span class="line"><span class="number">1</span>/<span class="number">1234567</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% ------------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; sym(<span class="built_in">exp</span>(<span class="built_in">pi</span>))  <span class="comment">% 错误</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"> </span><br><span class="line"><span class="number">6513525919879993</span>/<span class="number">281474976710656</span></span><br><span class="line"> </span><br><span class="line">&gt;&gt; <span class="built_in">exp</span>(sym(<span class="built_in">pi</span>))  <span class="comment">% 正确</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"> </span><br><span class="line"><span class="built_in">exp</span>(<span class="built_in">pi</span>)</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="符号矩阵运算">符号矩阵运算</h2>
-<h3 id="转置">转置</h3>
-<p>Matlab默认符号属于复数，在使用<code>'</code>求转置时，会自动求出共轭转置。因此若只想求转置，应该使用<code>.'</code></p>
+<h2 id="符号矩阵运算"><a href="#符号矩阵运算" class="headerlink" title="符号矩阵运算"></a>符号矩阵运算</h2><h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><p>Matlab默认符号属于复数，在使用<code>&#39;</code>求转置时，会自动求出共轭转置。因此若只想求转置，应该使用<code>.&#39;</code></p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">syms <span class="string">&#x27;A%d%d&#x27;</span> [<span class="number">2</span> <span class="number">3</span>]</span><br><span class="line"><span class="comment">% A =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% [ A11, A12, A13]</span></span><br><span class="line"><span class="comment">% [ A21, A22, A23]</span></span><br><span class="line"></span><br><span class="line">B = A.&#x27;</span><br><span class="line"><span class="comment">% B =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% [ A11, A21]</span></span><br><span class="line"><span class="comment">% [ A12, A22]</span></span><br><span class="line"><span class="comment">% [ A13, A23]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="行列式">行列式</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">syms <span class="string">&#x27;A%d%d&#x27;</span> <span class="number">2</span></span><br><span class="line"><span class="comment">% A =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% [ A11, A12]</span></span><br><span class="line"><span class="comment">% [ A21, A22]</span></span><br><span class="line"></span><br><span class="line">d = det(A)</span><br><span class="line"><span class="comment">% d =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% A11*A22 - A12*A21</span></span><br></pre></td></tr></table></figure>
-<h3 id="求逆">求逆</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inv(A);  <span class="comment">% A必须是方阵，结果用A中元素表示</span></span><br></pre></td></tr></table></figure>
-<h3 id="求秩">求秩</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rank(A);  <span class="comment">% 返回一个整数</span></span><br></pre></td></tr></table></figure>
-<h3 id="其他">其他</h3>
-<table>
+
+<h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">syms <span class="string">&#x27;A%d%d&#x27;</span> <span class="number">2</span></span><br><span class="line"><span class="comment">% A =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% [ A11, A12]</span></span><br><span class="line"><span class="comment">% [ A21, A22]</span></span><br><span class="line"></span><br><span class="line">d = det(A)</span><br><span class="line"><span class="comment">% d =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% A11*A22 - A12*A21</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="求逆"><a href="#求逆" class="headerlink" title="求逆"></a>求逆</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inv(A);  <span class="comment">% A必须是方阵，结果用A中元素表示</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="求秩"><a href="#求秩" class="headerlink" title="求秩"></a>求秩</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rank(A);  <span class="comment">% 返回一个整数</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">函数</th>
-<th style="text-align: center;">说明</th>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>inv(A)</code></td>
-<td style="text-align: center;">求矩阵的逆，结果用<span class="math inline">\(A\)</span>中的元素表示</td>
+<tbody><tr>
+<td align="center"><code>inv(A)</code></td>
+<td align="center">求矩阵的逆，结果用$A$中的元素表示</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>rank(A)</code></td>
-<td style="text-align: center;">求矩阵的秩，返回一个整数</td>
+<tr>
+<td align="center"><code>rank(A)</code></td>
+<td align="center">求矩阵的秩，返回一个整数</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>eig(A)</code></td>
-<td style="text-align: center;">求特征值、特征向量</td>
+<tr>
+<td align="center"><code>eig(A)</code></td>
+<td align="center">求特征值、特征向量</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><code>svd(A)</code></td>
-<td style="text-align: center;">奇异值分解</td>
+<tr>
+<td align="center"><code>svd(A)</code></td>
+<td align="center">奇异值分解</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><code>jordan(A)</code></td>
-<td style="text-align: center;">Jordan标准形运算</td>
+<tr>
+<td align="center"><code>jordan(A)</code></td>
+<td align="center">Jordan标准形运算</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <hr>
-<h2 id="符号运算">符号运算</h2>
-<h3 id="因式分解">因式分解</h3>
-<p>使用函数<code>factor(S)</code>实现</p>
+<h2 id="符号运算"><a href="#符号运算" class="headerlink" title="符号运算"></a>符号运算</h2><h3 id="因式分解"><a href="#因式分解" class="headerlink" title="因式分解"></a>因式分解</h3><p>使用函数<code>factor(S)</code>实现</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">S = poly2sym([<span class="number">1</span> <span class="number">3</span> <span class="number">2</span>]);  <span class="comment">% S = X^2+3*x+2</span></span><br><span class="line"><span class="built_in">factor</span>(S)</span><br><span class="line"><span class="comment">% ans =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% [ x + 2, x + 1]</span></span><br></pre></td></tr></table></figure>
+
 <p>也可用于质因数分解</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">S = sym(<span class="number">276</span>);</span><br><span class="line"><span class="built_in">factor</span>(S)  <span class="comment">% [2 2 3 23]</span></span><br></pre></td></tr></table></figure>
-<h3 id="表达式展开">表达式展开</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">syms x</span><br><span class="line">S = eval(<span class="string">&#x27;(x+1)*(x+2)&#x27;</span>);</span><br><span class="line">expand(S)  <span class="comment">% x^2 + 3*x + 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="表达式展开"><a href="#表达式展开" class="headerlink" title="表达式展开"></a>表达式展开</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">syms x</span><br><span class="line">S = eval(<span class="string">&#x27;(x+1)*(x+2)&#x27;</span>);</span><br><span class="line">expand(S)  <span class="comment">% x^2 + 3*x + 2</span></span><br></pre></td></tr></table></figure>
+
 <p>也可以用于三角函数、指数函数、对数函数的展开</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">syms x y</span><br><span class="line">S = eval(<span class="string">&#x27;sin(x+y)&#x27;</span>);</span><br><span class="line">expand(S)  <span class="comment">% cos(x)*sin(y) + cos(y)*sin(x)</span></span><br></pre></td></tr></table></figure>
-<h3 id="表达式化简">表达式化简</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">syms x</span><br><span class="line">S = eval(<span class="string">&#x27;sin(x)^2+cos(x)^2&#x27;</span>);</span><br><span class="line">simplify(S)  <span class="comment">% x+1</span></span><br></pre></td></tr></table></figure>
-<h3 id="分式通分">分式通分</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">syms x y</span><br><span class="line">S = eval(<span class="string">&#x27;1/x+1/y&#x27;</span>);</span><br><span class="line">[n, d] = numden(S)</span><br><span class="line"><span class="comment">% n - 分子 n=x+y</span></span><br><span class="line"><span class="comment">% d - 分母 d=x*y</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="表达式化简"><a href="#表达式化简" class="headerlink" title="表达式化简"></a>表达式化简</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">syms x</span><br><span class="line">S = eval(<span class="string">&#x27;sin(x)^2+cos(x)^2&#x27;</span>);</span><br><span class="line">simplify(S)  <span class="comment">% x+1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="分式通分"><a href="#分式通分" class="headerlink" title="分式通分"></a>分式通分</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">syms x y</span><br><span class="line">S = eval(<span class="string">&#x27;1/x+1/y&#x27;</span>);</span><br><span class="line">[n, d] = numden(S)</span><br><span class="line"><span class="comment">% n - 分子 n=x+y</span></span><br><span class="line"><span class="comment">% d - 分母 d=x*y</span></span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="代入计算结果">代入/计算结果</h2>
-<p>通过函数<code>subs(S,old,new)</code>实现，返回值仍是<code>sym</code>类型。</p>
+<h2 id="代入-x2F-计算结果"><a href="#代入-x2F-计算结果" class="headerlink" title="代入&#x2F;计算结果"></a>代入&#x2F;计算结果</h2><p>通过函数<code>subs(S,old,new)</code>实现，返回值仍是<code>sym</code>类型。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">syms F m a Ff</span><br><span class="line">str = <span class="string">&#x27;Ff+F&#x27;</span>;</span><br><span class="line">S = eval(str);</span><br><span class="line">S = subs(S,F,a*m)  <span class="comment">% 用a*m代换F</span></span><br><span class="line"><span class="comment">% S =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% Ff + a*m</span></span><br><span class="line"></span><br><span class="line">res = subs(S,[a m Ff],[<span class="number">2</span> <span class="number">10</span> <span class="number">15</span>])  <span class="comment">% 分别给[a m Ff]赋值为[2 10 15]</span></span><br><span class="line"><span class="comment">% res =</span></span><br><span class="line"><span class="comment">%  </span></span><br><span class="line"><span class="comment">% 35</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
   </div>
@@ -2869,14 +2874,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Matlab二维绘图</p>
           <p class="content">Matlab进阶教程1-二维绘图，包含基本的绘图函数，坐标系的切换，图形窗口，图形标注及特殊图形的绘制（饼图、条形图等）。
 
+
+
+
 Matlab基础教程系列：
 
             
 
 
 
-
-Ma...</p>
+...</p>
         </a>
       
       
@@ -2884,10 +2891,13 @@ Ma...</p>
           <p class="title">Matlab矩阵<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class="content">Matlab系列教程4-矩阵，包括基本的矩阵创建、编辑和运算操作。
 
-矩阵是由个数排成的行列数表，记成  含有个维行向量，个维列向量。
-矩阵创建
-创建 - 直接输入
-用[]定义矩阵，同一行的元素...</p>
+
+
+
+
+
+矩阵是由个数排成的行列数表，记成含有个维行向量，个维列向量。
+矩阵创建创建 - 直接输入用[]定义矩阵，同一行的元...</p>
         </a>
       
     </div>
@@ -3030,7 +3040,7 @@ Ma...</p>
 
 
     <div class="content">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%AC%A6%E5%8F%B7%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">创建符号表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="toc-text">符号矩阵运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E7%BD%AE"><span class="toc-text">转置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="toc-text">行列式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%82%E9%80%86"><span class="toc-text">求逆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%82%E7%A7%A9"><span class="toc-text">求秩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E8%BF%90%E7%AE%97"><span class="toc-text">符号运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3"><span class="toc-text">因式分解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B1%95%E5%BC%80"><span class="toc-text">表达式展开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%96%E7%AE%80"><span class="toc-text">表达式化简</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%BC%8F%E9%80%9A%E5%88%86"><span class="toc-text">分式通分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E5%85%A5%E8%AE%A1%E7%AE%97%E7%BB%93%E6%9E%9C"><span class="toc-text">代入&#x2F;计算结果</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%AC%A6%E5%8F%B7%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">创建符号表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="toc-text">符号矩阵运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E7%BD%AE"><span class="toc-text">转置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="toc-text">行列式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%82%E9%80%86"><span class="toc-text">求逆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%82%E7%A7%A9"><span class="toc-text">求秩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E8%BF%90%E7%AE%97"><span class="toc-text">符号运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3"><span class="toc-text">因式分解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B1%95%E5%BC%80"><span class="toc-text">表达式展开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%96%E7%AE%80"><span class="toc-text">表达式化简</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%BC%8F%E9%80%9A%E5%88%86"><span class="toc-text">分式通分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E5%85%A5-x2F-%E8%AE%A1%E7%AE%97%E7%BB%93%E6%9E%9C"><span class="toc-text">代入&#x2F;计算结果</span></a></li></ol>
     </div>
   </section>
 
@@ -3797,7 +3807,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
   <script>
-  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg"];
+  let imgs = ["https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_49.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_39.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_33.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_29.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_45.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_5.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_23.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_9.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_26.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_47.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_42.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_57.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_50.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_31.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_18.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_35.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_17.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_21.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_15.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_37.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_32.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_54.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_7.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_25.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_6.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_41.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_40.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_55.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_53.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_43.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_3.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_10.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_28.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_27.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_48.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_19.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_14.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_38.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_34.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_44.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_52.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_20.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_4.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_22.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_56.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_12.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_36.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_30.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_24.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_8.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_51.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_11.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_13.jpg","https://img-1306037672.cos.ap-beijing.myqcloud.com/bg_16.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
