@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://pyxblog.cn/blogs/how-to-create-a-prompt/</loc>
+        <lastmod>2023-11-29T15:10:30.638Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://pyxblog.cn/blogs/algorithm-c2-f/</loc>
         <lastmod>2023-10-30T17:44:18.434Z</lastmod>
         <changefreq>weekly</changefreq>
